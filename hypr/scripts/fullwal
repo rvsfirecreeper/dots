@@ -1,0 +1,3 @@
+wal --cols16 -i ~/Pictures/bg.jpg
+cp ~/.cache/wal/colors-hyprland.conf ~/.config/hypr/
+pywalfox update
