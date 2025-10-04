@@ -1,0 +1,21 @@
+{
+	"modules-left": ["custom/wofi"],
+	"modules-center": ["hyprland/workspaces"],
+	"modules-right": ["clock"],
+	"clock": {
+		"format": " {:%H:%M}",
+		"timezone": "America/New_York",
+		"tooltip-format": "{:%d }{calendar}",
+		"format-alt": " {:%Y-%m-%d}",
+	},
+	"custom/wofi": {
+		"format": "",
+		"on-click": "wofi --show drun -n"
+	},
+	"hyprland/workspaces": {
+		"persistent-workspaces": {
+			"*": 5,
+		}
+	},
+}
+
