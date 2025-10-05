@@ -3,7 +3,7 @@ walldir="$HOME/.config/hypr/wallpaper"
 read -p "Which wallpaper?(or ls to list) " wall
 wall="${wall/#\~/$HOME}"
 if [ "$wall" = "ls" ]; then
-	ls $walldir
+	ls "$walldir"
 	sleep 2
 	exit 0
 elif [ -f "$wall" ]; then
@@ -36,7 +36,7 @@ elif [ -f "$walldir/$wall.jpg" ]; then
 else
 	echo "Exiting, no file found. Did you use the shorthand you set when importing? "
 	echo "Here are the current wallpapers."
-	ls $walldir
+	ls "$walldir"
 	sleep 3
 	exit 1
 fi

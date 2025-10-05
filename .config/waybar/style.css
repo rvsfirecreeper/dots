@@ -2,49 +2,55 @@
 
 * {
 	border: none;
-	border-radius: 0px;
+	border-radius: 0pt;
 	font-family: 'Lilex Nerd Font';
-	font-size: 20px;
-	min-height: 0;
-	margin: 0px 0px 0px 0px;
+	font-size: 15pt;
+	min-height: 0pt;
+	margin: 0pt 0pt 0pt 0pt;
 }
 window#waybar {
 	background-color: alpha(@color3, 0.2);
 	color: #ffffff;
 	transition-property: background-color;
 	transition-duration: .5s;
-	margin: 0px;
-	padding: 0;
+	margin: 0pt;
+	padding: 0pt;
 }
 #custom-wofi {
 	background-color: @background;
 	color: white;
-	margin: 10px 0px 5px 20px;
-	border-radius: 20px;
-	padding: 4px 12px 4px 10px;
+	margin: 8pt 0pt 8pt 15pt;
+	border-radius: 15pt;
+	padding: 4pt 10pt 4pt 8pt;
 }
 #clock {
 	background-color: @background;
 	color: white;
-	margin: 10px 20px 5px 0px;
-	border-radius: 20px;
-	padding: 4px 12px;
+	margin: 8pt 15pt 8pt 0pt;
+	border-radius: 15pt;
+	padding: 4pt 12pt;
 }
 #workspaces button {
 	background-color: @background;
 	color: #ffffff;
-	font-size: 20px;
-	margin: 10px 0px 5px 0px;
-	padding: 0px 6px;
+	font-size: 15pt;
+	margin: 8pt 0pt 8pt 0pt;
+	padding: 0pt 6pt;
+}
+#workspaces button:hover {
+	background-color: @color12;
 }
 #workspaces button:last-child {
-	border-radius: 0 20px 20px 0;
-	padding-right: 9px;
+	border-radius: 0pt 15pt 15pt 0pt;
+	padding-right: 9pt;
 }
 #workspaces button:first-child {
-	border-radius: 20px 0 0 20px;
-	padding-left: 9px;
+	border-radius: 15pt 0pt 0pt 15pt;
+	padding-left: 9pt;
 }
 #workspaces button.active {
 	background-color: @color11;
+}
+#workspaces button.urgent {
+	background-color: @color13;
 }

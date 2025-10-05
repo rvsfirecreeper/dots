@@ -1,37 +1,37 @@
 @import ".config/wofi/colors.css";
 * {
-	font-family: "JetBrainsMono Nerd Font"
+	font-family: "Lilex Nerd Font"
 }
 
 window {
     background-color: alpha(@background,.3);
 }
 #inner-box {
-    margin: 10px;
+    margin: 8pt;
     border: none;
     background-color: alpha(@background,0);
 }
 #outer-box {    
-    border: 2px;
-    border-radius: 5;
+    border: 2pt;
+    border-radius: 4pt;
     background-color: alpha(@background,0);
 }
 #input {
-    margin-left:10px;
-    margin-right:10px;
-    margin-top:10px;
-    padding: 15px;
-    border: 5px;
+    margin-left:8pt;
+    margin-right:8pt;
+    margin-top:8pt;
+    padding: 12pt;
+    border: 4pt;
     outline: none;
     color: @color11;
-    box-shadow: 1px 1px 5px rgba(0,0,0, .5);
-    border-radius:10;
+    box-shadow: 1pt 1pt 4pt rgba(0,0,0, .5);
+    border-radius:8pt;
     background-color: alpha(@background,0.2);
 }
 #entry:selected {
-    box-shadow: 1px 1px 5px rgba(255,255,255, .03);
-    border: 0px;
-    border-radius: 20px;
+    box-shadow: 1pt 1pt 4pt rgba(255,255,255, .03);
+    border: 0pt;
+    border-radius: 16pt;
     background-color: alpha(@background,0.2);
 }
 #entry:selected #text {
@@ -39,7 +39,7 @@ window {
 }
 #entry {
     border: none;
-    margin: 5px;
-    padding: 5px;
+    margin: 4pt;
+    padding: 4pt;
     color: @color7;
 }
