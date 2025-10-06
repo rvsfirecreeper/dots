@@ -8,6 +8,13 @@ These dotfiles rely on Pywal16 heavily. Not pywal, pywal16. PLEASE Do Not attemp
 Welcome to my dotfiles! Take whatever you like, but here are a few suggestions:
 Use your own wallpaper. I have a script for this that can import wallpapers into the folder for future use.
 Modify monitors.conf to suit your own monitor. I have a 165hz 1440p, but that's kinda niche.
+
+## aurh
+This comes bundled with an aur helper aurh. It's like aura, except based off paru which makes it way less jank.
+It uses -S for pacman(It quite literally forwards it to pacman so you need to use sudo) and -A for AUR packages.
+
+# Install
+You can use `curl -sS https://gitlab.com/coolrustcoderguy/dots/-/raw/main/install.sh` for Arch or manually copy dotfiles
 # Dependencies:
 ## Shells/Terminal: 
 `bash` 
@@ -36,6 +43,4 @@ Modify monitors.conf to suit your own monitor. I have a 165hz 1440p, but that's 
 `wofi`
 `wlogout`
 
-Screenshot:
-![Screenshot](screenshot.png)
 
