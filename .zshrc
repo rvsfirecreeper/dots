@@ -10,6 +10,7 @@ bindkey -v
 zstyle :compinstall filename '/home/rajs/.zshrc'
 export EDITOR='nvim'
 export VISUAL='nvim'
+export PATH="$HOME/.config/hypr/scripts/bin:$PATH"
 fastfetch
 (cat ~/.cache/wal/sequences &)
 autoload -Uz compinit

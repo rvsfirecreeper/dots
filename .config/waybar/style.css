@@ -17,21 +17,21 @@ window#waybar {
 	padding: 0pt;
 }
 #custom-wofi {
-	background-color: @background;
+	background-color: @color4;
 	color: white;
 	margin: 8pt 0pt 8pt 15pt;
 	border-radius: 15pt;
 	padding: 4pt 10pt 4pt 8pt;
 }
 #clock {
-	background-color: @background;
+	background-color: @color4;
 	color: white;
 	margin: 8pt 15pt 8pt 0pt;
 	border-radius: 15pt;
 	padding: 4pt 12pt;
 }
 #workspaces button {
-	background-color: @background;
+	background-color: @color4;
 	color: #ffffff;
 	font-size: 15pt;
 	margin: 8pt 0pt 8pt 0pt;

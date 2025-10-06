@@ -30,6 +30,7 @@ Modify monitors.conf to suit your own monitor. I have a 165hz 1440p, but that's 
 
 ## Utilities:
 `nvim`
+`paru`(needed for aurh)
 `swaync`
 `waybar`
 `wofi`
