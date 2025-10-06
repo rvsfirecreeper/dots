@@ -9,7 +9,7 @@ cd ..
 # Updating the system because it needs to be updated
 paru
 #install all deps
-paru -S kitty starship zsh hypridle hyprland hyprlock hyprpaper hyprpolkitagent hyprsunset graphicsmagick python-pywal16 swayimg neovim paru swaync waybar wofi wlogout
+paru -S kitty starship zsh hypridle hyprland hyprlock hyprpaper hyprpolkitagent hyprsunset graphicsmagick python-pywal16 swayimg neovim paru swaync waybar wofi wlogout sudo 
 rm -r paru
 git clone https://gitlab.com/coolrustcoderguy/dots.git
 cd dots

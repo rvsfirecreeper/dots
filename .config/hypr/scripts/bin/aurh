@@ -9,6 +9,6 @@ elif [ "$1" == "-As" ]; then
 elif [ "$1" == "-Ay" ]; then
 	paru --mode aur -Ay "$2"
 else
-	pacman "$@" 
+	sudo pacman "$@" 
 fi
 
