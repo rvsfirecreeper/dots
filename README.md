@@ -14,7 +14,7 @@ This comes bundled with an aur helper aurh. It's like aura, except based off par
 It uses -S for pacman(It quite literally forwards it to pacman so you need to use sudo) and -A for AUR packages.
 
 # Install
-You can use `curl -sS https://gitlab.com/coolrustcoderguy/dots/-/raw/main/install.sh` for Arch or manually copy dotfiles
+You can use `curl -sS https://gitlab.com/coolrustcoderguy/dots/-/raw/main/install.sh | bash` for Arch or manually copy dotfiles
 # Dependencies:
 ## Shells/Terminal: 
 `bash` 
