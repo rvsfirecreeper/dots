@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/zsh
 walldir="$HOME/.config/hypr/wallpaper"
-read -p "Which wallpaper?(or ls to list) " wall
+read "?Which wallpaper?(or ls to list) " wall
 wall="${wall/#\~/$HOME}"
 if [ "$wall" = "ls" ]; then
 	ls "$walldir"

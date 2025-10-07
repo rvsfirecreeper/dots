@@ -10,8 +10,7 @@ Use your own wallpaper. I have a script for this that can import wallpapers into
 Modify monitors.conf to suit your own monitor. I have a 165hz 1440p, but that's kinda niche.
 
 ## aurh
-This comes bundled with an aur helper aurh. It's like aura, except based off paru which makes it way less jank.
-It uses -S for pacman(It quite literally forwards it to sudo pacman) and -A for AUR packages.
+Is deprecated. just use paru like a sane one.
 
 # Install
 You can use `curl -sS https://gitlab.com/coolrustcoderguy/dots/-/raw/main/install.sh | bash` for Arch or manually copy dotfiles
@@ -37,7 +36,7 @@ You can use `curl -sS https://gitlab.com/coolrustcoderguy/dots/-/raw/main/instal
 
 ## Utilities:
 `nvim`
-`paru`(needed for aurh)
+`paru`(needed for install)(also just use an AUR Helper bro you're not cool)
 `swaync`
 `waybar`
 `wofi`

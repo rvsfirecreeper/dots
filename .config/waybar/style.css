@@ -17,27 +17,27 @@ window#waybar {
 	padding: 0pt;
 }
 #custom-wofi {
-	background-color: @color4;
+	background-color: @color12;
 	color: white;
 	margin: 8pt 0pt 8pt 15pt;
 	border-radius: 15pt;
 	padding: 4pt 10pt 4pt 8pt;
 }
 #clock {
-	background-color: @color4;
+	background-color: @color12;
 	color: white;
 	margin: 8pt 15pt 8pt 0pt;
 	border-radius: 15pt;
 	padding: 4pt 12pt;
 }
 #workspaces button {
-	background-color: @color4;
+	background-color: @color12;
 	color: #ffffff;
 	font-size: 15pt;
 	margin: 8pt 0pt 8pt 0pt;
 	padding: 0pt 6pt;
 }
-#workspaces button:hover {
+#workspaces button.hover {
 	background-color: @color12;
 }
 #workspaces button:last-child {
@@ -49,8 +49,8 @@ window#waybar {
 	padding-left: 9pt;
 }
 #workspaces button.active {
-	background-color: @color11;
+	background-color: @color13;
 }
 #workspaces button.urgent {
-	background-color: @color13;
+	background-color: @color0;
 }

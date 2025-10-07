@@ -1,2 +1,3 @@
 #!/bin/zsh
-kitty lf
+source $HOME/.zshrc
+lf
