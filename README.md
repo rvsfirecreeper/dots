@@ -42,5 +42,9 @@ You can use `curl -sS https://gitlab.com/coolrustcoderguy/dots/-/raw/main/instal
 `wofi`
 `wlogout`
 
-Screenshot(s):
+Screenshots:
 ![Screenshot](screenshots/screenshot1.png)
+![Screenshot](screenshots/screenshot2.png)
+![Screenshot](screenshots/screenshot3.png)
+![Screenshot](screenshots/screenshot4.png)
+![Screenshot](screenshots/screenshot5.png)

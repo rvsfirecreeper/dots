@@ -12,7 +12,7 @@ elif [ -f "$wall" ]; then
 	    sleep 2
 	    exit 1
 	fi
-	read -p "New wallpaper detected. What would you like the shorthand to be? Do not include file extensions. " shorthand
+	read "?New wallpaper detected. What would you like the shorthand to be? Do not include file extensions. " shorthand
 	if [ -f "$walldir/$shorthand.jpg" ]; then
 		echo "Exiting, file already exists."
 		sleep 2
@@ -27,7 +27,7 @@ elif [ -f "$wall" ]; then
 	echo "Previewing, press q to continue."
 	sleep 1
 	swayimg "$walldir/$shorthand.jpg"
-	read -p "Would you like to switch or not(y/n)" confirm
+	read "?Would you like to switch or not(y/n)" confirm
 	if [ "$confirm" = "y" ]; then
 		cp "$walldir/$shorthand.jpg" "$walldir/bg.jpg"
 	fi

@@ -9,7 +9,7 @@
 	margin: 0pt 0pt 0pt 0pt;
 }
 window#waybar {
-	background-color: alpha(@color3, 0.2);
+	background-color: alpha(@background, 0.1);
 	color: #ffffff;
 	transition-property: background-color;
 	transition-duration: .5s;
@@ -17,28 +17,28 @@ window#waybar {
 	padding: 0pt;
 }
 #custom-wofi {
-	background-color: @color12;
+	background-color: alpha(@color3, 0.4);
 	color: white;
 	margin: 8pt 0pt 8pt 15pt;
 	border-radius: 15pt;
 	padding: 4pt 10pt 4pt 8pt;
 }
 #clock {
-	background-color: @color12;
+	background-color: alpha(@color3, 0.4);
 	color: white;
 	margin: 8pt 15pt 8pt 0pt;
 	border-radius: 15pt;
 	padding: 4pt 12pt;
 }
 #workspaces button {
-	background-color: @color12;
+	background-color: alpha(@color3, 0.4);
 	color: #ffffff;
 	font-size: 15pt;
 	margin: 8pt 0pt 8pt 0pt;
 	padding: 0pt 6pt;
 }
 #workspaces button.hover {
-	background-color: @color12;
+	background-color: alpha(@color3, 0.4);
 }
 #workspaces button:last-child {
 	border-radius: 0pt 15pt 15pt 0pt;
@@ -49,8 +49,8 @@ window#waybar {
 	padding-left: 9pt;
 }
 #workspaces button.active {
-	background-color: @color13;
+	background-color: alpha(@color4, 0.7);
 }
 #workspaces button.urgent {
-	background-color: @color0;
+	background-color: alpha(@color3, 0.3);
 }
