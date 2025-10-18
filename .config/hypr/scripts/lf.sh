@@ -1,3 +1,3 @@
 #!/bin/zsh
-source $HOME/.zshrc
+source .zshrc
 lf

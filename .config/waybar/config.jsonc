@@ -9,7 +9,7 @@
 		"format-alt": " {:%Y-%m-%d}",
 	},
 	"custom/wofi": {
-		"format": "",
+		"format": "",
 		"on-click": "wofi --show drun -n"
 	},
 	"hyprland/workspaces": {

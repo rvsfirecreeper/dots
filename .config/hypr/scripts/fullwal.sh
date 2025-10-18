@@ -1,18 +1,22 @@
 #!/bin/zsh
 walldir="$HOME/.config/hypr/wallpaper"
-read "?Which wallpaper?(or ls to list) " wall
+read "?Which wallpaper?(or ls to list already imported) (You can enter a full path(tildes allowed) to import a new one) " wall
 wall="${wall/#\~/$HOME}"
 if [ "$wall" = "ls" ]; then
 	ls "$walldir"
 	sleep 2
-	exit 0
-elif [ -f "$wall" ]; then
+	read "?Which wallpaper, now that you have all the options? " wall
+	wall="${wall/#\~/$HOME}"
+fi
+if [ -f "$wall" ]; then
 	if ! [[ "${wall##*.}" =~ ^(jpg|jpeg|png|webp|svg)$ ]]; then
 	    echo "Not an image. "
 	    sleep 2
 	    exit 1
 	fi
-	read "?New wallpaper detected. What would you like the shorthand to be? Do not include file extensions. " shorthand
+	echo "New Wallpaper Detected! Previewing, press q to continue."
+	pqiv "$wall"
+	read "?What would you like the shorthand to be? Do not include file extensions. " shorthand
 	if [ -f "$walldir/$shorthand.jpg" ]; then
 		echo "Exiting, file already exists."
 		sleep 2
@@ -24,9 +28,9 @@ elif [ -f "$wall" ]; then
 		exit 1
 	fi
 	magick "$wall" "$walldir/$shorthand.jpg"
-	echo "Previewing, press q to continue."
+	echo "New Wallpaper Detected! Previewing, press q to continue."
 	sleep 1
-	swayimg "$walldir/$shorthand.jpg"
+	pqiv "$walldir/$shorthand.jpg"
 	read "?Would you like to switch or not(y/n)" confirm
 	if [ "$confirm" = "y" ]; then
 		cp "$walldir/$shorthand.jpg" "$walldir/bg.jpg"
@@ -49,7 +53,7 @@ cp "$HOME/.cache/wal/colors-waybar.css" "$HOME/.config/wlogout/colors.css"
 sleep 0.1
 killall -SIGUSR2 waybar
 pywalfox update
-hyprctl hyprpaper reload ,"$walldir/bg.jpg"
+hyprctl hyprpaper reload DP-3, "$walldir/bg.jpg"
 echo "Done! Automatically Closing in 3 seconds."
 sleep 2
 exit 0

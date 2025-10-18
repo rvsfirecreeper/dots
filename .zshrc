@@ -4,6 +4,9 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=10000
 setopt autocd
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export TERM=xterm-256color
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
@@ -14,6 +17,7 @@ fastfetch
 (cat ~/.cache/wal/sequences &)
 autoload -Uz compinit
 compinit
+setopt interactivecomments
 eval `ssh-agent`
 # End of lines added by compinstall
 eval "$(starship init zsh)"

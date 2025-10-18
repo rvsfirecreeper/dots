@@ -21,7 +21,7 @@ window#waybar {
 	color: white;
 	margin: 8pt 0pt 8pt 15pt;
 	border-radius: 15pt;
-	padding: 4pt 10pt 4pt 8pt;
+	padding: 4pt 12pt 4pt 8pt;
 }
 #clock {
 	background-color: alpha(@color3, 0.4);
