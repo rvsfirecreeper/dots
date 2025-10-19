@@ -8,12 +8,7 @@ if [ "$wall" = "ls" ]; then
 	read "?Which wallpaper, now that you have all the options? " wall
 	wall="${wall/#\~/$HOME}"
 fi
-if [ -f "$wall" ]; then
-	if ! [[ "${wall##*.}" =~ ^(jpg|jpeg|png|webp|svg)$ ]]; then
-	    echo "Not an image. "
-	    sleep 2
-	    exit 1
-	fi
+if [ -e "$wall" ]; then
 	echo "New Wallpaper Detected! Previewing, press q to continue."
 	pqiv "$wall"
 	read "?What would you like the shorthand to be? Do not include file extensions. " shorthand
@@ -53,7 +48,7 @@ cp "$HOME/.cache/wal/colors-waybar.css" "$HOME/.config/wlogout/colors.css"
 sleep 0.1
 killall -SIGUSR2 waybar
 pywalfox update
-hyprctl hyprpaper reload DP-3, "$walldir/bg.jpg"
+hyprctl hyprpaper reload ,"$walldir/$wall.jpg"
 echo "Done! Automatically Closing in 3 seconds."
 sleep 2
 exit 0

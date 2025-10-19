@@ -1,0 +1,20 @@
+[helpers]
+
+[default]
+depends = []
+
+[default.files]
+zshrc = { target = "~/.zshrc", type = "symbolic" }
+bashrc = { target = "~/.bashrc", type = "symbolic" }
+hypr = { target = "~/.config/hypr", type = "symbolic" }
+waybar = { target = "~/.config/waybar", type = "symbolic" }
+nvim = { target = "~/.config/nvim", type = "symbolic" }
+wofi = { target = "~/.config/wofi", type = "symbolic" }
+kitty = { target = "~/.config/kitty", type = "symbolic"  }
+wlogout = { target = "~/.config/wlogout",  type = "symbolic" }
+lf = { target = "~/.config/lf" , type = "symbolic" }
+"starship.toml" = "~/.config/starship.toml"
+[default.variables]
+
+[settings]
+default_target_type = "automatic"

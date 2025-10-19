@@ -17,7 +17,8 @@ Modify monitors.conf to suit your own monitor. I have a 165hz 1440p, but that's 
 Is deprecated. just use paru like a sane one.
 
 # Install
-You can use `curl -sS https://gitlab.com/coolrustcoderguy/dots/-/raw/main/install.sh | bash` for Arch or manually copy dotfiles
+You can use `curl -sS https://gitlab.com/coolrustcoderguy/dots/-/raw/main/install.sh | bash` for Artix, Arch, etc.
+Or manually install all dependencies and use dotter deploy
 # Dependencies:
 ## Shells/Terminal: 
 `bash` 
@@ -41,6 +42,7 @@ You can use `curl -sS https://gitlab.com/coolrustcoderguy/dots/-/raw/main/instal
 ## Utilities:
 `nvim`
 `paru`(needed for install)(also just use an AUR Helper bro you're not cool)
+`dotter`(Needed for install, you can copy dotfiles but I highly recommend dotter, it's pretty cool!)
 `swaync`
 `waybar`
 `wofi`

@@ -107,3 +107,4 @@ cmd zip ${{
     rm -rf $1
 }}
 map . set hidden!
+

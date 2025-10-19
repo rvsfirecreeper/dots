@@ -6,25 +6,25 @@
 }
 {
     "label" : "hibernate",
-    "action" : "systemctl hibernate",
+    "action" : "hibernate",
     "text" : "Hibernate",
     "keybind" : "h"
 }
 {
     "label" : "suspend",
-    "action" : "systemctl suspend",
+    "action" : "suspend",
     "text" : "Suspend",
     "keybind" : "s"
 }
 {
     "label" : "reboot",
-    "action" : "systemctl reboot",
+    "action" : "reboot",
     "text" : "Restart",
     "keybind" : "r"
 }
 {
     "label" : "shutdown",
-    "action" : "systemctl poweroff",
+    "action" : "shutdown",
     "text" : "Power Off",
     "keybind" : "p"
 }
