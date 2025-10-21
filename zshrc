@@ -17,6 +17,8 @@ fastfetch
 (cat ~/.cache/wal/sequences &)
 autoload -Uz compinit
 compinit
+export PATH=/home/ragef/.cargo/bin:$PATH
+alias sudo="doas"
 setopt interactivecomments
 eval `ssh-agent`
 # End of lines added by compinstall

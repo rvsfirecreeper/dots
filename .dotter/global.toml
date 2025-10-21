@@ -10,6 +10,7 @@ hypr = { target = "~/.config/hypr", type = "symbolic" }
 waybar = { target = "~/.config/waybar", type = "symbolic" }
 nvim = { target = "~/.config/nvim", type = "symbolic" }
 wofi = { target = "~/.config/wofi", type = "symbolic" }
+tofi = { target = "~/.config/tofi", type = "symbolic" }
 kitty = { target = "~/.config/kitty", type = "symbolic"  }
 wlogout = { target = "~/.config/wlogout",  type = "symbolic" }
 lf = { target = "~/.config/lf" , type = "symbolic" }
