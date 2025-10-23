@@ -37,7 +37,7 @@ Or manually install all dependencies and use dotter deploy
 ## Pywal/Wallpaper/Fullwal.sh:
 `imagemagick`(Substitutable with `graphicsmagick`)
 `pywal16`
-`pqiv`
+`swayimg`
 
 ## Utilities:
 `nvim`
