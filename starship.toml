@@ -1,20 +1,25 @@
 format = """ 
+\
+[](fg:blue)\
+$os\
+[](bg:blue fg:red)\
 $username\
+[](bg:red fg:green)\
 $directory\
+[ ](fg:green)\
 $git_branch\
-$git_status
-$os \
-$character
-"""
+$git_status\
+$all\
+$character"""
 
 [username]
 show_always = true
-format = '[$user ](fg:blue)'
+format = '[$user ](bg:red fg:black)'
 disabled = false
 
 [os]
 disabled = false
-style = 'fg:blue'
+style = 'bg:blue fg:black'
 [os.symbols]
 Alpine = " "
 Arch = " "
@@ -30,17 +35,18 @@ NixOS = " "
 openSUSE = " "
 Solus = "󰠳 "
 Void = " "
+
 [cmd_duration]
-format = "[$duration](fg:purple)"
+format = "[$duration](fg:red)"
 
 [directory]
-format = "[$path](fg:purple)"
-truncation_length = 6
+format = "[$path](bg:green fg:black)"
+truncation_length = 2
 truncation_symbol = "…/"
 
 [character]
 success_symbol = "[](bold blue)"
-error_symbol = "[✗](bold purple)"
+error_symbol = "[✗](bold red)"
 disabled = false
 
 [directory.substitutions]
