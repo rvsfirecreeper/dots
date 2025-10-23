@@ -1,5 +1,4 @@
 # Lines configured by zsh-newuser-install
-source ~/.cache/wal/colors-tty.sh
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=10000
@@ -14,7 +13,6 @@ zstyle :compinstall filename '/home/rajs/.zshrc'
 export EDITOR='nvim'
 export VISUAL='nvim'
 fastfetch
-(cat ~/.cache/wal/sequences &)
 autoload -Uz compinit
 compinit
 export PATH=/home/ragef/.cargo/bin:$PATH
