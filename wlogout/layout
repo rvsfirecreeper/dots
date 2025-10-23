@@ -6,25 +6,25 @@
 }
 {
     "label" : "hibernate",
-    "action" : "hibernate",
+    "action" : "loginctl hibernate",
     "text" : "Hibernate",
     "keybind" : "h"
 }
 {
     "label" : "suspend",
-    "action" : "suspend",
+    "action" : "loginctl suspend",
     "text" : "Suspend",
     "keybind" : "s"
 }
 {
     "label" : "reboot",
-    "action" : "reboot",
+    "action" : "loginctl reboot",
     "text" : "Restart",
     "keybind" : "r"
 }
 {
     "label" : "shutdown",
-    "action" : "shutdown",
+    "action" : "loginctl shutdown",
     "text" : "Power Off",
     "keybind" : "p"
 }

@@ -30,7 +30,7 @@ by Stephan Raabe (2023)
 window {
 	background: url("bg.jpg");
 	background-size: cover;
-	font-size: 16pt;
+	font-size: 20px;
 
 }
 
@@ -39,8 +39,8 @@ button {
 	background-position: center;
 	background-size: 20%;
 	animation: gradient_f 20s ease-in infinite;
-	border-radius: 64pt; /* Increased border radius for a more rounded look */
-	border:0pt;
+	border-radius: 80px; /* Increased border radius for a more rounded look */
+	border:0px;
 	transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
 	color: @color15;
 	background-color: alpha(@color9, 0.6);
@@ -53,12 +53,11 @@ button:focus {
 }
 
 button:hover {
-    background-color: alpha(@color9, 0.9);;
-	opacity: 0.8;
-    color: @color11;
+    background-color: alpha(@color9, 0.9);
+    opacity: 0.8;
     background-size: 30%;
-    margin: 24pt;
-    border-radius: 64pt;
+    margin: 30px;
+    border-radius: 80px;
     box-shadow: none;
 }
 
@@ -74,42 +73,42 @@ Buttons
 */
 
 #lock {
-	margin: 8pt;
-	border-radius: 16pt;
+	margin: 10px;
+	border-radius: 20px;
 	background-image: image(url("icons/lock.png"));
 }
 
 #logout {
-	margin: 8pt;
-	border-radius: 16pt;
+	margin: 10px;
+	border-radius: 20px;
 	background-image: image(url("icons/logout.png"));
 }
 
 #suspend {
-	margin: 8pt;
-	border-radius: 16pt;
+	margin: 10px;
+	border-radius: 20px;
 	background-image: image(url("icons/suspend.png"));
 }
 
 #hibernate {
-	margin: 8pt;
-	border-radius: 16pt;
+	margin: 10px;
+	border-radius: 20px;
 	background-image: image(url("icons/hibernate.png"));
 }
 
 #shutdown {
-	margin: 8pt;
-	border-radius: 16pt;
+	margin: 10px;
+	border-radius: 20px;
 	background-image: image(url("icons/shutdown.png"));
 }
 
 #reboot {
-	margin: 8pt;
-	border-radius: 16pt;
+	margin: 10px;
+	border-radius: 20px;
 	background-image: image(url("icons/reboot.png"));
 }
 #killhypr {
-	margin: 8pt;
-	border-radius: 16pt;
+	margin: 10px;
+	border-radius: 20px;
 	background-image: image(url("icons/logout.png"))
 }

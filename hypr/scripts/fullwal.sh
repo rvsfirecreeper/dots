@@ -45,6 +45,9 @@ cp "$HOME/.cache/wal/colors-hyprland.conf" "$HOME/.config/hypr/"
 cp "$HOME/.cache/wal/colors-waybar.css" "$HOME/.config/waybar/colors.css"
 cp "$HOME/.cache/wal/colors-waybar.css" "$HOME/.config/wofi/colors.css"
 cp "$HOME/.cache/wal/colors-waybar.css" "$HOME/.config/wlogout/colors.css"
+cat "$HOME/.config/hypr/colors-hyprland.conf" "$HOME/.config/hypr/hyprtoolkitstat.conf" > "$HOME/temp"
+mv "$HOME/temp" "$HOME/.config/hypr/hyprtoolkit.conf"
+sed -i 's/1\.0/0\.7/g' "$HOME/.config/hypr/hyprtoolkit.conf"
 sleep 0.1
 killall -SIGUSR2 waybar
 pywalfox update
