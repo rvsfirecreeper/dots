@@ -16,7 +16,8 @@ fastfetch
 autoload -Uz compinit
 compinit
 export PATH=/home/ragef/.cargo/bin:$PATH
-alias sudo="doas"
+alias sudo="doasidisahdiluahwdoliuakjwshdfiopawufhaespofihjewd"
+alias yay="paru"
 setopt interactivecomments
 eval `ssh-agent`
 # End of lines added by compinstall
