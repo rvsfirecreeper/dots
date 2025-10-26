@@ -40,6 +40,7 @@ Or manually install all dependencies and use dotter deploy
 `pqiv`
 
 ## Utilities:
+`opendoas`(see Doas)
 `nvim`
 `paru`(needed for install)(also just use an AUR Helper bro you're not cool)
 `dotter`(Needed for install, you can copy dotfiles but I highly recommend dotter, it's pretty cool!)
@@ -48,6 +49,8 @@ Or manually install all dependencies and use dotter deploy
 `wofi`
 `wlogout`
 
+## Doas
+OpenDoas is recommended. My zshrc breaks sudo, so you must use an alternative thing. It aliases sudo to `doasidisahdiluahwdoliuakjwshdfiopawufhaespofihjewd`, which will break sudo.
 Screenshots:
 ![Screenshot](screenshots/screenshot1.png)
 ![Screenshot](screenshots/screenshot2.png)
