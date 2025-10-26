@@ -1,5 +1,5 @@
 #!/bin/zsh
-walldir="$HOME/.config/hypr/wallpaper"
+walldir="$HOME/dots/hypr/wallpaper"
 read "?Which wallpaper?(or ls to list already imported) (You can enter a full path(tildes allowed) to import a new one) " wall
 wall="${wall/#\~/$HOME}"
 if [ "$wall" = "ls" ]; then
@@ -23,11 +23,13 @@ if [ -e "$wall" ]; then
 		exit 1
 	fi
 	magick "$wall" "$walldir/$shorthand.jpg"
+	(cd "$HOME/dots" && dotter deploy --force)
 	echo "New Wallpaper Detected! Previewing, press q to continue."
 	sleep 1
-	pqiv "$walldir/$shorthand.jpg"
 	read "?Would you like to switch or not(y/n)" confirm
 	if [ "$confirm" = "y" ]; then
+		exit 0
+	else
 		cp "$walldir/$shorthand.jpg" "$walldir/bg.jpg"
 	fi
 elif [ -f "$walldir/$wall.jpg" ]; then 
@@ -39,16 +41,16 @@ else
 	sleep 3
 	exit 1
 fi
-echo "Switching to the new wallpaper at .config/hypr/wallpaper/bg.jpg Note: Use magick to convert image formats!"
+echo "Switching to the new wallpaper at dots/hypr/wallpaper/bg.jpg Note: Use magick to convert image formats!"
 wal --cols16 -i "$walldir/bg.jpg"
-cp "$HOME/.cache/wal/colors-hyprland.conf" "$HOME/.config/hypr/"
-cp "$HOME/.cache/wal/colors-waybar.css" "$HOME/.config/waybar/colors.css"
-cp "$HOME/.cache/wal/colors-waybar.css" "$HOME/.config/wofi/colors.css"
-cp "$HOME/.cache/wal/colors-waybar.css" "$HOME/.config/wlogout/colors.css"
-cp "$HOME/.cache/wal/colors-kitty.conf" "$HOME/.config/kitty/colors.conf"
-cat "$HOME/.config/hypr/colors-hyprland.conf" "$HOME/.config/hypr/hyprtoolkitstat.conf" > "$HOME/temp"
-mv "$HOME/temp" "$HOME/.config/hypr/hyprtoolkit.conf"
-sed -i 's/1\.0/0\.7/g' "$HOME/.config/hypr/hyprtoolkit.conf"
+for target in waybar wofi wlogout; do
+    cp "$HOME/.cache/wal/colors-waybar.css" "$HOME/dots/$target/colors.css"
+done
+cp "$HOME/.cache/wal/colors-hyprland.conf" "$HOME/dots/hypr/"
+cp "$HOME/.cache/wal/colors-kitty.conf" "$HOME/dots/kitty/colors.conf"
+cat "$HOME/dots/hypr/colors-hyprland.conf" "$HOME/dots/hypr/hyprtoolkitstat.conf" > "$HOME/temp"
+mv "$HOME/temp" "$HOME/dots/hypr/hyprtoolkit.conf"
+sed -i 's/1\.0/0\.7/g' "$HOME/dots/hypr/hyprtoolkit.conf"
 sleep 0.1
 killall -SIGUSR2 waybar
 pywalfox update

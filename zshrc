@@ -16,6 +16,7 @@ fastfetch
 autoload -Uz compinit
 compinit
 export PATH=/home/ragef/.cargo/bin:$PATH
+export PATH=/home/ragef/.local/bin:$PATH
 alias sudo="doasidisahdiluahwdoliuakjwshdfiopawufhaespofihjewd"
 alias yay="paru"
 setopt interactivecomments

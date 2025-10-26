@@ -1,12 +1,30 @@
 {
-	"modules-left": ["custom/wofi"],
+	"position": "right",
+	"modules-left": ["custom/wofi", "pulseaudio", "network"],
 	"modules-center": ["hyprland/workspaces"],
 	"modules-right": ["clock"],
 	"clock": {
-		"format": " {:%H:%M}",
-		"timezone": "America/New_York",
-		"tooltip-format": "{:%d }{calendar}",
-		"format-alt": " {:%Y-%m-%d}",
+		"interval": 1,
+		"format": "{:%H\n%M}",
+		"tooltip-format": "<tt><small>{calendar}</small></tt>"
+	},
+	"pulseaudio/slider": {
+		"format": "",
+		"min": 0,
+		"max": 50,
+		"orientation": "horizontal"
+	},
+	"pulseaudio": {
+		"format": "{icon}",
+		"on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"format-icons": {
+			"default": [ "󰕿", "󰖀", "󰕾" ],
+			"default-muted": "󰝟",
+			"headphone": "󰋋",
+			"headphone-muted": "󰟎",
+			"headset": "󰋎",
+			"headset-muted": "󰋐"
+		},
 	},
 	"custom/wofi": {
 		"format": "",
@@ -16,6 +34,12 @@
 		"persistent-workspaces": {
 			"*": 5,
 		}
+	},
+	"network": {
+		"format": "󰈂",
+		"format-ethernet": "󰈀",
+		"format-wifi": "",
+		"format-disconnected": "󰈂",
 	},
 }
 
