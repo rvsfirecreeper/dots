@@ -3,7 +3,10 @@
 * {
 	border: none;
 	border-radius: 0px;
-	font-family: 'Lilex Nerd Font';
+	font-family: 'JetBrains Mono Nerd Font Propo';
+	/*
+	font-family: 'Lilex Nerd Font Propo';
+	 */
 	color: white;
 	font-size: 20px;
 	min-height: 0px;
@@ -14,20 +17,32 @@ window#waybar {
 }
 #custom-wofi {
 	background-color: alpha(@color3, 0.4);
-	margin: 10px 0px 10px 20px;
-	border-radius: 20px;
-	padding: 0px 15px 0px 10px;
+	margin: 10px 10px 0px 0px;
+	border-radius: 20px 20px 0px 0px;
+	/*Top left then Top Right then Bottom Right then Bottom Left*/
+	padding: 10px 10px 10px 10px
+	/*Top then Right ten Bottom then Left*/
 }
-#clock {
+#pulseaudio-slider {
 	background-color: alpha(@color3, 0.4);
-	margin: 10px 20px 10px 0px;
-	border-radius: 20px;
-	padding: 5px 15px;
+	margin: 10px 10px 20px 0px;
+	padding: 15px 0px 10px 0px;
+}
+#pulseaudio {
+	background-color: alpha(@color3, 0.4);
+	margin: 0px 10px 0px 0px;
+	padding: 0px 0px 10px 0px;
+}
+#network {
+	background-color: alpha(@color3, 0.4);
+	margin: 0px 10px 0px 0px;
+	border-radius: 0px 0px 20px 20px;
+	padding: 0px 0px 10px 0px;
 }
 #workspaces button {
 	font-size: 20px;
 	background-color: alpha(@color3, 0.4);
-	margin: 10px 0px 10px 0px;
+	margin: 0px 10px 0px 0px;
 	border-radius: 0px;
 	padding: 8px 8px;
 }
@@ -35,16 +50,22 @@ window#waybar {
 	background-color: alpha(@color3, 0.4);
 }
 #workspaces button:last-child {
-	border-radius: 0px 20px 20px 0px;
-	padding-right: 10px;
+	border-radius: 0px 0px 20px 20px;
+	padding-top: 10px;
 }
 #workspaces button:first-child {
-	border-radius: 20px 0px 0px 20px;
-	padding-left: 10px;
+	border-radius: 20px 20px 0px 0px;
+	padding-bottom: 10px;
 }
 #workspaces button.active {
-	background-color: alpha(@color4, 0.7);
+	background-color: alpha(@color4, 0.8);
 }
 #workspaces button.urgent {
 	background-color: alpha(@color3, 0.3);
+}
+#clock {
+	background-color: alpha(@color3, 0.4);
+	margin: 0px 10px 20px 0px;
+	border-radius: 20px;
+	padding: 8px 8px;
 }
