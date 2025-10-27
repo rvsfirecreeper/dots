@@ -24,7 +24,7 @@
 }
 {
     "label" : "shutdown",
-    "action" : "loginctl shutdown",
+    "action" : "loginctl poweroff",
     "text" : "Power Off",
     "keybind" : "p"
 }
