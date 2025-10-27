@@ -17,8 +17,10 @@ autoload -Uz compinit
 compinit
 export PATH=/home/ragef/.cargo/bin:$PATH
 export PATH=/home/ragef/.local/bin:$PATH
+export PATH=$PATH:$HOME/go/bin
 alias sudo="doasidisahdiluahwdoliuakjwshdfiopawufhaespofihjewd"
 alias yay="paru"
+alias ncdu="ncdu --exclude-kernfs"
 setopt interactivecomments
 eval `ssh-agent`
 # End of lines added by compinstall
