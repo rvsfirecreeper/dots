@@ -1,5 +1,7 @@
 #!/bin/zsh
-walldir="$HOME/dots/hypr/wallpaper"
+abspath="$(readlink -f "$HOME/.config/hypr/hyprland.conf")"
+dotsroot="$(cd "$(dirname "$abspath")" && git rev-parse --show-toplevel)"
+walldir="$dotsroot/hypr/wallpaper"
 read "?Which wallpaper?(or ls to list already imported) (You can enter a full path(tildes allowed) to import a new one) " wall
 wall="${wall/#\~/$HOME}"
 if [ "$wall" = "ls" ]; then
@@ -23,7 +25,7 @@ if [ -e "$wall" ]; then
 		exit 1
 	fi
 	magick "$wall" "$walldir/$shorthand.jpg"
-	(cd "$HOME/dots" && dotter deploy --force)
+	(cd "$dotsroot" && dotter deploy --force)
 	echo "New Wallpaper Detected! Previewing, press q to continue."
 	sleep 1
 	read "?Would you like to switch or not(y/n)" confirm
@@ -44,13 +46,13 @@ fi
 echo "Switching to the new wallpaper at dots/hypr/wallpaper/bg.jpg Note: Use magick to convert image formats!"
 wal --cols16 -i "$walldir/bg.jpg"
 for target in waybar wofi wlogout; do
-    cp "$HOME/.cache/wal/colors-waybar.css" "$HOME/dots/$target/colors.css"
+    cp "$HOME/.cache/wal/colors-waybar.css" "$dotsroot/$target/colors.css"
 done
-cp "$HOME/.cache/wal/colors-hyprland.conf" "$HOME/dots/hypr/"
-cp "$HOME/.cache/wal/colors-kitty.conf" "$HOME/dots/kitty/colors.conf"
-cat "$HOME/dots/hypr/colors-hyprland.conf" "$HOME/dots/hypr/hyprtoolkitstat.conf" > "$HOME/temp"
-mv "$HOME/temp" "$HOME/dots/hypr/hyprtoolkit.conf"
-sed -i 's/1\.0/0\.7/g' "$HOME/dots/hypr/hyprtoolkit.conf"
+cp "$HOME/.cache/wal/colors-hyprland.conf" "$dotsroot/hypr/"
+cp "$HOME/.cache/wal/colors-kitty.conf" "$dotsroot/kitty/colors.conf"
+cat "$dotsroot/hypr/colors-hyprland.conf" "$dotsroot/hypr/hyprtoolkitstat.conf" > "$dotsroot/hypr/hyprtoolkit.conf"
+mv "$HOME/temp" "$dotsroot/hypr/hyprtoolkit.conf"
+sed -i 's/1\.0/0\.7/g' "$dotsroot/hypr/hyprtoolkit.conf"
 sleep 0.1
 killall -SIGUSR2 waybar
 pywalfox update
