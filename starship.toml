@@ -2,6 +2,7 @@ format = """
 $username\
 $directory\
 $git_branch\
+$git_commit\
 $git_status
 $os \
 $character
@@ -57,11 +58,13 @@ format = '[$symbol($version)]($style)'
 [git_branch]
 symbol = "  "
 format = '[$symbol($branch) ($version)]($style)'
+ignore_branches = ['master', 'main']
 
 [git_commit]
 tag_symbol = '  '
 format = '[$symbol($version)]($style)'
-
+[git_status]
+format = '[ $all_status $ahead_behind]($style)'
 [aws]
 symbol = "   "
 format = '[$symbol($version)]($style)'
