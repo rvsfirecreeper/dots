@@ -14,6 +14,8 @@ kitty = { target = "~/.config/kitty", type = "symbolic"  }
 wlogout = { target = "~/.config/wlogout",  type = "symbolic" }
 lf = { target = "~/.config/lf" , type = "symbolic" }
 "starship.toml" = "~/.config/starship.toml"
+profile = { target = "~/.profile", type="symbolic" }
+alacritty = { target = "~/.config/alacritty", type="symbolic" }
 [default.variables]
 
 [settings]
