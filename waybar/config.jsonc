@@ -18,6 +18,8 @@
 		"format": "{icon}",
 		"on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
 		"format-icons": {
+			"alsa_output.usb-Apple_Inc._Beats_Studio_Pro_GD7MXAP0266W-00.analog-stereo": "󰋋",
+			"alsa_output.usb-Apple_Inc._Beats_Studio_Pro_GD7MXAP0266W-00.analog-stereo-muted": "󰟎",
 			"default": [ "󰕿", "󰖀", "󰕾" ],
 			"default-muted": "󰝟",
 			"headphone": "󰋋",
