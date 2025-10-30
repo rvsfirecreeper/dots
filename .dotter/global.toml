@@ -16,6 +16,7 @@ lf = { target = "~/.config/lf" , type = "symbolic" }
 "starship.toml" = "~/.config/starship.toml"
 profile = { target = "~/.profile", type="symbolic" }
 alacritty = { target = "~/.config/alacritty", type="symbolic" }
+wal = { target = "~/.config/wal", type="symbolic" }
 [default.variables]
 
 [settings]
