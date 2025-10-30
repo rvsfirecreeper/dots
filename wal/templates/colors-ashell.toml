@@ -1,0 +1,7 @@
+[colors]
+background = "{background}"
+primary = "{color6}"
+secondary = "{color14}"
+success = "{color5}"
+danger_color = "{color7}"
+text_color = "{foreground}"
