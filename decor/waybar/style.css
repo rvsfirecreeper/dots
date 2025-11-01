@@ -1,5 +1,4 @@
 @import "colors.css";
-
 * {
 	border: none;
 	border-radius: 0px;
@@ -20,7 +19,7 @@ window#waybar {
 	margin: 10px 10px 0px 0px;
 	border-radius: 20px 20px 0px 0px;
 	/*Top left then Top Right then Bottom Right then Bottom Left*/
-	padding: 10px 10px 10px 10px
+	padding: 10px 15px 10px 15px
 	/*Top then Right ten Bottom then Left*/
 }
 #pulseaudio-slider {
@@ -58,7 +57,7 @@ window#waybar {
 	padding-bottom: 10px;
 }
 #workspaces button.active {
-	background-color: alpha(@color4, 0.8);
+	background-color: alpha(@color4, 0.6);
 }
 #workspaces button.urgent {
 	background-color: alpha(@color3, 0.3);
