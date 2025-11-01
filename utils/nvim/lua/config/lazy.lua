@@ -23,6 +23,7 @@ vim.g.maplocalleader = "\\"
 
 -- Setup lazy.nvim
 require("lazy").setup({
+
   spec = {
     -- import your plugins
     { import = "plugins" },
@@ -32,4 +33,10 @@ require("lazy").setup({
   install = { colorscheme = { "habamax" } },
   -- automatically check for plugin updates
   checker = { enabled = true },
-})
+  {
+	  "nvim-treesitter/nvim-treesitter",
+	  branch = 'master',
+	  lazy = false,
+	  build = ":TSUpdate"},
+  }
+)

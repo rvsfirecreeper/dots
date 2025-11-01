@@ -5,6 +5,7 @@ require("config.lazy")
 -- optionally enable 24-bit colour
 
 -- empty setup using defaults
+
 require("nvim-tree").setup()
 
 -- OR setup with some options
@@ -36,5 +37,8 @@ disable_arrow_keys('i') -- insert
 disable_arrow_keys('v') -- visual
 local pywal16 = require('pywal16')
 vim.opt.fillchars = { eob = ' ' }
+vim.filetype.add({
+  pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
+})
 -- add option map_cr
 pywal16.setup()
