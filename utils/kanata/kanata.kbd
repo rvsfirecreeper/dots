@@ -1,0 +1,10 @@
+(defcfg)
+(defsrc
+	caps
+)
+(defalias
+	escsuper (tap-hold 100 100 esc lmet)
+)
+(deflayer base
+	@escsuper
+)

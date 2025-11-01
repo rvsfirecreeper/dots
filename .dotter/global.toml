@@ -4,19 +4,21 @@
 depends = []
 
 [default.files]
-zshrc = { target = "~/.zshrc", type = "symbolic" }
-bashrc = { target = "~/.bashrc", type = "symbolic" }
-hypr = { target = "~/.config/hypr", type = "symbolic" }
-waybar = { target = "~/.config/waybar", type = "symbolic" }
-nvim = { target = "~/.config/nvim", type = "symbolic" }
-wofi = { target = "~/.config/wofi", type = "symbolic" }
-kitty = { target = "~/.config/kitty", type = "symbolic"  }
-wlogout = { target = "~/.config/wlogout",  type = "symbolic" }
-lf = { target = "~/.config/lf" , type = "symbolic" }
-"starship.toml" = "~/.config/starship.toml"
-profile = { target = "~/.profile", type="symbolic" }
-alacritty = { target = "~/.config/alacritty", type="symbolic" }
-wal = { target = "~/.config/wal", type="symbolic" }
+"rc/zshrc" = { target = "~/.zshrc", type = "symbolic" }
+"rc/bashrc" = { target = "~/.bashrc", type = "symbolic" }
+"decor/hypr" = { target = "~/.config/hypr", type = "symbolic" }
+"decor/waybar" = { target = "~/.config/waybar", type = "symbolic" }
+"utils/nvim" = { target = "~/.config/nvim", type = "symbolic" }
+"utils/wofi" = { target = "~/.config/wofi", type = "symbolic" }
+"utils/kitty" = { target = "~/.config/kitty", type = "symbolic"  }
+"decor/wlogout" = { target = "~/.config/wlogout",  type = "symbolic" }
+"utils/lf" = { target = "~/.config/lf" , type = "symbolic" }
+"decor/starship.toml" = "~/.config/starship.toml"
+"rc/profile" = { target = "~/.profile", type="symbolic" }
+"utils/alacritty" = { target = "~/.config/alacritty", type="symbolic" }
+"decor/wal" = { target = "~/.config/wal", type="symbolic" }
+"decor/wallust" = { target = "~/.config/wallust", type="symbolic" }
+"utils/kanata" = { target = "~/.config/kanata", type="symbolic" }
 [default.variables]
 
 [settings]
