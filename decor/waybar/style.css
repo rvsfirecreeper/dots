@@ -5,38 +5,38 @@
 	font-family: 'JetBrains Mono Nerd Font Propo';
 	/*
 	font-family: 'Lilex Nerd Font Propo';
+	font-family: 'JetBrains Mono Nerd Font';
 	 */
 	color: white;
 	font-size: 20px;
 	min-height: 0px;
 	background-color: transparent;
 }
+.module {
+	margin-bottom: 5px;
+	background-color: transparent;
+}
+.modules-left {
+	border-radius: 20px;
+	/*Top left then Top Right then Bottom Right then Bottom Left*/
+	background-color: alpha(@color3, 0.4);
+	margin: 10px 10px 0px 0px;
+	padding: 10px 5px 10px 6px
+	/*Top then Right ten Bottom then Left*/
+}
 window#waybar {
 	all: unset
 }
 #custom-wofi {
-	background-color: alpha(@color3, 0.4);
-	margin: 10px 10px 0px 0px;
-	border-radius: 20px 20px 0px 0px;
+	/* ( background-color: alpha(@color3, 0.4); */
 	/*Top left then Top Right then Bottom Right then Bottom Left*/
-	padding: 10px 15px 10px 15px
 	/*Top then Right ten Bottom then Left*/
-}
-#pulseaudio-slider {
-	background-color: alpha(@color3, 0.4);
-	margin: 10px 10px 20px 0px;
-	padding: 15px 0px 10px 0px;
-}
-#pulseaudio {
-	background-color: alpha(@color3, 0.4);
-	margin: 0px 10px 0px 0px;
-	padding: 0px 0px 10px 0px;
+	padding-left: 0px;
+	padding-right: 0px
 }
 #network {
-	background-color: alpha(@color3, 0.4);
-	margin: 0px 10px 0px 0px;
-	border-radius: 0px 0px 20px 20px;
-	padding: 0px 0px 10px 0px;
+	padding-right: 0px;
+	padding-left: 0px;
 }
 #workspaces button {
 	font-size: 20px;
