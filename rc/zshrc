@@ -12,12 +12,14 @@ bindkey -v
 zstyle :compinstall filename '/home/rajs/.zshrc'
 export EDITOR='nvim'
 export VISUAL='nvim'
+complete -cf doas
 fastfetch
 autoload -Uz compinit
 compinit
 export PATH=/home/ragef/.cargo/bin:$PATH
 export PATH=/home/ragef/.local/bin:$PATH
 export PATH=$PATH:$HOME/go/bin
+export GPG_TTY=$(tty)
 alias sudo="doasidisahdiluahwdoliuakjwshdfiopawufhaespofihjewd"
 alias yay="paru"
 alias ncdu="ncdu --exclude-kernfs"
