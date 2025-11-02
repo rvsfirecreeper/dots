@@ -19,6 +19,7 @@ depends = []
 "decor/wal" = { target = "~/.config/wal", type="symbolic" }
 "decor/wallust" = { target = "~/.config/wallust", type="symbolic" }
 "utils/kanata" = { target = "~/.config/kanata", type="symbolic" }
+"wallpaper" = { target = "~/.config/hypr/wallpaper", type="symbolic" }
 [default.variables]
 
 [settings]
