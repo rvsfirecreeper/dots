@@ -1,11 +1,11 @@
-#!/bin/zsh
+#!/bin/zsh 
 abspath="$(readlink -f "$HOME/.config/hypr/hyprland.conf")"
 dotsroot="$(cd "$(dirname "$abspath")" && git rev-parse --show-toplevel)"
-walldir="$dotsroot/hypr/wallpaper"
+walldir="$dotsroot/wallpaper"
 read "?Which wallpaper?(or ls to list already imported) (You can enter a full path(tildes allowed) to import a new one) " wall
 wall="${wall/#\~/$HOME}"
 if [ "$wall" = "ls" ]; then
-	ls "$walldir"
+	ls "$walldir" | sed 's/.jpg//g' | sed 's/bg//g'
 	sleep 2
 	read "?Which wallpaper, now that you have all the options? " wall
 	wall="${wall/#\~/$HOME}"
@@ -39,7 +39,7 @@ elif [ -f "$walldir/$wall.jpg" ]; then
 else
 	echo "Exiting, no file found. Did you use the shorthand you set when importing? "
 	echo "Here are the current wallpapers."
-	ls "$walldir"
+	ls "$walldir" | sed 's/.jpg//g' | sed 's/bg//g'
 	sleep 3
 	exit 1
 fi
@@ -48,11 +48,12 @@ wal --cols16 -i "$walldir/bg.jpg"
 for target in waybar wofi wlogout; do
     cp "$HOME/.cache/wal/colors-waybar.css" "$dotsroot/$target/colors.css"
 done
-cp "$HOME/.cache/wal/colors-hyprland.conf" "$dotsroot/hypr/"
-cp "$HOME/.cache/wal/colors-kitty.conf" "$dotsroot/kitty/colors.conf"
-cat "$dotsroot/hypr/colors-hyprland.conf" "$dotsroot/hypr/hyprtoolkitstat.conf" > "$dotsroot/hypr/hyprtoolkit.conf"
-mv "$HOME/temp" "$dotsroot/hypr/hyprtoolkit.conf"
-sed -i 's/1\.0/0\.7/g' "$dotsroot/hypr/hyprtoolkit.conf"
+cp "$HOME/.cache/wal/colors-hyprland.conf" "$dotsroot/decor/hypr/"
+cp "$HOME/.cache/wal/colors-kitty.conf" "$dotsroot/utils/kitty/colors.conf"
+cp "$HOME/.cache/wal/colors-alacritty.toml" "$dotsroot/utils/alacritty/colors.toml"
+cat "$dotsroot/decor/hypr/colors-hyprland.conf" "$dotsroot/decor/hypr/hyprtoolkitstat.conf" > "$dotsroot/hypr/hyprtoolkit.conf"
+mv "$HOME/temp" "$dotsroot/decor/hypr/hyprtoolkit.conf"
+sed -i 's/1\.0/0\.7/g' "$dotsroot/decor/hypr/hyprtoolkit.conf"
 sleep 0.1
 killall -SIGUSR2 waybar
 pywalfox update
