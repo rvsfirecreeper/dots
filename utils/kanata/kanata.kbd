@@ -1,10 +1,14 @@
 (defcfg)
 (defsrc
-	caps
+	 caps rsft lsft
 )
 (defalias
-	escsuper (tap-hold 100 100 esc lmet)
+	escsuper (tap-hold 1000 125 esc lmet)
+	tildectrl (tap-hold 1000 125 S-grv lctl)
+	backshift (tap-hold 1000 125 bspc lsft)
 )
 (deflayer base
 	@escsuper
+	@tildectrl
+	@backshift
 )
