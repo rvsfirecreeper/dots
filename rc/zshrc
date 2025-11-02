@@ -12,8 +12,6 @@ bindkey -v
 zstyle :compinstall filename '/home/rajs/.zshrc'
 export EDITOR='nvim'
 export VISUAL='nvim'
-complete -cf doas
-fastfetch
 autoload -Uz compinit
 compinit
 export PATH=/home/ragef/.cargo/bin:$PATH
@@ -21,9 +19,14 @@ export PATH=/home/ragef/.local/bin:$PATH
 export PATH=$PATH:$HOME/go/bin
 export GPG_TTY=$(tty)
 alias sudo="doasidisahdiluahwdoliuakjwshdfiopawufhaespofihjewd"
-alias yay="paru"
+alias "yay"="paru"
 alias ncdu="ncdu --exclude-kernfs"
+if [ ! -z "$PS1" ]; then
+	for util in $(coreutils --list); do
+		alias "$util"="coreutils $util"
+	done
+fi
 setopt interactivecomments
 eval `ssh-agent`
-# End of lines added by compinstall
+fastfetch
 eval "$(starship init zsh)"
