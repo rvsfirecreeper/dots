@@ -45,11 +45,12 @@ error_symbol = "[✗](bold purple)"
 disabled = false
 
 [directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = "󰝚 "
-"Pictures" = " "
-"Scripts" = "󰲋 "
+"documents" = "󰈙 "
+"downloads" = " "
+"music" = "󰝚 "
+"pictures" = " "
+"scripts" = "󰲋 "
+".local/bin" = "󰲋 "
 
 [fossil_branch]
 symbol = "  "
