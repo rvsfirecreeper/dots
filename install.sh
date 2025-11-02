@@ -1,7 +1,7 @@
 #!/bin/bash
 # Just making sure paru is installed
 cd "$HOME"
-sudo pacman -S --needed base-devel
+doas pacman -S --needed base-devel
 git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
@@ -10,7 +10,9 @@ cd ..
 paru
 paru -S paru-bin
 #install all deps
-paru -S kitty starship zsh dotter-rs-bin hypridle hyprland hyprlock hyprpaper hyprpolkitagent hyprsunset graphicsmagick python-pywal16 python-pywalfox pqiv neovim paru swaync waybar wofi wlogout sudo 
+paru -S kitty starship zsh dotter-rs-bin hypridle hyprland hyprlock hyprpaper hyprpolkitagent hyprsunset graphicsmagick python-pywal16 python-pywalfox pqiv neovim paru swaync waybar wofi wlogout doas rust
+cargo install coreutils
+~/.cargo/bin/coreutils
 git clone https://gitlab.com/coolrustcoderguy/dots.git
 cd dots
 chsh -s zsh

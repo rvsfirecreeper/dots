@@ -20,6 +20,8 @@ depends = []
 "decor/wallust" = { target = "~/.config/wallust", type="symbolic" }
 "utils/kanata" = { target = "~/.config/kanata", type="symbolic" }
 "wallpaper" = { target = "~/.config/hypr/wallpaper", type="symbolic" }
+"utils/makepkg.conf" = { target = "~/makepkg.conf", type="symbolic" }
+"utils/paru" = { target = "~/.config/paru", type="symbolic" }
 [default.variables]
 
 [settings]
