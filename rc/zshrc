@@ -27,6 +27,6 @@ if [ ! -z "$PS1" ]; then
 	done
 fi
 setopt interactivecomments
-eval `ssh-agent`
+eval `ssh-agent` > /dev/null 2>&1
 fastfetch
 eval "$(starship init zsh)"
