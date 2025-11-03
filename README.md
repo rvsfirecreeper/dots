@@ -19,7 +19,9 @@ Modify monitors.conf to suit your own monitor. I have a 165hz 1440p, but that's 
 # Install
 You can use `curl -sS https://gitlab.com/coolrustcoderguy/dots/-/raw/main/install.sh | bash` for Artix, Arch, etc.
 Or manually install all dependencies and use dotter deploy
-# Dependencies:
+## Note for Artix users:
+I'm too lazy to check but you probably need the extra repo enabled at minimum
+# Dependencies(This list is outdated, just chck install.sh for up-to-date deps):
 ## Shells/Terminal: 
 `bash` 
 `kitty`
