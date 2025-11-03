@@ -14,6 +14,7 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 autoload -Uz compinit
 compinit
+compdef '_normal doas command' doas
 export PATH=/home/ragef/.cargo/bin:$PATH
 export PATH=/home/ragef/.local/bin:$PATH
 export PATH=$PATH:$HOME/go/bin
