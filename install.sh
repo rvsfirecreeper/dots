@@ -10,7 +10,8 @@ cd ..
 paru
 paru -S paru-bin
 #install all deps
-paru -S kitty starship zsh dotter-rs-bin hypridle hyprland hyprlock hyprpaper hyprpolkitagent hyprsunset graphicsmagick python-pywal16 python-pywalfox pqiv neovim paru swaync waybar wofi wlogout doas rust
+paru -S kitty starship zsh dotter-rs-bin hypridle hyprland hyprlock hyprpaper hyprpolkitagent hyprsunset graphicsmagick python-pywal16 python-pywalfox pqiv neovim paru swaync waybar wofi wlogout doas rust papirus-icon-theme
+gsettings set org.gnome.desktop.interface icon-theme "Papirus"
 cargo install coreutils
 git clone https://gitlab.com/coolrustcoderguy/dots.git
 cd dots
