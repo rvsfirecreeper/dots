@@ -34,6 +34,7 @@ depends = []
 "utils/nvim" = { target = "~/.config/nvim", type = "symbolic" }
 "utils/paru" = { target = "~/.config/paru", type="symbolic" }
 "utils/wofi" = { target = "~/.config/wofi", type = "symbolic" }
+"utils/nushell" = { target = "~/.config/nushell", type = "symbolic" }
 [default.variables]
 
 [settings]
