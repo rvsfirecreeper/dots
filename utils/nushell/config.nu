@@ -22,7 +22,10 @@ $env.config.buffer_editor = 'nvim'
 if (tty | str contains "/dev/tty") {
 	runsvdir -P ~/.service &
 }
-$env.path = ($env.Path | prepend '~/.cargo/bin')
+use std/util "path add"
+path add "~/.local/bin"
+path add ($env.CARGO_HOME | path join "bin")
 fastfetch
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+cd ~
