@@ -5,7 +5,6 @@ require("config.lazy")
 -- optionally enable 24-bit colour
 
 -- empty setup using defaults
-
 require("nvim-tree").setup()
 
 -- OR setup with some options
