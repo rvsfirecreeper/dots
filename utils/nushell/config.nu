@@ -17,5 +17,12 @@
 # options using:
 #     config nu --doc | nu-highlight | less -R
 $env.config.show_banner = false
+$env.NO_AT_BRIDGE = 1
+$env.config.buffer_editor = 'nvim'
+if (tty | str contains "/dev/tty") {
+	runsvdir -P ~/.service &
+}
+$env.path = ($env.Path | prepend '~/.cargo/bin')
+fastfetch
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
