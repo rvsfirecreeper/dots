@@ -7,5 +7,5 @@ padding = { x = 5, y = 5 }
 builtin_box_drawing = false
 size = 12.0
 offset = { x = 0, y = 0 }
-normal = { family = "JetBrainsMono Nerd Font Propo", style = "SemiBold" }
+normal = { family = "JetBrainsMono Nerd Font", style = "SemiBold" }
 
