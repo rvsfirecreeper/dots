@@ -1,11 +1,13 @@
 #!/bin/bash
+set -euo pipefail
 # Just making sure paru is installed
-cd "$HOME"
+cd "$HOME" || exit
 doas pacman -S --needed base-devel
 git clone https://aur.archlinux.org/paru.git
-cd paru
-makepkg -si
-cd ..
+eval "$(
+  cd paru || exit
+  makepkg -si
+)"
 # Updating the system because it needs to be updated
 paru
 paru -S paru-bin
@@ -14,9 +16,10 @@ paru -S kitty starship zsh dotter-rs-bin hypridle hyprland hyprlock hyprpaper hy
 gsettings set org.gnome.desktop.interface icon-theme "Papirus"
 cargo install coreutils
 git clone https://gitlab.com/coolrustcoderguy/dots.git
-cd dots
+cd dots || exit
 chsh -s zsh
 dotter deploy
 echo "Deployed. Running fullwal to start you off."
-cd "$HOME"
-./.config/hypr/scripts/fullwal.sh
+./decor/hypr/scripts/fullwal.sh
+dotter deploy --force
+echo "Done!"
