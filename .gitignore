@@ -1,2 +1,9 @@
 .dotter/cache
 .dotter/cache.toml
+wallpaper/bg.jpg
+utils/wofi/colors.css
+decor/waybar/colors.css
+decor/wlogout/colors.css
+decor/hypr/colors-hyprland.conf
+utils/kitty/colors.conf
+utils/alacritty/colors.toml
