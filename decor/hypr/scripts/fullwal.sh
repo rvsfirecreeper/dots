@@ -1,8 +1,8 @@
-#!/bin/zsh 
+#!/bin/bash 
 abspath="$(readlink -f "$HOME/.config/hypr/hyprland.conf")"
 dotsroot="$(cd "$(dirname "$abspath")" && git rev-parse --show-toplevel)"
 walldir="$dotsroot/wallpaper"
-read "?Which wallpaper?(or ls to list already imported) (You can enter a full path(tildes allowed) to import a new one) " wall
+read -p "Which wallpaper?(or ls to list already imported) (You can enter a full path(tildes allowed) to import a new one) " wall
 wall="${wall/#\~/$HOME}"
 if [ "$wall" = "ls" ]; then
 	ls "$walldir" | sed 's/.jpg//g' | sed 's/bg//g'
@@ -13,7 +13,7 @@ fi
 if [ -e "$wall" ]; then
 	echo "New Wallpaper Detected! Previewing, press q to continue."
 	pqiv "$wall"
-	read "?What would you like the shorthand to be? Do not include file extensions. " shorthand
+	read -p "What would you like the shorthand to be? Do not include file extensions. " shorthand
 	if [ -f "$walldir/$shorthand.jpg" ]; then
 		echo "Exiting, file already exists."
 		sleep 2
@@ -28,7 +28,7 @@ if [ -e "$wall" ]; then
 	(cd "$dotsroot" && dotter deploy --force)
 	echo "New Wallpaper Detected! Previewing, press q to continue."
 	sleep 1
-	read "?Would you like to switch or not(y/n)" confirm
+	read -p "Would you like to switch or not(y/n)" confirm
 	if [ "$confirm" = "y" ]; then
 		exit 0
 	else
@@ -45,7 +45,7 @@ else
 fi
 echo "Switching to the new wallpaper at dots/hypr/wallpaper/bg.jpg Note: Use magick to convert image formats!"
 wal --cols16 -i "$walldir/bg.jpg"
-for target in waybar wofi wlogout; do
+for target in "decor/waybar" "utils/wofi" "decor/wlogout"; do
     cp "$HOME/.cache/wal/colors-waybar.css" "$dotsroot/$target/colors.css"
 done
 cp "$HOME/.cache/wal/colors-hyprland.conf" "$dotsroot/decor/hypr/"
