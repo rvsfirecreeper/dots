@@ -2,18 +2,18 @@
 abspath="$(readlink -f "$HOME/.config/hypr/hyprland.conf")"
 dotsroot="$(cd "$(dirname "$abspath")" && git rev-parse --show-toplevel)"
 walldir="$dotsroot/wallpaper"
-read -p "Which wallpaper?(or ls to list already imported) (You can enter a full path(tildes allowed) to import a new one) " wall
+read -rp "Which wallpaper?(or ls to list already imported) (You can enter a full path(tildes allowed) to import a new one) " wall
 wall="${wall/#\~/$HOME}"
 if [ "$wall" = "ls" ]; then
   ls "$walldir" | sed 's/.jpg//g' | sed 's/bg//g'
   sleep 2
-  read "?Which wallpaper, now that you have all the options? " wall
+  read -rp "Which wallpaper, now that you have all the options? " wall
   wall="${wall/#\~/$HOME}"
 fi
 if [ -e "$wall" ]; then
   echo "New Wallpaper Detected! Previewing, press q to continue."
   pqiv "$wall"
-  read -p "What would you like the shorthand to be? Do not include file extensions. " shorthand
+  read -rp "What would you like the shorthand to be? Do not include file extensions. " shorthand
   if [ -f "$walldir/$shorthand.jpg" ]; then
     echo "Exiting, file already exists."
     sleep 2
@@ -28,7 +28,7 @@ if [ -e "$wall" ]; then
   (cd "$dotsroot" && dotter deploy --force)
   echo "New Wallpaper Detected! Previewing, press q to continue."
   sleep 1
-  read -p "Would you like to switch or not(y/n)" confirm
+  read -rp "Would you like to switch or not(y/n)" confirm
   if [ "$confirm" = "y" ]; then
     cp "$walldir/$shorthand.jpg" "$walldir/bg.jpg"
   else
