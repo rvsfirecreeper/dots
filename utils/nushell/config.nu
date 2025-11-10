@@ -53,4 +53,7 @@ $env.config.edit_mode = 'vi'
 sleep 0.1sec
 fastfetch
 mkdir ($nu.data-dir | path join "vendor/autoload")
+zoxide init nushell | save -f ~/.zoxide.nu
+source ~/.zoxide.nu
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+
