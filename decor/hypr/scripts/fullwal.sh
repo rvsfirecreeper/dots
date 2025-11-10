@@ -30,9 +30,9 @@ if [ -e "$wall" ]; then
   sleep 1
   read -p "Would you like to switch or not(y/n)" confirm
   if [ "$confirm" = "y" ]; then
-    exit 0
-  else
     cp "$walldir/$shorthand.jpg" "$walldir/bg.jpg"
+  else
+    exit 0
   fi
 elif [ -f "$walldir/$wall.jpg" ]; then
   cp "$walldir/$wall.jpg" "$walldir/bg.jpg"
