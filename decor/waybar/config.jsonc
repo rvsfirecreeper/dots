@@ -1,60 +1,71 @@
 {
-	"position": "right",
-	"modules-left": ["custom/wofi", "pulseaudio", "network"],
-	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["clock"],
-	"clock": {
-		"interval": 1,
-		"format": "{:%H\n%M}",
-		"tooltip-format": "<tt><small>{calendar}</small></tt>"
-	},
-	"pulseaudio/slider": {
-		"format": "",
-		"min": 0,
-		"max": 50,
-		"orientation": "horizontal"
-	},
-	"pulseaudio": {
-		"format": "{icon}",
-		"on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-		"format-icons": {
-			"alsa_output.usb-Apple_Inc._Beats_Studio_Pro_GD7MXAP0266W-00.analog-stereo": "󰋋",
-			"alsa_output.usb-Apple_Inc._Beats_Studio_Pro_GD7MXAP0266W-00.analog-stereo-muted": "󰟎",
-			"default": [ "󰕿", "󰖀", "󰕾" ],
-			"default-muted": "󰝟",
-			"headphone": "󰋋",
-			"headphone-muted": "󰟎",
-			"headset": "󰋎",
-			"headset-muted": "󰋐"
-		},
-	},
-	"mpris": {
-		"format": "TEST {player_icon} {dynamic}",
-		"format-paused": "{status_icon} <i>{dynamic}</i>",
-		"dynamic-len": 4,
-		"player-icons": {
-			"default": "▶",
-			"mpv": "🎵",
-		},
-		"status-icons": {
-			"paused": "⏸"
-		},
-	// "ignored-players": ["firefox"]
-	},
-	"custom/wofi": {
-		"format": "",
-		"on-click": "wofi --show drun -n"
-	},
-	"hyprland/workspaces": {
-		"persistent-workspaces": {
-			"*": 5,
-		}
-	},
-	"network": {
-		"format": "󰈂",
-		"format-ethernet": "󰈀",
-		"format-wifi": "",
-		"format-disconnected": "󰈂",
-	},
+  "position": "right",
+  "modules-left": [
+    "custom/wofi",
+    "pulseaudio",
+    "network"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "clock"
+  ],
+  "clock": {
+    "interval": 1,
+    "format": "{:%H\n%M}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>"
+  },
+  "pulseaudio/slider": {
+    "format": "",
+    "min": 0,
+    "max": 50,
+    "orientation": "horizontal"
+  },
+  "pulseaudio": {
+    "format": "{icon}",
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "format-icons": {
+      "alsa_output.usb-Apple_Inc._Beats_Studio_Pro_GD7MXAP0266W-00.analog-stereo": "󰋋",
+      "alsa_output.usb-Apple_Inc._Beats_Studio_Pro_GD7MXAP0266W-00.analog-stereo-muted": "󰟎",
+      "default": [
+        "󰕿",
+        "󰖀",
+        "󰕾"
+      ],
+      "default-muted": "󰝟",
+      "headphone": "󰋋",
+      "headphone-muted": "󰟎",
+      "headset": "󰋎",
+      "headset-muted": "󰋐"
+    },
+  },
+  "mpris": {
+    "format": "TEST {player_icon} {dynamic}",
+    "format-paused": "{status_icon} <i>{dynamic}</i>",
+    "dynamic-len": 4,
+    "player-icons": {
+      "default": "▶",
+      "mpv": "🎵",
+    },
+    "status-icons": {
+      "paused": "⏸"
+    },
+    // "ignored-players": ["firefox"]
+  },
+  "custom/wofi": {
+    "format": "",
+    "on-click": "wofi --show drun -n"
+  },
+  "hyprland/workspaces": {
+    "persistent-workspaces": {
+      "*": 5,
+    }
+  },
+  "network": {
+    "format": "󰈂",
+    "format-ethernet": "󰈀",
+    "format-wifi": "󰖩",
+    "format-disconnected": "󰈂",
+  },
 }
-
