@@ -19,7 +19,7 @@
 $env.config.show_banner = false
 $env.NO_AT_BRIDGE = 1
 $env.config.buffer_editor = 'nvim'
-if (tty | str contains "/dev/tty") {
+if (tty | str contains "/dev/tty1") {
 	runsvdir -P ~/.service &
 }
 use std/util "path add"
