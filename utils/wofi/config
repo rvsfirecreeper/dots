@@ -1,11 +1,13 @@
-[config]
 allow_images=true
 width=500
 show=drun
-prompt=Search
+prompt=Speak the app. Big brother is watching.
+xoffset=300
+normal_window = true
 height=400
-term=kitty
+term=alacritty
 hide_scroll=true
+exec_search=true
 print_command=true
 insensitive=true
 columns=1
