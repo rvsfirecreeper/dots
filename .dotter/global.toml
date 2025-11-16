@@ -8,31 +8,32 @@ depends = []
 # Rcs/profile
 
 "rc/bashrc" = { target = "~/.bashrc", type = "symbolic" }
-"rc/profile" = { target = "~/.profile", type="symbolic" }
+"rc/profile" = { target = "~/.profile", type = "symbolic" }
 "rc/zshrc" = { target = "~/.zshrc", type = "symbolic" }
 
 # Decoration
 
 # I Had a Hrd time placing hypr but i Decided its more decoration. If you want utility use Sway.
 
-"decor/fastfetch" = { target = "~/.config/fastfetch", type="symbolic" }
+"decor/fastfetch" = { target = "~/.config/fastfetch", type = "symbolic" }
 "decor/hypr" = { target = "~/.config/hypr", type = "symbolic" }
 "decor/starship.toml" = "~/.config/starship.toml"
-"decor/wal" = { target = "~/.config/wal", type="symbolic" }
-"wallpaper" = { target = "~/.config/hypr/wallpaper", type="symbolic" }
-"decor/wallust" = { target = "~/.config/wallust", type="symbolic" }
+"decor/wal" = { target = "~/.config/wal", type = "symbolic" }
+"wallpaper" = { target = "~/.config/hypr/wallpaper", type = "symbolic" }
+"decor/wallust" = { target = "~/.config/wallust", type = "symbolic" }
 "decor/waybar" = { target = "~/.config/waybar", type = "symbolic" }
-"decor/wlogout" = { target = "~/.config/wlogout",  type = "symbolic" }
+"decor/wlogout" = { target = "~/.config/wlogout", type = "symbolic" }
 
 # Functional Utilities
 
-"utils/alacritty" = { target = "~/.config/alacritty", type="symbolic" }
-"utils/kanata" = { target = "~/.config/kanata", type="symbolic" }
-"utils/kitty" = { target = "~/.config/kitty", type = "symbolic"  }
-"utils/lf" = { target = "~/.config/lf" , type = "symbolic" }
-"utils/makepkg.conf" = { target = "~/makepkg.conf", type="symbolic" }
+"utils/alacritty" = { target = "~/.config/alacritty", type = "symbolic" }
+"utils/kanata" = { target = "~/.config/kanata", type = "symbolic" }
+"utils/kitty" = { target = "~/.config/kitty", type = "symbolic" }
+"utils/lf" = { target = "~/.config/lf", type = "symbolic" }
+"utils/makepkg.conf" = { target = "~/makepkg.conf", type = "symbolic" }
+"utils/tmux.conf" = { target = "~/.tmux.conf", type = "symbolic" }
 "utils/nvim" = { target = "~/.config/nvim", type = "symbolic" }
-"utils/paru" = { target = "~/.config/paru", type="symbolic" }
+"utils/paru" = { target = "~/.config/paru", type = "symbolic" }
 "utils/wofi" = { target = "~/.config/wofi", type = "symbolic" }
 "utils/nushell" = { target = "~/.config/nushell", type = "symbolic" }
 [default.variables]
