@@ -34,6 +34,10 @@ window#waybar {
 	padding-left: 0px;
 	padding-right: 0px
 }
+#pulseaudio {
+	padding-left: 0px;
+	padding-right: 0px
+}
 #network {
 	padding-right: 0px;
 	padding-left: 0px;
