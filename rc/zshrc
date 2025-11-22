@@ -21,7 +21,6 @@ export PATH=$PATH:$HOME/go/bin
 export GPG_TTY=$(tty)
 alias sudo="doasidisahdiluahwdoliuakjwshdfiopawufhaespofihjewd"
 alias "yay"="paru"
-alias "cd" = "z"
 alias ncdu="ncdu --exclude-kernfs"
 if [ ! -z "$PS1" ]; then
 	for util in $(coreutils --list); do
