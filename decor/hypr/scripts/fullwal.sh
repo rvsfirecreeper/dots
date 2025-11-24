@@ -5,7 +5,7 @@ walldir="$dotsroot/wallpaper"
 read -rp "Which wallpaper?(or ls to list already imported) (You can enter a full path(tildes allowed) to import a new one) " wall
 wall="${wall/#\~/$HOME}"
 if [ "$wall" = "ls" ]; then
-  ls "$walldir" | sed 's/.jpg//g' | sed 's/bg//g'
+  ls "$walldir" | sed 's/.png//g' | sed 's/bg//g'
   sleep 2
   read -rp "Which wallpaper, now that you have all the options? " wall
   wall="${wall/#\~/$HOME}"
@@ -14,7 +14,7 @@ if [ -e "$wall" ]; then
   echo "New Wallpaper Detected! Previewing, press q to continue."
   pqiv "$wall"
   read -rp "What would you like the shorthand to be? Do not include file extensions. " shorthand
-  if [ -f "$walldir/$shorthand.jpg" ]; then
+  if [ -f "$walldir/$shorthand.png" ]; then
     echo "Exiting, file already exists."
     sleep 2
     exit 1
@@ -24,27 +24,27 @@ if [ -e "$wall" ]; then
     sleep 2
     exit 1
   fi
-  magick "$wall" "$walldir/$shorthand.jpg"
+  magick "$wall" "$walldir/$shorthand.png"
   (cd "$dotsroot" && dotter deploy --force)
   echo "New Wallpaper Detected! Previewing, press q to continue."
   sleep 1
   read -rp "Would you like to switch or not(y/n)" confirm
   if [ "$confirm" = "y" ]; then
-    cp "$walldir/$shorthand.jpg" "$walldir/bg.jpg"
+    cp "$walldir/$shorthand.png" "$walldir/bg.jpg"
   else
     exit 0
   fi
-elif [ -f "$walldir/$wall.jpg" ]; then
-  cp "$walldir/$wall.jpg" "$walldir/bg.jpg"
+elif [ -f "$walldir/$wall.png" ]; then
+  cp "$walldir/$wall.png" "$walldir/bg.jpg"
 else
   echo "Exiting, no file found. Did you use the shorthand you set when importing? "
   echo "Here are the current wallpapers."
-  find "$walldir" | sed 's/.jpg//g' | sed 's/bg//g'
+  find "$walldir" | sed 's/.png//g' | sed 's/bg//g'
   sleep 3
   exit 1
 fi
-echo "Switching to the new wallpaper at dots/hypr/wallpaper/bg.jpg Note: Use magick to convert image formats!"
-wal --cols16 -i "$walldir/bg.jpg"
+echo "Switching to the new wallpaper at dots/hypr/wallpaper/bg.png Note: Use magick to convert image formats!"
+wal --cols16 -i "$walldir/bg.png"
 for target in "decor/waybar" "utils/wofi" "decor/wlogout"; do
   cp "$HOME/.cache/wal/colors-waybar.css" "$dotsroot/$target/colors.css"
 done
@@ -57,7 +57,7 @@ sed -i 's/1\.0/0\.7/g' "$dotsroot/decor/hypr/hyprtoolkit.conf"
 sleep 0.1
 killall -SIGUSR2 waybar
 sleep 0.1
-hyprctl hyprpaper reload ,"$walldir/bg.jpg"
+hyprctl hyprpaper reload ,"$walldir/bg.png"
 echo "Done! Automatically Closing in 3 seconds."
 sleep 2
 exit 0
