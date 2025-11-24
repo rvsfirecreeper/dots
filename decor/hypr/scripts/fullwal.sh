@@ -39,7 +39,7 @@ elif [ -f "$walldir/$wall.jpg" ]; then
 else
   echo "Exiting, no file found. Did you use the shorthand you set when importing? "
   echo "Here are the current wallpapers."
-  ls "$walldir" | sed 's/.jpg//g' | sed 's/bg//g'
+  find "$walldir" | sed 's/.jpg//g' | sed 's/bg//g'
   sleep 3
   exit 1
 fi
