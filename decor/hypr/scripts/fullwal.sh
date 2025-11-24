@@ -30,12 +30,12 @@ if [ -e "$wall" ]; then
   sleep 1
   read -rp "Would you like to switch or not(y/n)" confirm
   if [ "$confirm" = "y" ]; then
-    cp "$walldir/$shorthand.png" "$walldir/bg.jpg"
+    cp "$walldir/$shorthand.png" "$walldir/bg.png"
   else
     exit 0
   fi
 elif [ -f "$walldir/$wall.png" ]; then
-  cp "$walldir/$wall.png" "$walldir/bg.jpg"
+  cp "$walldir/$wall.png" "$walldir/bg.png"
 else
   echo "Exiting, no file found. Did you use the shorthand you set when importing? "
   echo "Here are the current wallpapers."
