@@ -2,7 +2,7 @@
 * {
 	border: none;
 	border-radius: 0px;
-	font-family: 'JetBrains Mono Nerd Font Propo';
+	font-family: 'Maple Mono';
 	/*
 	font-family: 'Lilex Nerd Font Propo';
 	font-family: 'JetBrains Mono Nerd Font';
@@ -10,7 +10,8 @@
 	color: white;
 	font-size: 20px;
 	min-height: 0px;
-	background-color: transparent;
+
+  background-color: transparent;
 }
 .module {
 	margin-bottom: 5px;
