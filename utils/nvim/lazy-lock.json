@@ -29,6 +29,7 @@
   "nvim-ts-autotag": { "branch": "main", "commit": "c4ca798ab95b316a768d51eaaaee48f64a4a46bc" },
   "persistence.nvim": { "branch": "main", "commit": "b20b2a7887bd39c1a356980b45e03250f3dce49c" },
   "plenary.nvim": { "branch": "master", "commit": "b9fd5226c2f76c951fc8ed5923d85e4de065e509" },
+  "pywal16.nvim": { "branch": "main", "commit": "b21a36cfcbe4581176b79fe46b88ae42ae0fe520" },
   "render-markdown.nvim": { "branch": "main", "commit": "13bfaaabaaf732cf58d14004ed79b331bb40b838" },
   "rustaceanvim": { "branch": "master", "commit": "ccd8f99b159f53113e503fa99a613875407db49f" },
   "snacks.nvim": { "branch": "main", "commit": "dec29f55666f8f4545835636077a86b150faf630" },
@@ -37,7 +38,6 @@
   "trouble.nvim": { "branch": "main", "commit": "bd67efe408d4816e25e8491cc5ad4088e708a69a" },
   "ts-comments.nvim": { "branch": "main", "commit": "123a9fb12e7229342f807ec9e6de478b1102b041" },
   "venv-selector.nvim": { "branch": "main", "commit": "1ef6564d0bd0d9c4194711cfb696357a6119abd7" },
-  "wal.nvim": { "branch": "master", "commit": "cca641462523e68d27569391e62e3dcb54e33f49" },
   "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" },
   "yanky.nvim": { "branch": "main", "commit": "04775cc6e10ef038c397c407bc17f00a2f52b378" }
 }
