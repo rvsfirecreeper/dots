@@ -10,8 +10,7 @@
 	color: white;
 	font-size: 20px;
 	min-height: 0px;
-
-  background-color: transparent;
+	background-color: transparent;
 }
 .module {
 	margin-bottom: 5px;
@@ -22,7 +21,7 @@
 	/*Top left then Top Right then Bottom Right then Bottom Left*/
 	background-color: alpha(@color3, 0.4);
 	margin: 10px 10px 0px 0px;
-	padding: 10px 5px 10px 6px
+	padding: 10px 0px 10px 0px;
 	/*Top then Right ten Bottom then Left*/
 }
 window#waybar {
@@ -33,15 +32,17 @@ window#waybar {
 	/*Top left then Top Right then Bottom Right then Bottom Left*/
 	/*Top then Right ten Bottom then Left*/
 	padding-left: 0px;
-	padding-right: 0px
+	padding-right: 0px;
+  margin: 0px 5px 0px 0px
 }
 #pulseaudio {
 	padding-left: 0px;
-	padding-right: 0px
+	padding-right: 0px;
 }
 #network {
 	padding-right: 0px;
 	padding-left: 0px;
+  margin: 0px 9px 0px 0px
 }
 #workspaces button {
 	font-size: 20px;

@@ -23,6 +23,7 @@
     "orientation": "horizontal"
   },
   "pulseaudio": {
+    "align": 0.5,
     "format": "{icon}",
     "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "format-icons": {
@@ -54,8 +55,9 @@
     // "ignored-players": ["firefox"]
   },
   "custom/wofi": {
-    "format": "",
-    "on-click": "wofi --show drun -n"
+    "align": 0.5,
+    "format": "<span gravity=\"south\"></span>",
+    "on-click": "wofi --show drun -n",
   },
   "hyprland/workspaces": {
     "persistent-workspaces": {
@@ -63,9 +65,11 @@
     }
   },
   "network": {
-    "format": "󰈂",
-    "format-ethernet": "󰈀",
-    "format-wifi": "󰖩",
-    "format-disconnected": "󰈂",
+    "align": 0.5,
+    "justify": "center",
+    "format": "<span gravity=\"south\">󰈂</span>",
+    "format-wifi": "<span gravity=\"south\"></span>",
+    "format-ethernet": "<span gravity=\"south\">󰈀</span>",
+    "format-disconnected": "<span gravity=\"south\">󰈂</span>"
   },
 }
