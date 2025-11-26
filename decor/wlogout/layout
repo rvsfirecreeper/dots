@@ -30,7 +30,7 @@
 }
 {
     "label" : "killhypr"
-    "action" : "killall hyprland"
+    "action" : "hyprctl dispatch exit"
     "text" : "Quit Hyprland"
     "keybind" : "q"
 }
