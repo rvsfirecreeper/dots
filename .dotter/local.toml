@@ -4,3 +4,4 @@ packages = ["default"]
 [files]
 
 [variables]
+home = "/home/ragef"

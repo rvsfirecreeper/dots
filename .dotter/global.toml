@@ -37,6 +37,6 @@ depends = []
 "utils/wofi" = { target = "~/.config/wofi", type = "symbolic" }
 "utils/nushell" = { target = "~/.config/nushell", type = "symbolic" }
 [default.variables]
-
+font = "Maple Mono"
 [settings]
 default_target_type = "automatic"

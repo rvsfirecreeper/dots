@@ -29,6 +29,7 @@ I have a 165hz 1440p, but that's kinda niche.
 
 ## Install
 
+WARNING: INSTALLATION IS DEPRECATED. THESE ARE NOT GUARANTEED TO WORK ON ANY OTHER SYSTEM. 
 You can use
 `curl -sS https://gitlab.com/coolrustcoderguy/dots/-/raw/main/install.sh | bash`
 for Artix, Arch, etc.
