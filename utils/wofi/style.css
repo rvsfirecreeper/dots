@@ -1,7 +1,7 @@
 @import "../../.config/wofi/colors.css";
 /* @import "../../.config/wofi/colors.css"; */
 * {
-	font-family: "Maple Mono"
+	font-family: "{{font}}"
 }
 
 window {

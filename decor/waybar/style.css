@@ -2,7 +2,7 @@
 * {
 	border: none;
 	border-radius: 0px;
-	font-family: 'Maple Mono';
+	font-family: '{{font}}';
 	/*
 	font-family: 'Lilex Nerd Font Propo';
 	font-family: 'JetBrains Mono Nerd Font';
