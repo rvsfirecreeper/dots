@@ -39,5 +39,7 @@ depends = []
 "utils/nushell" = { target = "~/.config/nushell", type = "symbolic" }
 [default.variables]
 font = "Maple Mono"
+fsize = 13
+lfsize = 20
 [settings]
 default_target_type = "automatic"

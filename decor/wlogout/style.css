@@ -22,7 +22,8 @@ by Stephan Raabe (2023)
 
 * {
   font-family: "{{font}}", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-	background-image: none;
+	font-size: {{lfsize}};
+  background-image: none;
 	transition: 20ms;
 	box-shadow: none;
 }
@@ -30,7 +31,7 @@ by Stephan Raabe (2023)
 window {
 	background: url("bg.jpg");
 	background-size: cover;
-	font-size: 20px;
+	font-size: {{lfsize}};
 
 }
 

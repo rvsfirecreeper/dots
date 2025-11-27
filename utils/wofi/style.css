@@ -1,7 +1,8 @@
 @import "../../.config/wofi/colors.css";
-/* @import "../../.config/wofi/colors.css"; */
+/* @import "../.config/wofi/colors.css"; */
 * {
-	font-family: "{{font}}"
+	font-family: "{{font}}";
+  font-size: {{lfsize}}px
 }
 
 window {
