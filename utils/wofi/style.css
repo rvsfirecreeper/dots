@@ -2,7 +2,7 @@
 /* @import "../.config/wofi/colors.css"; */
 * {
 	font-family: "{{font}}";
-  font-size: {{lfsize}}px
+  font-size: {{fsize}}px
 }
 
 window {
