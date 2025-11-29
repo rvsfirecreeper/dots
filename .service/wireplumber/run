@@ -1,0 +1,10 @@
+#!/bin/sh
+# Wait until both pipewire and pipewire-pulse are ready
+while [ ! -S "${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/pipewire-0" ]; do
+  sleep 0.2
+done
+while [ ! -S "${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/pulse/native" ]; do
+  sleep 0.2
+done
+exec wireplumber 2>&1
+

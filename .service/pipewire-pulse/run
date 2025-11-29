@@ -1,0 +1,7 @@
+#!/bin/sh
+# Wait until the core PipeWire socket is up before starting
+while [ ! -S "${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/pipewire-0" ]; do
+  sleep 0.2
+done
+exec pipewire-pulse 2>&1
+
