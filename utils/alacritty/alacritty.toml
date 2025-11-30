@@ -4,7 +4,7 @@ import = ["~/.cache/wal/colors-alacritty.toml"]
 opacity = 0.6
 padding = { x = 5, y = 5 }
 [font]
-size = {{fsize}}.0
-builtin_box_drawing = false
+size = {{fsize}}
+builtin_box_drawing = true
 offset = { x = 0, y = 0 }
 normal = { family = "{{font}}", style = "Regular" }
