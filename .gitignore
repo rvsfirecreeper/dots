@@ -1,6 +1,6 @@
 .dotter/cache
 .dotter/cache.toml
-wallpaper/bg.jpg
+wallpaper/bg.png
 utils/wofi/colors.css
 decor/waybar/colors.css
 decor/wlogout/colors.css
