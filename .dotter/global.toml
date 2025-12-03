@@ -37,6 +37,7 @@ depends = []
 "utils/paru" = { target = "~/.config/paru", type = "symbolic" }
 "utils/wofi" = "~/.config/wofi"
 "utils/greetd" = { target = "/etc/greetd", owner = "root", type = "template" }
+"utils/doas.conf" = { target = "/etc/doas.conf", owner = "root", type = "template" }
 "utils/nushell" = { target = "~/.config/nushell", type = "symbolic" }
 
 # Services
