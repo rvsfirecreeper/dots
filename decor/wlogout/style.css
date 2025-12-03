@@ -108,7 +108,7 @@ Buttons
 	border-radius: 20px;
 	background-image: image(url("icons/reboot.png"));
 }
-#killhypr {
+#logout {
 	margin: 10px;
 	border-radius: 20px;
 	background-image: image(url("icons/logout.png"))

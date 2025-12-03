@@ -29,8 +29,8 @@
     "keybind" : "p"
 }
 {
-    "label" : "killhypr"
+    "label" : "logout"
     "action" : "hyprctl dispatch exit"
-    "text" : "Quit Hyprland"
-    "keybind" : "q"
+    "text" : "Log Out"
+    "keybind": "q"
 }
