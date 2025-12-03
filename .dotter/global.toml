@@ -7,38 +7,38 @@ depends = []
 
 # Rcs/profile
 
-"rc/bashrc" = { target = "~/.bashrc", type = "symbolic" }
-"rc/profile" = { target = "~/.profile", type = "symbolic" }
-"rc/zshrc" = { target = "~/.zshrc", type = "symbolic" }
+"rc/bashrc" = "~/.bashrc"
+"rc/profile" = "~/.profile"
+"rc/zshrc" = "~/.zshrc"
 
 # Decoration
 
 # I Had a Hrd time placing hypr but i Decided its more decoration. If you want utility use Sway.
 
-"decor/fastfetch" = { target = "~/.config/fastfetch", type = "symbolic" }
+"decor/fastfetch" = "~/.config/fastfetch"
 "decor/hypr" = "~/.config/hypr"
 "decor/starship.toml" = "~/.config/starship.toml"
-"decor/wal" = { target = "~/.config/wal", type = "symbolic" }
-"wallpaper" = { target = "~/.config/hypr/wallpaper", type = "symbolic" }
-"decor/wallust" = { target = "~/.config/wallust", type = "symbolic" }
+"decor/wal" = "~/.config/wal"
+"wallpaper" = "~/.config/hypr/wallpaper"
+"decor/wallust" = "~/.config/wallust"
 "decor/waybar" = "~/.config/waybar"
 "decor/wlogout" = "~/.config/wlogout"
-"decor/wlogout/icons" = { target = "~/.config/wlogout/icons", type = "symbolic" }
+"decor/wlogout/icons" = "config/wlogout/icons"
 
 # Functional Utilities
 
 "utils/alacritty" = "~/.config/alacritty"
-"utils/kanata" = { target = "~/.config/kanata", type = "symbolic" }
+"utils/kanata" = "~/.config/kanata"
 "utils/kitty" = "~/.config/kitty"
-"utils/lf" = { target = "~/.config/lf", type = "symbolic" }
-"utils/makepkg.conf" = { target = "~/makepkg.conf", type = "symbolic" }
-"utils/tmux.conf" = { target = "~/.tmux.conf", type = "symbolic" }
-"utils/nvim" = { target = "~/.config/nvim", type = "symbolic" }
-"utils/paru" = { target = "~/.config/paru", type = "symbolic" }
+"utils/lf" = "~/.config/lf"
+"utils/makepkg.conf" = "~/makepkg.conf"
+"utils/tmux.conf" = "~/.tmux.conf"
+"utils/nvim" = "~/.config/nvim"
+"utils/paru" = "~/.config/paru"
 "utils/wofi" = "~/.config/wofi"
-"utils/greetd" = { target = "/etc/greetd", owner = "root", type = "template" }
-"utils/doas.conf" = { target = "/etc/doas.conf", owner = "root", type = "template" }
-"utils/nushell" = { target = "~/.config/nushell", type = "symbolic" }
+"utils/greetd" = "/etc/greetd"
+"utils/doas.conf" = "/etc/doas.conf"
+"utils/nushell" = "~/.config/nushell"
 
 # Services
 
