@@ -37,7 +37,6 @@ depends = []
 "utils/paru" = "~/.config/paru"
 "utils/wofi" = "~/.config/wofi"
 "utils/greetd" = "/etc/greetd"
-"utils/doas.conf" = "/etc/doas.conf"
 "utils/nushell" = "~/.config/nushell"
 
 # Services
