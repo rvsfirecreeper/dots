@@ -23,7 +23,7 @@ depends = []
 "decor/wallust" = "~/.config/wallust"
 "decor/waybar" = "~/.config/waybar"
 "decor/wlogout" = "~/.config/wlogout"
-"decor/wlogout/icons" = "config/wlogout/icons"
+"decor/wlogout/icons" = "~/.config/wlogout/icons"
 
 # Functional Utilities
 
