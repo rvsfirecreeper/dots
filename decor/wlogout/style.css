@@ -44,7 +44,7 @@ button {
 	border:0px;
 	transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
 	color: @color15;
-	background-color: alpha(@color9, 0.6);
+	background-color: alpha(@color9, {{math opacity "-" 0.2}});
 }
 
 button:focus {
@@ -54,7 +54,7 @@ button:focus {
 }
 
 button:hover {
-    background-color: alpha(@color9, 0.9);
+    background-color: alpha(@color9, {{math opacity "+" 0.1}});
     opacity: 0.8;
     background-size: 30%;
     margin: 30px;

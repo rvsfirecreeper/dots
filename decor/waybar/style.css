@@ -19,7 +19,7 @@
 .modules-left {
 	border-radius: 20px;
 	/*Top left then Top Right then Bottom Right then Bottom Left*/
-	background-color: alpha(@color3, 0.4);
+	background-color: alpha(@color3, {{math opacity "-" 0.2}});
 	margin: 10px 10px 0px 0px;
 	padding: 10px 0px 10px 0px;
 	/*Top then Right ten Bottom then Left*/
@@ -46,13 +46,13 @@ window#waybar {
 }
 #workspaces button {
 	font-size: {{lfsize}}px;
-	background-color: alpha(@color3, 0.4);
+	background-color: alpha(@color3, {{math opacity "-" 0.2}});
 	margin: 0px 10px 0px 0px;
 	border-radius: 0px;
 	padding: 8px 8px;
 }
-#workspaces button.hover {
-	background-color: alpha(@color3, 0.4);
+#workspaces button.visible {
+	background-color: alpha(@color3, {{math opacity "-" 0.2}});
 }
 #workspaces button:last-child {
 	border-radius: 0px 0px 20px 20px;
@@ -63,13 +63,13 @@ window#waybar {
 	padding-bottom: 10px;
 }
 #workspaces button.active {
-	background-color: alpha(@color4, 0.6);
+	background-color: alpha(@color4, 1);
 }
 #workspaces button.urgent {
-	background-color: alpha(@color3, 0.3);
+	background-color: alpha(@color3, {{math opacity "-" 0.2}});
 }
 #clock {
-	background-color: alpha(@color3, 0.4);
+	background-color: alpha(@color3, {{math opacity "-" 0.2}});
 	margin: 0px 10px 20px 0px;
 	border-radius: 20px;
 	padding: 8px 8px;
