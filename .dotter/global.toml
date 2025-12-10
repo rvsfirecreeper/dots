@@ -39,10 +39,6 @@ depends = []
 "utils/greetd" = { target = "/etc/greetd", owner = "root", type = "template" }
 "utils/nushell" = "~/.config/nushell"
 
-# Services
-
-".service" = "~/.service"
-
 [default.variables]
 font = "Maple Mono"
 fsize = 13

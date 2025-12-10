@@ -1,3 +1,0 @@
-#!/bin/sh
-ssh-agent -D -a "{{home}}/.ssh/agent/ssh-agent.socket"
-sleep infinity
