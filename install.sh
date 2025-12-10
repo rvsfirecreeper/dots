@@ -15,6 +15,7 @@ paru -S paru-bin
 paru -S kitty starship zsh dotter-rs-bin hypridle hyprland hyprlock greetd-regreet hyprpaper zoxide hyprpolkitagent hyprsunset graphicsmagick python-pywal16 python-pywalfox pqiv neovim paru swaync waybar wofi wlogout doas rust papirus-icon-theme
 gsettings set org.gnome.desktop.interface icon-theme "Papirus"
 cargo install coreutils
+hyprpm add https://github.com/hyprwm/hyprland-plugins
 git clone https://gitlab.com/coolrustcoderguy/dots.git
 cd dots || exit
 chsh -s /bin/nu
