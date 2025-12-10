@@ -31,4 +31,4 @@ source ~/.zoxide.nu
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 $env.PROMPT_INDICATOR_VI_INSERT = ""
 $env.PROMPT_INDICATOR_VI_NORMAL = ""
-
+$env.GPG_TTY = (tty)
