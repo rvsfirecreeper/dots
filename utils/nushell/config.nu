@@ -22,6 +22,7 @@ $env.config.buffer_editor = 'nvim'
 use std/util "path add"
 path add "~/.local/bin"
 path add "~/.cargo/bin"
+path add "./.venv/bin"
 $env.config.edit_mode = 'vi'
 sleep 0.1sec
 fastfetch
