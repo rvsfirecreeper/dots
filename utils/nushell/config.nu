@@ -25,6 +25,7 @@ path add "~/.cargo/bin"
 path add "./.venv/bin"
 $env.config.edit_mode = 'vi'
 sleep 0.1sec
+alias hx = helix
 fastfetch
 mkdir ($nu.data-dir | path join "vendor/autoload")
 zoxide init nushell | save -f ~/.zoxide.nu
