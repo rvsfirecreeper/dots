@@ -18,7 +18,7 @@
 #     config nu --doc | nu-highlight | less -R
 $env.config.show_banner = false
 $env.NO_AT_BRIDGE = 1
-$env.config.buffer_editor = 'nvim'
+$env.config.buffer_editor = 'helix'
 use std/util "path add"
 path add "~/.local/bin"
 path add "~/.cargo/bin"
