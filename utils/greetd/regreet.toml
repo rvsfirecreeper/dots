@@ -1,6 +1,0 @@
-[background]
-path = "{{home}}/.config/hypr/wallpaper/blocks.png"
-fit = "Fill"
-[commands]
-reboot = ["loginctl", "reboot"]
-poweroff = ["loginctl", "poweroff"]
