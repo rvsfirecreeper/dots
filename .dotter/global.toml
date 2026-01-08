@@ -36,6 +36,7 @@ depends = []
 "utils/nvim" = "~/.config/nvim"
 "utils/paru" = "~/.config/paru"
 "utils/wofi" = "~/.config/wofi"
+"utils/helix" = "~/.config/helix"
 "utils/greetd" = { target = "/etc/greetd", owner = "root", type = "template" }
 "utils/nushell" = "~/.config/nushell"
 
