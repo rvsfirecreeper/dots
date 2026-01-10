@@ -31,6 +31,12 @@ The script isn't long, you can read it yourself.
 
 I'm too lazy to check but you probably need the extra repo enabled at minimum
 
+## Greetd background
+
+The Greetd background will not update automatically via fullwal. You have to do it manually using:
+`doas cp ~/.config/hypr/wallpaper/bg.png /etc/greetd/background.png`
+In the future, it may be added as a doas rule + a helper script.
+
 ## Doas
 
 OpenDoas is required for install. I highly recommend using OpenDoas.
