@@ -39,7 +39,7 @@ depends = []
 "utils/helix" = "~/.config/helix"
 "utils/greetd" = { target = "/etc/greetd", owner = "root", type = "template" }
 "utils/nushell" = "~/.config/nushell"
-
+"utils/niri" = "~/.config/niri"
 [default.variables]
 font = "Maple Mono"
 fsize = 13
