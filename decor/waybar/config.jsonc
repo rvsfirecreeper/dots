@@ -6,7 +6,7 @@
     "network"
   ],
   "modules-center": [
-    "hyprland/workspaces"
+    "niri/workspaces"
   ],
   "modules-right": [
     "clock"
@@ -59,7 +59,7 @@
     "format": "<span gravity=\"south\"></span>",
     "on-click": "wofi --show drun -n",
   },
-  "hyprland/workspaces": {
+  "niri/workspaces": {
     "persistent-workspaces": {
       "*": 5,
     }

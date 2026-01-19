@@ -1,7 +1,7 @@
 [general]
 import = ["~/.cache/wal/colors-alacritty.toml"]
 [window]
-opacity = 0.6
+opacity = {{opacity}}
 padding = { x = 5, y = 5 }
 [font]
 size = {{fsize}}
