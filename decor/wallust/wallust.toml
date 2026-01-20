@@ -4,3 +4,5 @@ checkcontrast = true
 [templates]
 kitty.template = "kitty.conf"
 kitty.target = "~/.config/kitty/colors.conf"
+waybar.template = "waybar.css"
+waybar.target = "~/.config/waybar/colors.css"
