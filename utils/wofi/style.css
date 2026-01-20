@@ -1,4 +1,4 @@
-@import "../../.config/wofi/colors.css";
+@import "{{home}}/.config/wofi/colors.css";
 /* @import "../.config/wofi/colors.css"; */
 * {
 	font-family: "{{font}}";
