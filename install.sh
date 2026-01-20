@@ -12,7 +12,7 @@ eval "$(
 paru
 paru -S paru-bin
 #install all deps
-paru -S kitty starship zsh dotter-rs-bin cage hypridle hyprland hyprlock greetd-regreet hyprpaper zoxide hyprpolkitagent hyprsunset graphicsmagick python-pywal16 python-pywalfox pqiv neovim paru swaync waybar wofi wlogout doas rust papirus-icon-theme
+paru -S kitty starship nushell dotter-rs-bin cage hyprlock greetd-regreet zoxide graphicsmagick pqiv neovim paru swaync waybar wofi wlogout doas papirus-icon-theme
 gsettings set org.gnome.desktop.interface icon-theme "Papirus"
 cargo install coreutils
 hyprpm add https://github.com/hyprwm/hyprland-plugins
