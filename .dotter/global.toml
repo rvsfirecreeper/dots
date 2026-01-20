@@ -20,7 +20,7 @@ depends = []
 "decor/starship.toml" = "~/.config/starship.toml"
 "decor/wal" = "~/.config/wal"
 "wallpaper" = { target = "~/.config/hypr/wallpaper", type = "symbolic" }
-"decor/wallust" = "~/.config/wallust"
+"decor/wallust" = { target = "~/.config/wallust", type = "symbolic" }
 "decor/waybar" = "~/.config/waybar"
 "decor/wlogout" = "~/.config/wlogout"
 "decor/wlogout/icons" = "~/.config/wlogout/icons"
