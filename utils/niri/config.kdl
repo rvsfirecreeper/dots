@@ -93,7 +93,7 @@ output "DP-2" {
     // Transform allows to rotate the output counter-clockwise, valid values are:
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
     transform "normal"
-
+    variable-refresh-rate
     // Position of the output in the global coordinate space.
     // This affects directional monitor actions like "focus-monitor-left", and cursor movement.
     // The cursor can only move between directly adjacent outputs.
