@@ -15,7 +15,6 @@ depends = []
 
 "decor/fastfetch" = "~/.config/fastfetch"
 "decor/starship.toml" = "~/.config/starship.toml"
-"decor/wal" = "~/.config/wal"
 "wallpaper" = { target = "~/.config/niri/wallpaper", type = "symbolic" }
 "decor/wallust" = { target = "~/.config/wallust", type = "symbolic" }
 "decor/waybar" = "~/.config/waybar"
