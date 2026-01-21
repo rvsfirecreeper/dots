@@ -1,5 +1,5 @@
 #!/bin/bash
-abspath="$(readlink -f "$HOME/.config/hypr/hyprland.conf")"
+abspath="$(readlink -f "$HOME/.config/niri/config.kdl")"
 dotsroot="$(cd "$(dirname "$abspath")" && git rev-parse --show-toplevel)"
 walldir="$dotsroot/wallpaper"
 read -rp "Which wallpaper?(or ls to list already imported) (You can enter a full path(tildes allowed) to import a new one) " wall
