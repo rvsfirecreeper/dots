@@ -12,7 +12,7 @@ eval "$(
 paru
 paru -S paru-bin
 #install all deps
-paru -S kitty starship nushell dotter-rs-bin cage swaylock greetd-regreet zoxide pqiv neovim paru mako waybar wofi wlogout papirus-icon-theme  bibata-cursor-theme
+paru -S kitty wallust starship nushell dotter-rs-bin cage swaylock greetd-regreet zoxide pqiv neovim paru mako waybar wofi wlogout papirus-icon-theme  bibata-cursor-theme
 gsettings set org.gnome.desktop.interface icon-theme "Papirus"
 cargo install coreutils
 hyprpm add https://github.com/hyprwm/hyprland-plugins
