@@ -69,14 +69,19 @@ input {
     // focus-follows-mouse max-scroll-amount="0%"
 }
 environment {
-    XCURSOR_SIZE "24"
-    HYPRCURSOR_SIZE "32"
-    HYPRCURSOR_THEME "Future-Cyan-Hyprcursor_Theme"
     FONT "Maple Mono"
     SSH_AUTH_SOCK  "/home/ragef/.ssh/agent/ssh-agent.socket"
     TERMINAL "kitty"
     MOZ_ENABLE_WAYLAND "1"
     QT_QPA_PLATFORM  "wayland"
+}
+cursor {
+    hide-when-typing
+    hide-after-inactive-ms 10000
+    // xcursor-theme "Bibata-Modern-Classic"
+    xcursor-theme "Bibata-Modern-Classic"
+    xcursor-size 20
+    
 }
 // You can configure outputs by their name, which you can find
 // by running `niri msg outputs` while inside a niri instance.
