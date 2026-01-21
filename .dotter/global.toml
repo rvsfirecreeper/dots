@@ -13,10 +13,7 @@ depends = []
 
 # Decoration
 
-# I Had a Hrd time placing hypr but i Decided its more decoration. If you want utility use Sway.
-
 "decor/fastfetch" = "~/.config/fastfetch"
-"decor/hypr" = "~/.config/hypr"
 "decor/starship.toml" = "~/.config/starship.toml"
 "decor/wal" = "~/.config/wal"
 "wallpaper" = { target = "~/.config/niri/wallpaper", type = "symbolic" }
