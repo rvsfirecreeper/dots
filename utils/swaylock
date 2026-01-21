@@ -1,5 +1,5 @@
 ignore-empty-password
 show-failed-attempts
-image {{home}}/.config/niri/wallpaper/bg.png
+image={{home}}/.config/niri/wallpaper/bg.png
 show-keyboard-layout
-scaling fill
+scaling=fill
