@@ -21,6 +21,5 @@ cd dots || exit
 chsh -s /bin/nu
 dotter deploy
 echo "Deployed. Running fullwal to start you off."
-./decor/hypr/scripts/fullwal.sh
-dotter deploy --force
+./scripts/fullwal.sh
 echo "Done!"
