@@ -10,7 +10,7 @@
 	color: white;
 	font-size: {{lfsize}}px;
 	min-height: 0px;
-	background-color: transparent;
+	background-color: @background;
 }
 .module {
 	margin-bottom: 5px;
@@ -19,8 +19,7 @@
 .modules-left {
 	border-radius: 20px;
 	/*Top left then Top Right then Bottom Right then Bottom Left*/
-	background-color: @color3;
-	margin: 10px 10px 0px 0px;
+	margin: 0px 0px 0px 0px;
 	padding: 10px 0px 10px 0px;
 	/*Top then Right ten Bottom then Left*/
 }
@@ -33,16 +32,17 @@ window#waybar {
 	/*Top then Right ten Bottom then Left*/
 	padding-left: 0px;
 	padding-right: 0px;
-  margin: 0px 5px 0px 0px
+  margin: 0px 10px 0px 10px
 }
 #pulseaudio {
 	padding-left: 0px;
 	padding-right: 0px;
+	margin: 0px 10px 0px 10px;
 }
 #network {
 	padding-right: 0px;
 	padding-left: 0px;
-  margin: 0px 9px 0px 0px
+  margin: 0px 15px 0px 0px
 }
 #workspaces button {
 	font-size: {{lfsize}}px;
@@ -69,8 +69,7 @@ window#waybar {
 	background-color: @color3;
 }
 #clock {
-	background-color: @color3;
-	margin: 0px 10px 20px 0px;
+	background-color: @background;
+	margin: 10px 10px 0px 0px;
 	border-radius: 20px;
-	padding: 8px 8px;
 }
