@@ -7,7 +7,7 @@
 	font-family: 'Lilex Nerd Font Propo';
 	font-family: 'JetBrains Mono Nerd Font';
 	 */
-	color: white;
+	color: @foreground;
 	font-size: {{lfsize}}px;
 	min-height: 0px;
 	background-color: @background;
