@@ -44,18 +44,18 @@ button {
 	border-radius: 80px; /* Increased border radius for a more rounded look */
 	border:0px;
 	transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
-	color: @color15;
-	background-color: alpha(@color9, {{math opacity "-" 0.2}});
+	color: @foreground;
+	background-color: @background;
 }
 
 button:focus {
-	background-color: alpha(@color5, 1);
+	background-color: @background;
     background-size: 25%;
 	border: 0px;
 }
 
 button:hover {
-    background-color: alpha(@color9, {{math opacity "+" 0.1}});
+    background-color: @background;
     opacity: 0.8;
     background-size: 30%;
     margin: 30px;
