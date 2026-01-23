@@ -37,7 +37,7 @@ depends = []
 "utils/nushell" = "~/.config/nushell"
 "utils/niri" = "~/.config/niri"
 "utils/swaylock" = "~/.config/swaylock/config"
-"utils/waypaper" = "~/.config/waypaper"
+"utils/waypaper/style.css" = "~/.config/waypaper/style.css"
 "scripts" = "~/.scripts"
 [default.variables]
 font = "Maple Mono"
