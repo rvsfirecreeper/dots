@@ -42,7 +42,8 @@ button {
 	background-size: 20%;
 	animation: gradient_f 20s ease-in infinite;
 	border-radius: 80px; /* Increased border radius for a more rounded look */
-	border:0px;
+	border: 10px;
+	border-color: @color3;
 	transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
 	color: @foreground;
 	background-color: @background;
@@ -50,8 +51,7 @@ button {
 
 button:focus {
 	background-color: @background;
-    background-size: 25%;
-	border: 0px;
+  background-size: 25%;
 }
 
 button:hover {
