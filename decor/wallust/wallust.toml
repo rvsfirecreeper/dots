@@ -1,5 +1,6 @@
 backend = "wal"
 palette = "dark16"
+color_space = "labmixed"
 checkcontrast = true
 [templates]
 kitty.template = "kitty.conf"
