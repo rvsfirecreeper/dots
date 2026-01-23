@@ -64,7 +64,7 @@
   },
   "network": {
     "format": "󰈂",
-    "format-wifi": "",
+    "format-wifi": "󰖩",
     "format-ethernet": "󰈀",
     "format-disconnected": "󰈂"
   },
