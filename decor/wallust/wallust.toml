@@ -1,4 +1,4 @@
-backend = "wal"
+backend = "fastresize"
 palette = "dark16"
 color_space = "labmixed"
 checkcontrast = true
