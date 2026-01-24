@@ -12,7 +12,7 @@ eval "$(
 paru
 paru -S paru-bin
 #install all deps
-paru -S kitty starship zsh dotter-rs-bin cage hypridle hyprland hyprlock greetd-regreet hyprpaper zoxide hyprpolkitagent hyprsunset graphicsmagick python-pywal16 python-pywalfox pqiv neovim paru swaync waybar wofi wlogout doas rust papirus-icon-theme
+paru -S kitty wallust starship nushell dotter-rs-bin cage swaylock greetd-regreet zoxide pqiv neovim paru mako waybar wofi wlogout papirus-icon-theme  bibata-cursor-theme
 gsettings set org.gnome.desktop.interface icon-theme "Papirus"
 cargo install coreutils
 hyprpm add https://github.com/hyprwm/hyprland-plugins
@@ -21,6 +21,5 @@ cd dots || exit
 chsh -s /bin/nu
 dotter deploy
 echo "Deployed. Running fullwal to start you off."
-./decor/hypr/scripts/fullwal.sh
-dotter deploy --force
+./scripts/fullwal.sh
 echo "Done!"

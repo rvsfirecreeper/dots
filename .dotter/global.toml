@@ -13,14 +13,10 @@ depends = []
 
 # Decoration
 
-# I Had a Hrd time placing hypr but i Decided its more decoration. If you want utility use Sway.
-
 "decor/fastfetch" = "~/.config/fastfetch"
-"decor/hypr" = "~/.config/hypr"
 "decor/starship.toml" = "~/.config/starship.toml"
-"decor/wal" = "~/.config/wal"
-"wallpaper" = { target = "~/.config/hypr/wallpaper", type = "symbolic" }
-"decor/wallust" = "~/.config/wallust"
+"wallpaper" = { target = "~/.config/niri/wallpaper", type = "symbolic" }
+"decor/wallust" = { target = "~/.config/wallust", type = "symbolic" }
 "decor/waybar" = "~/.config/waybar"
 "decor/wlogout" = "~/.config/wlogout"
 "decor/wlogout/icons" = "~/.config/wlogout/icons"
@@ -39,12 +35,15 @@ depends = []
 "utils/helix" = "~/.config/helix"
 "utils/greetd" = { target = "/etc/greetd", owner = "root", type = "template" }
 "utils/nushell" = "~/.config/nushell"
-
+"utils/niri" = "~/.config/niri"
+"utils/swaylock" = "~/.swaylock/config"
+"utils/waypaper/style.css" = "~/.config/waypaper/style.css"
+"scripts" = "~/.scripts"
 [default.variables]
 font = "Maple Mono"
 fsize = 13
 lfsize = 20
-opacity = 0.8
+opacity = 1
 terminal = 'kitty'
 [settings]
 default_target_type = "automatic"

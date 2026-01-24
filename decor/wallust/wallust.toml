@@ -1,2 +1,19 @@
-backend = "wal"
-
+backend = "fastresize"
+palette = "dark16"
+color_space = "labmixed"
+checkcontrast = true
+[templates]
+kitty.template = "kitty.conf"
+kitty.target = "~/.config/kitty/colors.conf"
+waybar.template = "waybar.css"
+waybar.target = "~/.config/waybar/colors.css"
+wofi.template = "waybar.css"
+wofi.target = "~/.config/wofi/colors.css"
+wlogout.template = "waybar.css"
+wlogout.target = "~/.config/wlogout/colors.css"
+waypaper.template = "waybar.css"
+waypaper.target = "~/.config/waypaper/colors.css"
+niri.template = "niri.kdl"
+niri.target = "~/.config/niri/layout.kdl"
+zed.template = "zed.json"
+zed.target = "~/.config/zed/themes/wallust.json"

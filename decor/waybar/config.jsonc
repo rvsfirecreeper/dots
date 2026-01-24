@@ -1,19 +1,19 @@
 {
-  "position": "right",
+  "position": "top",
   "modules-left": [
     "custom/wofi",
     "pulseaudio",
     "network"
   ],
   "modules-center": [
-    "hyprland/workspaces"
+    "niri/window"
   ],
   "modules-right": [
     "clock"
   ],
   "clock": {
     "interval": 1,
-    "format": "{:%H\n%M}",
+    "format": "{:%H %M}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>"
   },
   "pulseaudio/slider": {
@@ -23,7 +23,6 @@
     "orientation": "horizontal"
   },
   "pulseaudio": {
-    "align": 0.5,
     "format": "{icon}",
     "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "format-icons": {
@@ -55,21 +54,18 @@
     // "ignored-players": ["firefox"]
   },
   "custom/wofi": {
-    "align": 0.5,
     "format": "<span gravity=\"south\"></span>",
     "on-click": "wofi --show drun -n",
   },
-  "hyprland/workspaces": {
+  "niri/workspaces": {
     "persistent-workspaces": {
       "*": 5,
     }
   },
   "network": {
-    "align": 0.5,
-    "justify": "center",
-    "format": "<span gravity=\"south\">󰈂</span>",
-    "format-wifi": "<span gravity=\"south\"></span>",
-    "format-ethernet": "<span gravity=\"south\">󰈀</span>",
-    "format-disconnected": "<span gravity=\"south\">󰈂</span>"
+    "format": "󰈂",
+    "format-wifi": "󰖩",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰈂"
   },
 }

@@ -7,7 +7,7 @@
 	font-family: 'Lilex Nerd Font Propo';
 	font-family: 'JetBrains Mono Nerd Font';
 	 */
-	color: white;
+	color: @foreground;
 	font-size: {{lfsize}}px;
 	min-height: 0px;
 	background-color: transparent;
@@ -19,40 +19,47 @@
 .modules-left {
 	border-radius: 20px;
 	/*Top left then Top Right then Bottom Right then Bottom Left*/
-	background-color: alpha(@color3, {{math opacity "-" 0.2}});
-	margin: 10px 10px 0px 0px;
-	padding: 10px 0px 10px 0px;
+	margin: 10px 10px 0px 10px;
+	padding: 10px 10px 10px 10px;
+	background-color: @background;
 	/*Top then Right ten Bottom then Left*/
 }
 window#waybar {
 	all: unset
 }
 #custom-wofi {
-	/* ( background-color: alpha(@color3, 0.4); */
+	/* ( background-color: @color3; */
 	/*Top left then Top Right then Bottom Right then Bottom Left*/
 	/*Top then Right ten Bottom then Left*/
 	padding-left: 0px;
 	padding-right: 0px;
-  margin: 0px 5px 0px 0px
+  margin: 0px 10px 0px 0px
 }
 #pulseaudio {
 	padding-left: 0px;
 	padding-right: 0px;
+	margin: 0px 10px 0px 10px;
 }
 #network {
 	padding-right: 0px;
 	padding-left: 0px;
-  margin: 0px 9px 0px 0px
+  margin: 0px 10px 0px 0px
+}
+.modules-center {
+	border-radius: 20px;
+	background-color: @background;
+	margin: 10px;
+	padding: 5px 10px 0px 10px;
 }
 #workspaces button {
 	font-size: {{lfsize}}px;
-	background-color: alpha(@color3, {{math opacity "-" 0.2}});
+	background-color: @color3;
 	margin: 0px 10px 0px 0px;
 	border-radius: 0px;
 	padding: 8px 8px;
 }
 #workspaces button.visible {
-	background-color: alpha(@color3, {{math opacity "-" 0.2}});
+	background-color: @color3;
 }
 #workspaces button:last-child {
 	border-radius: 0px 0px 20px 20px;
@@ -63,14 +70,14 @@ window#waybar {
 	padding-bottom: 10px;
 }
 #workspaces button.active {
-	background-color: alpha(@color4, 1);
+	background-color: @color4;
 }
 #workspaces button.urgent {
-	background-color: alpha(@color3, {{math opacity "-" 0.2}});
+	background-color: @color3;
 }
 #clock {
-	background-color: alpha(@color3, {{math opacity "-" 0.2}});
-	margin: 0px 10px 20px 0px;
+	background-color: @background;
+	margin: 10px 10px 0px 0px;
 	border-radius: 20px;
-	padding: 8px 8px;
+	padding: 0px 10px 0px 10px;
 }
