@@ -75,6 +75,7 @@ environment {
     DISPLAY ":0"
     MOZ_ENABLE_WAYLAND "1"
     QT_QPA_PLATFORM  "wayland"
+    OLLAMA_MODELS "/ai"
 }
 cursor {
     hide-when-typing
