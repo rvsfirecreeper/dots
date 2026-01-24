@@ -25,6 +25,8 @@ by Stephan Raabe (2023)
 	font-size: {{lfsize}};
   background-image: none;
 	transition: 20ms;
+	border-width: 5px;
+	border-color: @color3;
 	box-shadow: none;
 	color: @foreground;
 }
@@ -42,8 +44,6 @@ button {
 	background-size: 20%;
 	animation: gradient_f 20s ease-in infinite;
 	border-radius: 80px; /* Increased border radius for a more rounded look */
-	border: 10px;
-	border-color: @color3;
 	transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
 	color: @foreground;
 	background-color: @background;
