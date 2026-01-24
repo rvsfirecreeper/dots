@@ -8,3 +8,4 @@ decor/hypr/colors-hyprland.conf
 utils/kitty/colors.conf
 utils/alacritty/colors.toml
 wallpaper
+utils/swaylock
