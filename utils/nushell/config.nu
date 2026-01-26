@@ -26,6 +26,7 @@ path add "./.venv/bin"
 $env.config.edit_mode = 'vi'
 sleep 0.1sec
 alias hx = helix
+alias sed = perl -pe
 fastfetch
 mkdir ($nu.data-dir | path join "vendor/autoload")
 zoxide init nushell | save -f ~/.zoxide.nu
