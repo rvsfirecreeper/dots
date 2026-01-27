@@ -5,6 +5,8 @@ checkcontrast = true
 [templates]
 kitty.template = "kitty.conf"
 kitty.target = "~/.config/kitty/colors.conf"
+pywal.template = "colors.json"
+pywal.target = "~/.cache/wal/colors.json"
 waybar.template = "waybar.css"
 waybar.target = "~/.config/waybar/colors.css"
 wofi.template = "waybar.css"
