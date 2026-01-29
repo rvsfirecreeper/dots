@@ -36,133 +36,44 @@
     "showErrors": false,
     "disableLinewrap": true,
     "hideCursor": false,
-    "separator": ": ",
+    "separator": "  ",
     "color": {
-      "keys": "",
-      "title": "",
-      "output": "",
-      "separator": ""
-    },
-    "brightColor": true,
-    "duration": {
-      "abbreviation": false,
-      "spaceBeforeUnit": "default"
-    },
-    "size": {
-      "maxPrefix": "YB",
-      "binaryPrefix": "iec",
-      "ndigits": 2,
-      "spaceBeforeUnit": "default"
-    },
-    "temp": {
-      "unit": "D",
-      "ndigits": 1,
-      "color": {
-        "green": "32",
-        "yellow": "93",
-        "red": "91"
-      },
-      "spaceBeforeUnit": "default"
-    },
-    "percent": {
-      "type": [
-        "num",
-        "num-color"
-      ],
-      "ndigits": 0,
-      "color": {
-        "green": "32",
-        "yellow": "93",
-        "red": "91"
-      },
-      "spaceBeforeUnit": "default",
-      "width": 0
-    },
-    "bar": {
-      "char": {
-        "elapsed": "■",
-        "total": "-"
-      },
-      "border": {
-        "left": "[ ",
-        "right": " ]",
-        "leftElapsed": "",
-        "rightElapsed": ""
-      },
-      "color": {
-        "elapsed": "auto",
-        "total": "97",
-        "border": "97"
-      },
-      "width": 10
-    },
-    "fraction": {
-      "ndigits": 2
-    },
-    "noBuffer": false,
-    "key": {
-      "width": 0,
-      "type": "string",
-      "paddingLeft": 0
-    },
-    "freq": {
-      "ndigits": 2,
-      "spaceBeforeUnit": "default"
-    },
-    "constants": []
-  },
-  "general": {
-    "thread": true,
-    "processingTimeout": 5000,
-    "detectVersion": true,
-    "playerName": "",
-    "dsForceDrm": false
+      "keys": "32",
+      "output": "31",
+      "title": "34",
+      "separator": "33"
+    }
   },
   "modules": [
+    "break",
     {
-      "type": "title",
-      "key": " ",
-      "keyIcon": "",
-      "fqdn": false,
-      "color": {
-        "user": "",
-        "at": "",
-        "host": ""
-      }
+      "type": "custom",
+      "key": "╭───────────────────────────────────╮"
     },
     {
-      "type": "separator",
-      "string": "-",
-      "outputColor": "",
-      "times": 0
+      "type": "kernel",
+      "key": "│ {#output}  Kernel",
+      "format": "{#output}{release>22} {#keys}│"
+    },
+    {
+      "type": "title",
+      "key": "│ {#output}  Host",
+      "format": "{#output}{host-name>24} {#keys}│"
+    },
+    {
+      "type": "title",
+      "key": "│ {#output}  User",
+      "format": "{#output}{user-name>24} {#keys}│"
     },
     {
       "type": "os",
-      "keyIcon": ""
-    },
-    /* {
-      "type": "host",
-      "keyIcon": "󰌢"
-    }, */
-    /* {
-      "type": "kernel",
-      "keyIcon": ""
-    },
-    {
-      "type": "uptime",
-      "keyIcon": ""
-    }, */
-    {
-      "type": "packages",
-      "keyIcon": "󰏖",
-      "disabled": [
-        "apk"
-      ],
-      "combined": false
+      "key": "│ {#output}󰌽 OS",
+      "format": "{#output}{pretty-name>27}{#keys} │"
     },
     {
       "type": "shell",
-      "keyIcon": ""
+      "key": "│ {#output}  Shell",
+      "format": "{#output}{pretty-name>23} {#keys}│"
     },
     /* {
       "type": "display",
@@ -170,14 +81,15 @@
       "compactType": "none",
       "preciseRefreshRate": false
     }, */
-    {
-      "type": "de",
-      "keyIcon": "",
-      "slowVersionDetection": false
-    },
+    // {
+    //   "type": "de",
+    //   "keyIcon": "",
+    //   "slowVersionDetection": false
+    // },
     {
       "type": "wm",
-      "keyIcon": "",
+      "key": "│ {#output}  WM",
+      "format": "{#output}{pretty-name>26} {#keys}│",
       "detectPlugin": false
     },
     /* {
@@ -210,13 +122,22 @@
     }, */
     {
       "type": "cpu",
-      "keyIcon": "",
-      "temp": false,
+      "key": "│ {#output}  CPU",
+      "format": "{#output}{name>25} {#keys}│",
+      "temp": true,
+      "showPeCoreCount": false
+    },
+    {
+      "type": "cpu",
+      "key": "│ {#output} Temperature (CPU)",
+      "format": "{#output}{temperature>26} {#keys}│",
+      "temp": true,
       "showPeCoreCount": false
     },
     {
       "type": "gpu",
-      "keyIcon": "󰾲",
+      "key": "│ {#output}󰾲 GPU {index}",
+      "format": "{#output}{name>24} {#keys}│",
       "driverSpecific": false,
       "detectionMethod": "pci",
       "temp": false,
@@ -228,8 +149,13 @@
       }
     },
     {
-      "type": "memory",
-      "keyIcon": "",
+      "type": "gpu",
+      "key": "│ {#output} Temperature (GPU {index})",
+      "format": "{#output}{temperature>24} {#keys}│",
+      "driverSpecific": false,
+      "detectionMethod": "pci",
+      "temp": true,
+      "hideType": "none",
       "percent": {
         "green": 50,
         "yellow": 80,
@@ -237,18 +163,29 @@
       }
     },
     {
-      "type": "swap",
+      "type": "memory",
+      "key": "│ {#output}  RAM",
+      "format": "{#output}{percentage>25} {#separator}of {#title}{total} {#keys}│",
       "percent": {
         "green": 50,
         "yellow": 80,
         "type": 0
-      },
-      "keyIcon": "󰓡",
-      "separate": false
+      }
     },
+    // {
+    //   "type": "swap",
+    //   "percent": {
+    //     "green": 50,
+    //     "yellow": 80,
+    //     "type": 0
+    //   },
+    //   "keyIcon": "󰓡",
+    //   "separate": false
+    // },
     {
       "type": "disk",
-      "keyIcon": "",
+      "key": "│ {#output}  Disk Use",
+      "format": "{#output}{size-percentage>19} {#separator}of {#title}{size-total} {#keys}│",
       "showRegular": true,
       "showExternal": false,
       "showHidden": false,
@@ -266,31 +203,19 @@
       }
     },
     {
-      "type": "localip",
-      "keyIcon": "󰩟",
-      "showIpv4": true,
-      "showIpv6": false,
-      "showMac": false,
-      "showLoop": false,
-      "showPrefixLen": true,
-      "showMtu": false,
-      "showSpeed": false,
-      "showFlags": false,
-      "compact": false,
-      "defaultRouteOnly": true,
-      "showAllIps": false,
-      "namePrefix": ""
-    },
-    {
-      "type": "battery",
-      "keyIcon": "",
-      "temp": false,
-      "percent": {
-        "green": 50,
-        "yellow": 20,
-        "type": 0
-      }
+      "type": "custom",
+      "key": "╰───────────────────────────────────╯"
     }
+    // {
+    //   "type": "battery",
+    //   "keyIcon": "",
+    //   "temp": false,
+    //   "percent": {
+    //     "green": 50,
+    //     "yellow": 20,
+    //     "type": 0
+    //   }
+    // }
     /* {
       "type": "poweradapter",
       "keyIcon": "󰚥"

@@ -27,7 +27,6 @@ $env.config.edit_mode = 'vi'
 sleep 0.1sec
 alias hx = helix
 alias sed = perl -pe
-fastfetch
 mkdir ($nu.data-dir | path join "vendor/autoload")
 zoxide init nushell | save -f ~/.zoxide.nu
 source ~/.zoxide.nu
@@ -35,3 +34,4 @@ starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.n
 $env.PROMPT_INDICATOR_VI_INSERT = ""
 $env.PROMPT_INDICATOR_VI_NORMAL = ""
 $env.GPG_TTY = (tty)
+fastfetch
