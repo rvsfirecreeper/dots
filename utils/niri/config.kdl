@@ -133,6 +133,7 @@ include "layout.kdl"
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "waybar"
+spawn-at-startup "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
 spawn-sh-at-startup "waypaper --restore"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
