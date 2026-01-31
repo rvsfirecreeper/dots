@@ -29,7 +29,6 @@ depends = []
 "utils/lf" = "~/.config/lf"
 "utils/makepkg.conf" = "~/makepkg.conf"
 "utils/tmux.conf" = "~/.tmux.conf"
-"utils/nvim" = "~/.config/nvim"
 "utils/paru" = "~/.config/paru"
 "utils/wofi" = "~/.config/wofi"
 "utils/helix" = "~/.config/helix"
