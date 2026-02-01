@@ -18,7 +18,7 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+space hotkey-overlay-title="Run an Application: wofi" { spawn "wofi"; }
     Super+Ctrl+Q hotkey-overlay-title="Lock the Screen" { spawn "wlogout"; }
-    Super+Ctrl+P hotkey-overlay-title="Fullwal" { spawn-sh "kitty ~/.scripts/fullwal.sh"; }
+    Super+Ctrl+P hotkey-overlay-title="Fullwal" { spawn "waypaper"; }
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
     // For example, this is a standard bind to toggle the screen reader (orca).
