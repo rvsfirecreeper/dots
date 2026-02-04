@@ -6,6 +6,6 @@ cd $(git rev-parse --show-toplevel)
 base=$(basename "$1")
 rm ./utils/swaylock
 sed "s/bg\.png/$base/g" ./utils/swaylock.temp > ./utils/swaylock
-mv "$1" "$HOME/.mozilla/firefox/$(awk -F= '/^\[Profile/ {f=1} f==1 && $1~/^Path/ {print $2; 
-exit}' ~/.mozilla/firefox/profiles.ini)/chrome/wallpaper.png" || echo ""
-
+for i in $(sed -n 's/^Path=//p' "$HOME/.mozilla/firefox/profiles.ini"); do
+  cp "$1" "$HOME/.mozilla/firefox/$i/chrome/wallpaper.png" 
+done
