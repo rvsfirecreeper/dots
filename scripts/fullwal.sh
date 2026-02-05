@@ -9,6 +9,6 @@ sed "s/bg\.png/$base/g" ./utils/swaylock.temp > ./utils/swaylock
 prefix="$HOME/.mozilla/firefox"
 for i in $(sed -n 's/^Path=//p' "$HOME/.mozilla/firefox/profiles.ini"); do
   cp "$1" "$prefix/$i/chrome/wallpaper.png"
-  rm "/$i/chrome/ShyFox/shy-variables.css" || echo ""
-  ln -s "$prefix/.shyfox.css" "/$i/chrome/ShyFox/shy-variables.css" || echo "" 
+  rm "$prefix/$i/chrome/ShyFox/shy-variables.css" || echo ""
+  ln -s "$HOME/.shyfox.css" "$prefix/$i/chrome/ShyFox/shy-variables.css" || echo "" 
 done
