@@ -11,7 +11,7 @@ Values of these variables can be changed safely and most likely nothing will bre
 
 :root, #screenshots-component *{
   /* accent color */
-  --shy-accent-color: {{foreground}};
+  --shy-accent-color: {{color2}};
   
   /* window border thickness and size of many margins */
   --margin: 0.8rem;
@@ -56,7 +56,7 @@ Values of these variables can be changed safely and most likely nothing will bre
   
   /* colors */
   --shadow-col:  {{background}};    /* color of the translucent outline that imitates a shadow     */
-  --private-col: #6e00bc80;    /* private mode outline color                                  */
+  --private-col: {{background}};    /* private mode outline color                                  */
   --debug-col: transparent;    /* rgba(0, 0, 255, 0.2); color of hidden panels hover hitboxes */
   --debug-col-2: transparent;  /* rgba(0, 255, 0, 0.2); color of window dragging hitboxes     */
 }
