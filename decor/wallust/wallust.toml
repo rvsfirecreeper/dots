@@ -19,3 +19,4 @@ niri.template = "niri.kdl"
 niri.target = "~/.config/niri/layout.kdl"
 zed.template = "zed.json"
 zed.target = "~/.config/zed/themes/wallust.json"
+shyfox = { template = "shyfox.css", target = "~/.shyfox.css"}

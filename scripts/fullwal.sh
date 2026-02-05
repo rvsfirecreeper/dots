@@ -6,6 +6,9 @@ cd $(git rev-parse --show-toplevel)
 base=$(basename "$1")
 rm ./utils/swaylock
 sed "s/bg\.png/$base/g" ./utils/swaylock.temp > ./utils/swaylock
+prefix="$HOME/.mozilla/firefox"
 for i in $(sed -n 's/^Path=//p' "$HOME/.mozilla/firefox/profiles.ini"); do
-  cp "$1" "$HOME/.mozilla/firefox/$i/chrome/wallpaper.png" 
+  cp "$1" "$prefix/$i/chrome/wallpaper.png"
+  rm "/$i/chrome/ShyFox/shy-variables.css" || echo ""
+  ln -s "$prefix/.shyfox.css" "/$i/chrome/ShyFox/shy-variables.css" || echo "" 
 done
