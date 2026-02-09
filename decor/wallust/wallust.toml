@@ -20,3 +20,4 @@ niri.target = "~/.config/niri/layout.kdl"
 zed.template = "zed.json"
 zed.target = "~/.config/zed/themes/wallust.json"
 shyfox = { template = "shyfox.css", target = "~/.shyfox.css"}
+quickshell = { template = "colors.qml", target = "~/.config/quickshell/Colors.qml"}
