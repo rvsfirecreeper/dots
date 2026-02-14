@@ -3,6 +3,6 @@ import QtQuick
 import Quickshell
 
 Singleton {
-    property string font: "Maple Mono"
-    property int fontSize: 20
+    property string font: "{{font}}"
+    property int fontSize: {{lfsize}}
 }
