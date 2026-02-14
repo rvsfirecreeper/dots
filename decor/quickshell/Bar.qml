@@ -25,7 +25,7 @@ Scope {
           anchors.fill: parent
           radius: 18
           color: Colors.background
-          opacity: 0.95
+          opacity: Theme.opacity
           border.color: Colors.color3
           border.width: 2
           ClockModule {
