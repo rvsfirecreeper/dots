@@ -1,16 +1,21 @@
 import Quickshell // for PanelWindow
 import Quickshell.Io
 import QtQuick // for Text
+
 Scope {
   id: root
   property string time
-  Variants {
-    model: Quickshell.screens;
 
+  Variants {
+    model: Quickshell.screens
+
+
+    // RIGHT RECTANGLE
     PanelWindow {
       required property var modelData
       screen: modelData
       color: "transparent"
+
       anchors {
         top: true
         left: true
@@ -18,18 +23,24 @@ Scope {
       }
 
       implicitHeight: 70
+
       Item {
         anchors.margins: 10
         anchors.fill: parent
         Rectangle {
-          anchors.fill: parent
+          anchors {
+            top: parent.top
+            left: parent.left
+            bottom: parent.bottom
+          }
+          implicitWidth: 100
           radius: 18
           color: Colors.background
           opacity: Theme.opacity
           border.color: Colors.color3
-          border.width: 2
+          border.width: 3
+
           ClockModule {
-            // center the bar in its parent component (the window)
             anchors.centerIn: parent
             time: Time.time
           }
