@@ -10,7 +10,7 @@ Singleton {
 
     Process {
         id: dateProc
-        command: ["internet.sh"]
+        command: ["sh", "-c", "$HOME/.scripts/internet.sh"]
         running: true
 
         stdout: StdioCollector {
