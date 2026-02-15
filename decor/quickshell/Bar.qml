@@ -25,6 +25,7 @@ Scope {
       implicitHeight: 70
       ClockModule {}
       StatusModule {}
+      Flex {} // flex
     }
   }
 }
