@@ -23,6 +23,7 @@ use std/util "path add"
 path add "~/.local/bin"
 path add "~/.cargo/bin"
 path add "./.venv/bin"
+path add "~/.scripts"
 $env.config.edit_mode = 'vi'
 sleep 0.1sec
 alias hx = helix
