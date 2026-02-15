@@ -8,7 +8,7 @@ Item {
       bottom: parent.bottom
       left: parent.left
     }
-    implicitWidth: 70
+    implicitWidth: 50
     radius: 18
     color: Colors.background
     opacity: Theme.opacity
