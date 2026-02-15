@@ -1,8 +1,11 @@
 import QtQuick
+import Quickshell
+import Quickshell.Io
 Item {
   anchors.margins: 10
   anchors.fill: parent
   Rectangle {
+    id: status
     anchors {
       top: parent.top
       bottom: parent.bottom
@@ -14,14 +17,31 @@ Item {
     opacity: Theme.opacity
     border.color: Colors.color3
     border.width: 3
+    Process {
+      id: connman
+      command: ["kitty", "connmanctl"]
+    }
     Text {
         anchors.centerIn: parent
-        property string status
-        status: Status.status
-        text: status
+        text: Status.status
         font.family: Theme.font
         font.pixelSize: Theme.fontSize
         color: Colors.foreground
+    }
+    Behavior on implicitWidth {
+      NumberAnimation {
+        duration: 200
+        easing.type: Easing.InOutQuad
+      }
+    }
+    MouseArea {
+      anchors.fill: parent
+      onClicked: connman.running = true
+      hoverEnabled: true
+      onEntered: status.implicitWidth = 70
+      onExited: status.implicitWidth = 50
+       
+      
     }
   }
 }
