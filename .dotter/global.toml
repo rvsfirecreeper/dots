@@ -20,7 +20,8 @@ depends = []
 "decor/waybar" = "~/.config/waybar"
 "decor/wlogout" = "~/.config/wlogout"
 "decor/wlogout/icons" = "~/.config/wlogout/icons"
-"decor/quickshell" = {target = "~/.config/quickshell", type = "template"}
+"decor/quickshell" = "~/.config/quickshell"
+"decor/quickshell/shell.qml" = {target = "~/.config/quickshell/shell.qml", type = "template"}
 # Functional Utilities
 
 "utils/alacritty" = "~/.config/alacritty"
