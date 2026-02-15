@@ -16,7 +16,7 @@ Item {
     border.width: 3
     Text {
         anchors.centerIn: parent
-        text: ""
+        text: "\uF31F"
         font.family: Theme.font
         font.pixelSize: Theme.fontSize
         color: Colors.foreground
