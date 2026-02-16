@@ -10,11 +10,15 @@ Singleton {
 
     Process {
         id: dateProc
-        command: ["sh", "-c", "$HOME/.scripts/internet.sh"]
+        command: ["wget", "-q", "--spider", "http://example.com"]
         running: true
-
-        stdout: StdioCollector {
-            onStreamFinished: root.status = this.text
+        onExited: (code, status) => {
+            if (code == 0) {
+              root.status = "󰖩"          
+            }
+            else {
+                root.status = "󰈂"
+            }
         }
     }
     Timer {
