@@ -35,4 +35,6 @@ starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.n
 $env.PROMPT_INDICATOR_VI_INSERT = ""
 $env.PROMPT_INDICATOR_VI_NORMAL = ""
 $env.GPG_TTY = (tty)
+$env.CC_aarch64_unknown_linux_gnu = "aarch64-linux-gnu-gcc"
+$env.CARGO_TARGET_AARCH64_UNKNOWN_LINUX_GNU_LINKER = "aarch64-linux-gnu-gcc"
 fastfetch
