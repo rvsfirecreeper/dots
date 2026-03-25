@@ -40,8 +40,6 @@ Item {
       hoverEnabled: true
       onEntered: status.implicitWidth = 70
       onExited: status.implicitWidth = 50
-       
-      
     }
   }
 }
