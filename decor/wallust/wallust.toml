@@ -1,7 +1,9 @@
 backend = "fastresize"
-palette = "dark16"
-color_space = "labmixed"
-checkcontrast = true
+palette = "kmeans"
+salience = {sampling = "balanced", intensity = "pastel"}
+style = "dark"
+use16cols = false
+checkcontrast = false
 [templates]
 kitty.template = "kitty.conf"
 kitty.target = "~/.config/kitty/colors.conf"
