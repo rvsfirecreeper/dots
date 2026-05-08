@@ -217,6 +217,7 @@ window-rule {
     match app-id="^wofi$"
     background-effect {
         blur true
+        xray false
     }
 }
 // layer-rule {
