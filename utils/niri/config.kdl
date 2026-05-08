@@ -213,5 +213,16 @@ window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
 }
-
+window-rule {
+    match app-id="^wofi$"
+    background-effect {
+        blur true
+    }
+}
+// layer-rule {
+//     match namespace="^quickshell$"
+//     background-effect {
+//         blur true
+//     }
+// }
 include "binds.kdl"
