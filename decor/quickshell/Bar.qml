@@ -12,6 +12,7 @@ Scope {
 
     // RIGHT RECTANGLE
     PanelWindow {
+      id: barWindow
       required property var modelData
       screen: modelData
       color: "transparent"
@@ -26,6 +27,7 @@ Scope {
       ClockModule {}
       StatusModule {}
       Flex {} // flex
+      BackgroundEffect.blurRegion: Region { item: barWindow.contentItem }
     }
   }
 }

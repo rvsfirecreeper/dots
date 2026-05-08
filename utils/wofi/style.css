@@ -7,19 +7,19 @@
 }
 
 window {
-    background-color: @background;
+    background-color: alpha(@background, {{opacity}});
     outline: none;
     border: none;
 }
 #inner-box {
     margin: 10px;
     border: none;
-    background-color: @background;
+    background-color: alpha(@background, {{opacity}});
 }
 #outer-box {    
     border: 3px;
     border-radius: 5px;
-    background-color: @background;
+    background-color: alpha(@background, {{opacity}});
 }
 #input {
     margin-left:10px;
@@ -31,13 +31,13 @@ window {
     color: @color11;
     box-shadow: none;
     border-radius:10px;
-    background-color: @background;
+    background-color: alpha(@background, {{opacity}});
 }
 #entry:selected {
     box-shadow: none;
     border: none;
     border-radius: 20px;
-    background-color: @background;
+    background-color: alpha(@background, {{opacity}});
 }
 #entry:selected #text {
     color: @color3;
