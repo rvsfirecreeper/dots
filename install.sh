@@ -18,11 +18,12 @@ neovim paru mako waybar wofi wlogout wget \
 papirus-icon-theme  bibata-cursor-theme quickshell
 gsettings set org.gnome.desktop.interface icon-theme "Papirus"
 cargo install coreutils
-hyprpm add https://github.com/hyprwm/hyprland-plugins
 git clone https://gitlab.com/coolrustcoderguy/dots.git
 cd dots || exit
 chsh -s /bin/nu
+touch /usr/share/backgrounds/bg
+doas chown $USER:$USER /usr/share/backgrounds/bg
+doas chmod 744 /usr/share/backgrounds/bg
 dotter deploy
-echo "Deployed. Running fullwal to start you off."
-./scripts/fullwal.sh
+echo "Deployed. Running waypaper to start you off."
 echo "Done!"

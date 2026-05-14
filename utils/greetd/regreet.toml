@@ -1,5 +1,5 @@
 [background]
-path = "/etc/greetd/background.png"
+path = "/usr/share/backgrounds/bg"
 fit = "Fill"
 [commands]
 reboot = ["loginctl", "reboot"]
