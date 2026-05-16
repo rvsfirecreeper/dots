@@ -22,11 +22,14 @@ Scope {
         left: true
         right: true
       }
-
-      implicitHeight: 70
+      Rectangle {
+        anchors.fill: parent
+        color: Colors.background
+      }
+      implicitHeight: 40
       ClockModule {}
       StatusModule {}
-      Flex {} // flex
+      Artix {} // flex
       // BackgroundEffect.blurRegion: Region { item: barWindow.contentItem }
     }
   }

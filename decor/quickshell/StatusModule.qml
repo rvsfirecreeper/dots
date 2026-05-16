@@ -13,9 +13,9 @@ Item {
     }
     implicitWidth: 50
     radius: 18
-    color: Colors.background
+    color: "#00000000"
     opacity: Theme.opacity
-    border.color: Colors.color3
+    border.color: "#00000000"
     border.width: 3
     Process {
       id: connman

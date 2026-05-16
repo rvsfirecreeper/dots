@@ -12,11 +12,8 @@ Item {
       right: parent.right
     }
     implicitWidth: 50
-    radius: 18
-    color: Colors.background
+    color: "#00000000"
     opacity: Theme.opacity
-    border.color: Colors.color3
-    border.width: 3
     Text {
         anchors.centerIn: parent
         text: "\uF31F"

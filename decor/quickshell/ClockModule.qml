@@ -10,10 +10,10 @@ Item {
     }
     implicitWidth: 100
     radius: 18
-    color: Colors.background
+    color: "#00000000"
     opacity: Theme.opacity
     border.color: Colors.color3
-    border.width: 3
+    border.width: 0
     Text {
         anchors.centerIn: parent
         time: Time.time
