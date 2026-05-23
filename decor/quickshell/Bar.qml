@@ -1,5 +1,6 @@
 import Quickshell // for PanelWindow
 import Quickshell.Io
+import Quickshell.Wayland
 import QtQuick // for Text
 
 Scope {
@@ -15,22 +16,18 @@ Scope {
       id: barWindow
       required property var modelData
       screen: modelData
-      color: "transparent"
+      color: Colors.background
 
       anchors {
         top: true
         left: true
         right: true
       }
-      Rectangle {
-        anchors.fill: parent
-        color: Colors.background
-      }
       implicitHeight: 40
       ClockModule {}
       StatusModule {}
       Artix {} // flex
-      // BackgroundEffect.blurRegion: Region { item: barWindow.contentItem }
+      BackgroundEffect.blurRegion: Region { item: barWindow.contentItem }
     }
   }
 }

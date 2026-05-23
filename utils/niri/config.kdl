@@ -78,6 +78,7 @@ environment {
     EGL_PLATFORM "wayland"
     QT_WAYLAND_FORCE_DPI "physical"
     OLLAMA_MODELS "/ai"
+    DRI_PRIME "1"
 }
 cursor {
     hide-when-typing
