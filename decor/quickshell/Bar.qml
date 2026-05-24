@@ -16,18 +16,17 @@ Scope {
       id: barWindow
       required property var modelData
       screen: modelData
-      color: Colors.background
-
+      color: "#00000000"
       anchors {
         top: true
         left: true
         right: true
       }
-      implicitHeight: 40
+      implicitHeight: 60
       ClockModule {}
       StatusModule {}
       Artix {} // flex
-      BackgroundEffect.blurRegion: Region { item: barWindow.contentItem }
+      // BackgroundEffect.blurRegion: Region { item: barWindow.contentItem }
     }
   }
 }

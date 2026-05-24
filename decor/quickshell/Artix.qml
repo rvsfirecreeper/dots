@@ -5,15 +5,15 @@ Item {
   anchors.margins: 10
   anchors.fill: parent
   Rectangle {
-    id: flex
+    id: artix
     anchors {
       top: parent.top
       bottom: parent.bottom
       right: parent.right
     }
-    implicitWidth: 50
-    color: "#00000000"
-    opacity: Theme.opacity
+    implicitWidth: 45
+    color: Colors.background
+    radius: 18
     Text {
         anchors.centerIn: parent
         text: "\uF31F"
@@ -36,8 +36,8 @@ Item {
       anchors.fill: parent
       onClicked: wofi.running = true
       hoverEnabled: true
-      onEntered: flex.implicitWidth = 70 
-      onExited: flex.implicitWidth = 50 
+      onEntered: artix.implicitWidth = 70 
+      onExited: artix.implicitWidth = 45 
     }
   }
 }

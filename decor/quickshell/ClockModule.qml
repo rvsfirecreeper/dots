@@ -10,7 +10,7 @@ Item {
     }
     implicitWidth: 100
     radius: 18
-    color: "#00000000"
+    color: Colors.background
     opacity: Theme.opacity
     border.color: Colors.color3
     border.width: 0
