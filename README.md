@@ -43,11 +43,6 @@ OpenDoas is required for install. I highly recommend using OpenDoas.
 I may add doas-exclusive doas.conf rules in the future.
 I already considered it for greetd background. 
 
-## Screenshots
+## Preview
 
-![Screenshot](screenshots/screenshot1.png)
-![Screenshot](screenshots/screenshot2.png)
-![Screenshot](screenshots/screenshot3.png)
-![Screenshot](screenshots/screenshot4.png)
-![Screenshot](screenshots/screenshot5.png)
-![Screenshot](screenshots/screenshot6.png)
+[Rice Showcase](showcase.mp4)

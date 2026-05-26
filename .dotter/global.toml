@@ -7,9 +7,7 @@ depends = []
 
 # Rcs/profile
 
-"rc/bashrc" = "~/.bashrc"
 "rc/profile" = "~/.profile"
-"rc/zshrc" = "~/.zshrc"
 
 # Decoration
 
@@ -19,8 +17,6 @@ depends = []
 "decor/wallust/templates" = { target = "~/.config/wallust/templates", type = "symbolic" }
 "decor/wallust/wallust.toml" = "~/.config/wallust/wallust.toml"
 "decor/waybar" = "~/.config/waybar"
-"decor/wlogout" = "~/.config/wlogout"
-"decor/wlogout/icons" = "~/.config/wlogout/icons"
 "decor/quickshell" = "~/.config/quickshell"
 "decor/quickshell/shell.qml" = {target = "~/.config/quickshell/shell.qml", type = "template"}
 # Functional Utilities
