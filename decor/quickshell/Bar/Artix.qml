@@ -44,9 +44,25 @@ Item {
     }
     Rectangle {
         id: exit
+        property var actions: [
+            {
+                icon: "󰤄",
+                command: ["loginctl", "suspend"]
+            },
+            {
+                icon: "",
+                command: ["loginctl", "poweroff"]
+            },
+            {
+                icon: "",
+                command: ["loginctl", "reboot"]
+            },
+            {
+                icon: "󰈆",
+                command: ["niri", "msg", "action", "quit"]
+            }
+        ]
         clip: true
-        property list<string> chars: ["󰤄", "", "", "󰈆"]
-        property var commands: [["loginctl", "suspend"], ["loginctl", "poweroff"], ["loginctl", "reboot"], ["niri", "msg", "action", "quit"]]
         property var commandIndex: 0
         property bool expanded: false
         anchors {
@@ -79,17 +95,17 @@ Item {
             anchors.fill: parent
 
             Repeater {
-                model: exit.chars.length
+                model: exit.actions
 
                 delegate: Item {
-                    required property int index
+                    required property var modelData
 
                     implicitWidth: 45
                     implicitHeight: parent.height
 
                     Text {
                         anchors.centerIn: parent
-                        text: exit.chars[index]
+                        text: modelData.icon
                         font.family: Theme.font
                         font.pixelSize: Theme.fontSize
                         color: Colors.foreground
@@ -99,7 +115,7 @@ Item {
                         anchors.fill: parent
 
                         onClicked: {
-                            exit.commandIndex = index;
+                            quit.command = modelData.command;
                             quit.running = true;
                         }
                     }
