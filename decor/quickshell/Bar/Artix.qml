@@ -43,29 +43,24 @@ Item {
         }
     }
     Rectangle {
-        id: suspend
+        id: exit
+        clip: true
         property list<string> chars: ["󰤄", "", "", "󰈆"]
         property var commands: [["loginctl", "suspend"], ["loginctl", "poweroff"], ["loginctl", "reboot"], ["niri", "msg", "action", "quit"]]
         property var commandIndex: 0
+        property bool expanded: false
         anchors {
             top: parent.top
             bottom: parent.bottom
             right: artix.left
             rightMargin: 10
         }
-        implicitWidth: 45
+        implicitWidth: expanded ? 180 : 45
         color: Colors.background
         radius: 18
-        Text {
-            anchors.centerIn: parent
-            text: suspend.chars[suspend.commandIndex]
-            font.family: Theme.font
-            font.pixelSize: Theme.fontSize
-            color: Colors.foreground
-        }
         Process {
             id: quit
-            command: suspend.commands[suspend.commandIndex]
+            command: exit.commands[exit.commandIndex]
             running: false
         }
         Behavior on implicitWidth {
@@ -76,18 +71,40 @@ Item {
         }
         MouseArea {
             anchors.fill: parent
-            onWheel: wheel => {
-                const len = suspend.commands.length
-                if (wheel.inverted) {
-                    suspend.commandIndex = (suspend.commandIndex + 1) % len;
-                } else {
-                    suspend.commandIndex = (suspend.commandIndex - 1 + 4) % len;
+            hoverEnabled: true
+            onEntered: exit.expanded = true
+            onExited: exit.expanded = false
+        }
+        Row {
+            anchors.fill: parent
+
+            Repeater {
+                model: exit.chars.length
+
+                delegate: Item {
+                    required property int index
+
+                    implicitWidth: 45
+                    implicitHeight: parent.height
+
+                    Text {
+                        anchors.centerIn: parent
+                        text: exit.chars[index]
+                        font.family: Theme.font
+                        font.pixelSize: Theme.fontSize
+                        color: Colors.foreground
+                    }
+
+                    MouseArea {
+                        anchors.fill: parent
+
+                        onClicked: {
+                            exit.commandIndex = index;
+                            quit.running = true;
+                        }
+                    }
                 }
             }
-            onClicked: quit.running = true
-            hoverEnabled: true
-            onEntered: suspend.implicitWidth = 70
-            onExited: suspend.implicitWidth = 45
         }
     }
 }
