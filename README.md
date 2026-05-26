@@ -45,4 +45,4 @@ I already considered it for greetd background.
 
 ## Preview
 
-[Rice Showcase](showcase.mp4)
+[![Showcase](https://raw.githubusercontent.com/rvsfirecreeper/dots/main/showcase.png)](https://raw.githubusercontent.com/rvsfirecreeper/dots/main/showcase.mp4)
