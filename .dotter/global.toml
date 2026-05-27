@@ -18,7 +18,6 @@ depends = []
 "decor/wallust/wallust.toml" = "~/.config/wallust/wallust.toml"
 "decor/waybar" = "~/.config/waybar"
 "decor/quickshell" = "~/.config/quickshell"
-"decor/quickshell/shell.qml" = {target = "~/.config/quickshell/shell.qml", type = "template"}
 # Functional Utilities
 
 "utils/alacritty" = "~/.config/alacritty"

@@ -2,7 +2,7 @@ import Quickshell // for PanelWindow
 import Quickshell.Io
 import Quickshell.Wayland
 import QtQuick // for Text
-import qs
+import qs.Bar
 Scope {
   id: root
   property string time
