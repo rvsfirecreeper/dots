@@ -13,7 +13,7 @@ paru
 paru -S paru-bin
 #install all deps
 paru -S kitty wallust mate-polkit starship nushell \
-dotter-rs-bin cage swaylock swayidle greetd-regreet zoxide pqiv \
+dotter-rs-bin cage ttf-jetbrains-mono-nerd swayidle greetd-regreet zoxide pqiv \
 neovim paru mako waybar wofi wlogout wget \
 papirus-icon-theme  bibata-cursor-theme quickshell
 gsettings set org.gnome.desktop.interface icon-theme "Papirus"

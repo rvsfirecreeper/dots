@@ -36,7 +36,7 @@ depends = []
 "utils/waypaper/style.css" = "~/.config/waypaper/style.css"
 "scripts" = "~/.scripts"
 [default.variables]
-font = "Maple Mono"
+font = "JetBrainsMono Nerd Font"
 fsize = 13
 lfsize = 20
 opacity = 0.9
