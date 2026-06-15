@@ -28,6 +28,7 @@ depends = []
 "utils/tmux.conf" = "~/.tmux.conf"
 "utils/paru" = "~/.config/paru"
 "utils/wofi" = "~/.config/wofi"
+"utils/wezterm" = "~/.config/wezterm"
 "utils/helix" = "~/.config/helix"
 "utils/greetd" = { target = "/etc/greetd", owner = "root", type = "template" }
 "utils/nushell" = "~/.config/nushell"

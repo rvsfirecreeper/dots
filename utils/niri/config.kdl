@@ -221,6 +221,12 @@ window-rule {
         blur true
     }
 }
+window-rule {
+    match app-id="^.*wezterm$"
+    background-effect {
+        blur true
+    }
+}
 // layer-rule {
 //     match namespace="^quickshell$"
 //     background-effect {
