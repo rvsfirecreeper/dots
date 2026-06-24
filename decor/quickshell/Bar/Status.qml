@@ -14,7 +14,7 @@ Singleton {
         running: true
         onExited: (code, status) => {
             if (code == 0) {
-              root.wifistatus = "󰖩"          
+              root.wifistatus = ""          
             }
             else {
                 root.wifistatus = "󰈂"

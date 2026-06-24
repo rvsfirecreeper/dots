@@ -227,10 +227,10 @@ window-rule {
         blur true
     }
 }
-// layer-rule {
-//     match namespace="^quickshell$"
-//     background-effect {
-//         blur true
-//     }
-// }
+layer-rule {
+    match namespace="^quickshell$"
+    background-effect {
+        blur true
+    }
+}
 include "binds.kdl"

@@ -18,7 +18,7 @@ Item {
         radius: 18
         Text {
             anchors.centerIn: parent
-            text: "\uF31F"
+            text: "\uF002"
             font.family: Theme.font
             font.pixelSize: Theme.fontSize
             color: Colors.foreground
@@ -81,7 +81,7 @@ Item {
         }
         Behavior on implicitWidth {
             NumberAnimation {
-                duration: 200   // milliseconds
+                duration: 350   // milliseconds
                 easing.type: Easing.InOutQuad
             }
         }
