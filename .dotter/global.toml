@@ -40,7 +40,7 @@ depends = []
 font = "JetBrainsMono Nerd Font"
 fsize = 13
 lfsize = 20
-opacity = 0.8
+opacity = 0.85
 terminal = 'kitty'
 [settings]
 default_target_type = "automatic"

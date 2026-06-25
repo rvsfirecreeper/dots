@@ -46,10 +46,6 @@ Item {
         id: exit
         property var actions: [
             {
-                icon: "󰤄",
-                command: ["loginctl", "suspend"]
-            },
-            {
                 icon: "",
                 command: ["loginctl", "poweroff"]
             },
@@ -60,6 +56,10 @@ Item {
             {
                 icon: "󰈆",
                 command: ["niri", "msg", "action", "quit"]
+            },
+            {
+                icon: "󰤄",
+                command: ["loginctl", "suspend"]
             }
         ]
         clip: true
@@ -92,8 +92,12 @@ Item {
             onExited: exit.expanded = false
         }
         Row {
-            anchors.fill: parent
-
+            anchors {
+                right: parent.right
+                top: parent.top
+                bottom: parent.bottom
+            }
+            width: exit.actions.length * 45
             Repeater {
                 model: exit.actions
 
