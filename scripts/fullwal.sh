@@ -1,5 +1,5 @@
 #!/bin/bash
-wallust run "$1" 
+wallust run "$1" 1> /home/ragef/.wallog 2>&1
 killall -SIGUSR2 waybar
 cd $(dirname $(realpath "$HOME/.config/niri/config.kdl"))
 cd $(git rev-parse --show-toplevel)
