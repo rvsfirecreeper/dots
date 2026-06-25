@@ -1,9 +1,7 @@
 backend = "fastresize"
-palette = "kmeans"
-salience = {sampling = "balanced", intensity = "pastel"}
-style = "dark"
-use16cols = false
-checkcontrast = false
+palette = "dark16"
+color_space = "labmixed"
+checkcontrast = true
 alpha = {{math opacity "*" 100}}
 [templates]
 kitty.template = "kitty.conf"
