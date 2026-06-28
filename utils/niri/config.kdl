@@ -223,6 +223,7 @@ window-rule {
 }
 window-rule {
     match app-id="^.*wezterm$"
+    default-column-width {proportion 0.5;}
     background-effect {
         blur true
     }

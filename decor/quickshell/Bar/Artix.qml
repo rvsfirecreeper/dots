@@ -47,11 +47,11 @@ Item {
         property var actions: [
             {
                 icon: "",
-                command: ["loginctl", "poweroff"]
+                command: ["systemctl", "poweroff"]
             },
             {
                 icon: "",
-                command: ["loginctl", "reboot"]
+                command: ["systemctl", "reboot"]
             },
             {
                 icon: "󰈆",
@@ -59,7 +59,7 @@ Item {
             },
             {
                 icon: "󰤄",
-                command: ["loginctl", "suspend"]
+                command: ["systemctl", "suspend"]
             }
         ]
         clip: true
