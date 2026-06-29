@@ -8,7 +8,7 @@ cd yay-bin || exit
 makepkg -si
 # Updating the system because it needs to be updated
 #install all deps
-yay -Syu kitty wallust mate-polkit starship nushell \
+yay -Syu kitty waypaper fastfetch wallust mate-polkit starship nushell \
 dotter-rs-bin cage ttf-jetbrains-mono-nerd swayidle greetd-regreet zoxide pqiv \
 neovim mako waybar wofi wlogout wget \
 papirus-icon-theme  bibata-cursor-theme quickshell
