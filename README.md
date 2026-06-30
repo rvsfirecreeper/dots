@@ -13,35 +13,18 @@ PLEASE Do Not attempt to use Install.sh before you have a working OpenDoas confi
 Welcome to my dotfiles! Take whatever you like, but here are a few suggestions:
 
 Use your own wallpaper.
-I have a script for this that can import wallpapers into the folder for future use.
-
-Modify monitors.conf and hyprpaper.conf to suit your own monitor.
+simply move into ~/dots/wallpaper and run a quick dotter deploy
+Modify config.kdl to suit your own monitor.
 I have a 165hz 1440p, but that's kinda niche.
 
 ## Install
-
+You need to have sudo installed for the script to work
 You can use
-`curl -sS https://gitlab.com/coolrustcoderguy/dots/-/raw/main/install.sh | bash`
-for Artix or Arch Linux(maybe I ain't sure)
-
+`curl -sS https://raw.githubusercontent.com/rvsfirecreeper/dots/refs/heads/main/install.sh | bash`
+for Arch Linux
 Or manually install all dependencies and use dotter deploy, but just don't.
-The script isn't long, you can read it yourself.
+The script isn't long, so I force you to read it ;)
 
-## Note for Artix users
-
-I'm too lazy to check but you probably need the extra repo enabled at minimum
-
-## Greetd background
-
-The Greetd background will not update automatically via fullwal. You have to do it manually using:
-`doas cp ~/.config/hypr/wallpaper/bg.png /etc/greetd/background.png`
-In the future, it may be added as a doas rule + a helper script.
-
-## Doas
-
-OpenDoas is required for install. I highly recommend using OpenDoas.
-I may add doas-exclusive doas.conf rules in the future.
-I already considered it for greetd background. 
 
 ## Preview
 

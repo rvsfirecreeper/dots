@@ -1,5 +1,5 @@
 [background]
-path = "/usr/share/backgrounds/bg"
+path = "/var/lib/rajlab-dotfiles/bg"
 fit = "Fill"
 [commands]
 reboot = ["loginctl", "reboot"]

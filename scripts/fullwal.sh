@@ -3,7 +3,7 @@ wallust run "$1"
 killall -SIGUSR2 waybar
 cd $(dirname $(realpath "$HOME/.config/niri/config.kdl"))
 cd $(git rev-parse --show-toplevel)
-cp "$1" "/usr/share/backgrounds/bg"
+cp "$1" "/var/lib/rajlab-dotfiles/bg"
 base=$(basename "$1")
 rm ./utils/swaylock
 sed "s/bg\.png/$base/g" ./utils/swaylock.temp > ./utils/swaylock
