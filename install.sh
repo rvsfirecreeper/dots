@@ -23,7 +23,7 @@ dotter-rs-bin cage ttf-jetbrains-mono-nerd swayidle greetd-regreet zoxide pqiv \
 neovim mako waybar wofi wlogout wget \
 papirus-icon-theme  bibata-cursor-theme quickshell
 gsettings set org.gnome.desktop.interface icon-theme "Papirus"
-git clone https://gitlab.com/coolrustcoderguy/dots.git
+git clone https://github.com/rvsfirecreeper/dots.git
 cd dots || exit
 chsh -s /bin/nu
 sudo mkdir -p /var/lib/rajlab-dotfiles
