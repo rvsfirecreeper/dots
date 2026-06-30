@@ -67,6 +67,10 @@ Item {
         id: exit
         property var actions: [
             {
+                icon: "󰌾",
+                command: ["bash", "-c", "qs -p ~/.config/quickshell/Lock.qml"]
+            },
+            {
                 icon: "",
                 command: ["systemctl", "poweroff"]
             },
@@ -92,7 +96,7 @@ Item {
             right: artix.left
             rightMargin: 10
         }
-        implicitWidth: expanded ? 180 : 45
+        implicitWidth: expanded ? exit.actions.length * 45 : 45
         color: Colors.background
         radius: 18
         Process {
