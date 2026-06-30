@@ -7,11 +7,32 @@ Item {
     anchors.margins: 10
     anchors.fill: parent
     Rectangle {
-        id: artix
+        id: wifiStatus
         anchors {
             top: parent.top
             bottom: parent.bottom
             right: parent.right
+        }
+        implicitWidth: 45
+        radius: 18
+        color: Colors.background
+        border.color: Colors.foreground
+        border.width: 0
+        Text {
+            anchors.centerIn: parent
+            text: Status.wifistatus
+            font.family: Theme.font
+            font.pixelSize: Theme.fontSize
+            color: Colors.foreground
+        }
+    }
+    Rectangle {
+        id: artix
+        anchors {
+            top: parent.top
+            bottom: parent.bottom
+            right: wifiStatus.left
+            rightMargin: 10
         }
         implicitWidth: 45
         color: Colors.background
@@ -76,7 +97,7 @@ Item {
         radius: 18
         Process {
             id: quit
-            command: exit.commands[exit.commandIndex]
+            command: []
             running: false
         }
         Behavior on implicitWidth {
