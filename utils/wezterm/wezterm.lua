@@ -16,6 +16,12 @@ config.color_scheme = 'wallust'
 config.window_background_opacity = {{opacity}}
 config.enable_tab_bar = false
 
+config.window_padding = {
+  left = 20,
+  right = 20,
+  top = 20,
+  bottom = 20,
+}
 config.font = wezterm.font_with_fallback { '{{font}}', 'Noto Color Emoji' }
 -- config.kde_window_background_blur = true
 -- Finally, return the configuration to wezterm:

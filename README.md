@@ -6,7 +6,7 @@
 Please do not use these dotfiles unless you know what you're doing.
 You are at risk of having to Rescue from TTY2 out of a mess.
 
-PLEASE Do Not attempt to use Install.sh before you have a working OpenDoas config
+PLEASE Do Not attempt to use Install.sh before you have a working sudo config
 
 ##  Intro
 
