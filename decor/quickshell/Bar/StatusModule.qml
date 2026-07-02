@@ -18,7 +18,7 @@ Item {
             left: parent.left
         }
         clip: true
-        width: workRow.implicitWidth + 20
+        width: workRow.implicitWidth - 12
         radius: 18
         color: Colors.background
         border.color: Colors.foreground
@@ -40,7 +40,8 @@ Item {
                 leftMargin: 10
             }
             Repeater {
-                model: Status.numSpaces
+                property int visualCount: parseInt(Status.numSpaces) + 1
+                model: visualCount
                 Rectangle {
                     width: index + 1 == Status.focusedSpace ? 50 : 20
                     height: workRow.height
