@@ -9,7 +9,7 @@ case "$proceed" in
 esac
 # Just making sure yay is installed and git
 cd "$HOME" || exit
-sudo pacman -S git
+sudo pacman -S --needed git
 if ! command -v yay > /dev/null 2>&1; then
   sudo pacman -S --needed base-devel
   git clone https://aur.archlinux.org/yay-bin.git
@@ -18,7 +18,7 @@ if ! command -v yay > /dev/null 2>&1; then
 fi
 # Updating the system because it needs to be updated
 #install all deps
-yay -Syu wezterm-nightly-bin waypaper fastfetch wallust mate-polkit starship nushell \
+yay -Syu --needed wezterm-nightly-bin waypaper fastfetch wallust mate-polkit starship nushell \
 dotter-rs-bin cage ttf-jetbrains-mono-nerd swayidle greetd-regreet zoxide pqiv \
 neovim mako waybar wofi wlogout wget \
 papirus-icon-theme  bibata-cursor-theme quickshell
