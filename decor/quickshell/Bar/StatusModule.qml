@@ -17,15 +17,21 @@ Item {
             bottom: parent.bottom
             left: parent.left
         }
-
+        clip: true
         width: workRow.implicitWidth + 20
         radius: 18
         color: Colors.background
         border.color: Colors.foreground
         border.width: 0
+        Behavior on width {
+            NumberAnimation {
+                duration: 200
+                easing.type: Easing.InOutQuad
+            }
+        }
         Row {
             id: workRow
-            spacing: 8
+            spacing: 12
             anchors {
                 fill: parent
                 topMargin: 12
@@ -34,7 +40,7 @@ Item {
                 leftMargin: 10
             }
             Repeater {
-                model: 9
+                model: Status.numSpaces
                 Rectangle {
                     width: index + 1 == Status.focusedSpace ? 50 : 20
                     height: workRow.height
