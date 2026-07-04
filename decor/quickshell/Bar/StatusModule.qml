@@ -1,15 +1,10 @@
 import QtQuick
 import Quickshell.Io
+import Quickshell.Hyprland
 import qs
 Item {
     anchors.fill: parent
     anchors.margins: 10
-    Process {
-        id: niriFocus
-        property var selectedWorkspace: 0
-        running: false
-        command: ["niri", "msg", "action", "focus-workspace", selectedWorkspace.toString()]
-    }
 
     Rectangle {
         anchors {
@@ -18,7 +13,7 @@ Item {
             left: parent.left
         }
         clip: true
-        width: workRow.implicitWidth - 12
+        width: workRow.implicitWidth + 24
         radius: 18
         color: Colors.background
         border.color: Colors.foreground
@@ -36,27 +31,25 @@ Item {
                 fill: parent
                 topMargin: 12
                 bottomMargin: 12
-                rightMargin: 10
-                leftMargin: 10
+                rightMargin: 12
+                leftMargin: 12
             }
             Repeater {
-                property int visualCount: parseInt(Status.numSpaces) + 1
-                model: visualCount
+                model: Hyprland.workspaces
                 Rectangle {
-                    width: index + 1 == Status.focusedSpace ? 50 : 20
+                    width: modelData.active ? 50 : 20
                     height: workRow.height
-                    color: index + 1 == Status.focusedSpace ? Colors.foreground : Colors.color12
+                    color: modelData.active ? Colors.foreground : Colors.color12
                     radius: 10
                     MouseArea {
                         anchors.fill: parent
                         onClicked: {
-                            niriFocus.selectedWorkspace = index + 1
-                            niriFocus.running = true
+                            modelData.activate()
                         }
                     }
                     Behavior on width {
                         NumberAnimation {
-                            duration: 200
+                           duration: 200
                             easing.type: Easing.InOutQuad
                         }
                     }
