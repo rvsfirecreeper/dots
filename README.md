@@ -19,6 +19,7 @@ I have a 165hz 1440p, but that's kinda niche.
 
 ## Install
 You need to have sudo installed for the script to work
+(To be clear, it doesn't run as root, but it needs sudo for package management as well as greetd config)
 You can use
 `curl -sS https://raw.githubusercontent.com/rvsfirecreeper/dots/refs/heads/main/install.sh | bash`
 for Arch Linux
