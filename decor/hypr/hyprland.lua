@@ -7,7 +7,7 @@ hl.monitor({
     output   = "DP-2",
     mode     = "2560x1440@165",
     position = "0x0",
-    scale    = "1.1",
+    scale    = "1",
 })
 
 
@@ -43,6 +43,7 @@ end)
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
 
 hl.env("XCURSOR_SIZE", "24")
+hl.env("XCURSOR_THEME", "Bibata-Modern-Classic")
 hl.env("HYPRCURSOR_SIZE", "24")
 
 
