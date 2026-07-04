@@ -12,17 +12,29 @@ WlSessionLock {
         Rectangle {
             anchors.fill: parent
             color: Colors.background
-            Text {
-                id: roasts
+            Image {
+                anchors.fill: parent
+                source: "/var/lib/rajlab-dotfiles/bg"
+                visible: true
+            }
+            Rectangle {
+                width: roasts.implicitWidth + 30
+                height: roasts.implicitHeight + 20
                 anchors {
                     top: parent.top
                     horizontalCenter: parent.horizontalCenter
+                    topMargin: 10
                 }
-                height: 40
-                color: Colors.foreground
-                font.pixelSize: Theme.fontSize
-                font.family: Theme.font
-                text: "Press Enter to Authenticate, but first you should learn basic tech"
+                color: Colors.background
+                radius: 20
+                Text {
+                    id: roasts
+                    anchors.centerIn: parent
+                    color: Colors.foreground
+                    font.pixelSize: Theme.fontSize
+                    font.family: Theme.font
+                    text: "Press Enter to Authenticate, but first you should learn basic tech"
+                }
             }
             Rectangle {
                 width: 400
@@ -52,6 +64,7 @@ WlSessionLock {
                         } else {
                             password.text = "";
                             roasts.text = "You entered your own password incorrectly. Nice One.";
+                            lock.authenticating = false
                         }
                     }
                 }

@@ -20,7 +20,7 @@ fi
 #install all deps
 yay -Syu --needed wezterm-nightly-bin waypaper fastfetch wallust mate-polkit starship nushell \
 dotter-rs-bin cage ttf-jetbrains-mono-nerd swayidle greetd-regreet zoxide pqiv \
-neovim mako waybar wofi wlogout wget \
+neovim mako waybar wofi wlogout wget hyprland xdg-desktop-portal-hyprland hyprpolkitagent \
 papirus-icon-theme  bibata-cursor-theme quickshell
 gsettings set org.gnome.desktop.interface icon-theme "Papirus"
 git clone https://github.com/rvsfirecreeper/dots.git
