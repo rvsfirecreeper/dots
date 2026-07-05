@@ -24,8 +24,8 @@ Scope {
       }
       implicitHeight: 60
       ClockModule {}
-      StatusModule {}
-      Artix {} // flex
+      WorkspaceModule {}
+      StatusModule {} // flex
       // BackgroundEffect.blurRegion: Region { item: barWindow.contentItem }
     }
   }
