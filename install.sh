@@ -19,7 +19,7 @@ fi
 # Updating the system because it needs to be updated
 #install all deps
 yay -Syu --needed wezterm-nightly-bin waypaper fastfetch wallust starship nushell \
-dotter-rs-bin ly ttf-jetbrains-mono-nerd swayidle zoxide helix \
+dotter-rs-bin ly yazi ttf-jetbrains-mono-nerd swayidle zoxide helix \
 mako wofi wget hyprland xdg-desktop-portal-hyprland hyprpolkitagent \
 papirus-icon-theme  bibata-cursor-theme quickshell
 gsettings set org.gnome.desktop.interface icon-theme "Papirus"

@@ -21,7 +21,6 @@ depends = []
 # Functional Utilities
 
 "utils/kanata" = "~/.config/kanata"
-# "utils/lf" = "~/.config/lf"
 "utils/btop" = "~/.config/btop"
 # "utils/tmux.conf" = "~/.tmux.conf"
 "utils/wofi" = "~/.config/wofi"
