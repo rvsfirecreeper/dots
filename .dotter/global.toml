@@ -17,7 +17,6 @@ depends = []
 "wallpaper" = { target = "~/.wallpaper", type = "symbolic" }
 "decor/wallust/templates" = { target = "~/.config/wallust/templates", type = "symbolic" }
 "decor/wallust/wallust.toml" = "~/.config/wallust/wallust.toml"
-# "decor/waybar" = "~/.config/waybar"
 "decor/quickshell" = "~/.config/quickshell"
 # Functional Utilities
 
