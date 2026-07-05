@@ -22,22 +22,6 @@ Singleton {
             }
         }
     }
-    Process {
-        id: spaceProc
-        running: true
-        command: ["bash", "-c", "~/.scripts/currentWorkspace.sh"]
-        stdout: StdioCollector {
-            onStreamFinished: root.focusedSpace = this.text
-        }
-    }
-    Process {
-        id: numProc
-        running: true
-        command: ["bash", "-c", "~/.scripts/numSpaces.sh"]
-        stdout: StdioCollector {
-            onStreamFinished: root.numSpaces = this.text
-        }
-    }
     Timer {
         interval: 1000
         running: true
@@ -45,18 +29,6 @@ Singleton {
         onTriggered: {
             wifiProc.running = true
         }
-    }
-    Timer {
-        interval: 100
-        running: true
-        repeat: true
-        onTriggered: spaceProc.running = true
-    }
-    Timer {
-        interval: 100
-        running: true
-        repeat: true
-        onTriggered: numProc.running = true
     }
 }
 
