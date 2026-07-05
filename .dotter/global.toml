@@ -42,7 +42,7 @@ depends = []
 font = "JetBrainsMono Nerd Font"
 fsize = 13
 lfsize = 20
-opacity = 0.85
+opacity = 0.95
 terminal = 'wezterm'
 [settings]
 default_target_type = "automatic"

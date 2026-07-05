@@ -1,8 +1,7 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
-    "type": "auto",
-    "source": "~/.config/fastfetch/display.txt",
+    "type": "small",
     "color": {
       "1": "",
       "2": "",
@@ -17,7 +16,7 @@
     "width": null,
     "height": null,
     "padding": {
-      "top": 0,
+      "top": 3,
       "left": 0,
       "right": 4
     },
@@ -51,11 +50,6 @@
       "key": "╭───────────────────────────────────╮"
     },
     {
-      "type": "kernel",
-      "key": "│ {#output}  Kernel",
-      "format": "{#output}{release>22} {#keys}│"
-    },
-    {
       "type": "title",
       "key": "│ {#output}  Host",
       "format": "{#output}{host-name>24} {#keys}│"
@@ -75,51 +69,12 @@
       "key": "│ {#output}  Shell",
       "format": "{#output}{pretty-name>23} {#keys}│"
     },
-    /* {
-      "type": "display",
-      "keyIcon": "󰍹",
-      "compactType": "none",
-      "preciseRefreshRate": false
-    }, */
-    // {
-    //   "type": "de",
-    //   "keyIcon": "",
-    //   "slowVersionDetection": false
-    // },
     {
       "type": "wm",
       "key": "│ {#output}  WM",
       "format": "{#output}{pretty-name>26} {#keys}│",
       "detectPlugin": false
     },
-    /* {
-      "type": "wmtheme",
-      "keyIcon": "󰓸"
-    }, 
-    {
-      "type": "theme",
-      "keyIcon": "󰉼"
-    }
-    {
-      "type": "icons",
-      "keyIcon": ""
-    },
-    {
-      "type": "font",
-      "keyIcon": ""
-    },
-    {
-      "type": "cursor",
-      "keyIcon": "󰆿"
-    },
-    {
-      "type": "terminal",
-      "keyIcon": ""
-    },
-    {
-      "type": "terminalfont",
-      "keyIcon": ""
-    }, */
     {
       "type": "cpu",
       "key": "│ {#output}  CPU",
@@ -172,72 +127,9 @@
         "type": 0
       }
     },
-    // {
-    //   "type": "swap",
-    //   "percent": {
-    //     "green": 50,
-    //     "yellow": 80,
-    //     "type": 0
-    //   },
-    //   "keyIcon": "󰓡",
-    //   "separate": false
-    // },
-    {
-      "type": "disk",
-      "key": "│ {#output}  Disk Use",
-      "format": "{#output}{size-percentage>9} {#separator}of {#title}{size-total} {#keys}│",
-      "showRegular": true,
-      "showExternal": false,
-      "showHidden": false,
-      "showSubvolumes": false,
-      "showReadOnly": true,
-      "showUnknown": false,
-      "folders": "",
-      "hideFolders": "/efi:/boot:/boot/*",
-      "hideFS": "",
-      "useAvailable": false,
-      "percent": {
-        "green": 50,
-        "yellow": 80,
-        "type": 0
-      }
-    },
     {
       "type": "custom",
       "key": "╰───────────────────────────────────╯"
     }
-    // {
-    //   "type": "battery",
-    //   "keyIcon": "",
-    //   "temp": false,
-    //   "percent": {
-    //     "green": 50,
-    //     "yellow": 20,
-    //     "type": 0
-    //   }
-    // }
-    /* {
-      "type": "poweradapter",
-      "keyIcon": "󰚥"
-    },
-    {
-      "type": "locale",
-      "keyIcon": ""
-    },
-    "break",
-    {
-      "type": "colors",
-      "key": " ",
-      "keyIcon": "",
-      "symbol": "block",
-      "paddingLeft": 0,
-      "block": {
-        "width": 3,
-        "range": [
-          0,
-          15
-        ]
-      }
-    } */
   ]
 }
