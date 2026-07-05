@@ -22,7 +22,6 @@ depends = []
 
 "utils/kanata" = "~/.config/kanata"
 "utils/btop" = "~/.config/btop"
-# "utils/tmux.conf" = "~/.tmux.conf"
 "utils/wofi" = "~/.config/wofi"
 "utils/wezterm" = "~/.config/wezterm"
 "utils/helix" = "~/.config/helix"
