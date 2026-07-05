@@ -5,6 +5,7 @@ checkcontrast = true
 alpha = {{math opacity "*" 100}}
 [templates]
 hypr = { template = "hyprland.lua", target = "~/.config/hypr/colors.lua"}
+btop = { template = "btop.theme", target = "~/.config/btop/themes/wallust.theme"}
 kitty.template = "kitty.conf"
 kitty.target = "~/.config/kitty/colors.conf"
 pywal.template = "colors.json"
