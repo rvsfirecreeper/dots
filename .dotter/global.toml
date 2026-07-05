@@ -26,7 +26,6 @@ depends = []
 "utils/wofi" = "~/.config/wofi"
 "utils/wezterm" = "~/.config/wezterm"
 "utils/helix" = "~/.config/helix"
-# "utils/greetd" = { target = "/etc/greetd", owner = "root", type = "template" }
 "utils/nushell" = "~/.config/nushell"
 "utils/niri" = "~/.config/niri"
 # "utils/swaylock" = "~/.config/swaylock/config"
