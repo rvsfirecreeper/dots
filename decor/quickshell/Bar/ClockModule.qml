@@ -22,7 +22,7 @@ Item {
         text: time
         font.family: Theme.font
         font.pixelSize: Theme.fontSize
-        color: Colors.foreground
+        color: Colors.foreground      
     }
   }
 }

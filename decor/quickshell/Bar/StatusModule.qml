@@ -16,6 +16,7 @@ Item {
         implicitWidth: 45
         radius: 18
         color: Colors.background
+        opacity: Theme.opacity
         border.color: Colors.foreground
         border.width: 0
         Text {
@@ -36,6 +37,7 @@ Item {
         }
         implicitWidth: 45
         color: Colors.background
+        opacity: Theme.opacity
         radius: 18
         Text {
             anchors.centerIn: parent
@@ -98,6 +100,7 @@ Item {
         }
         implicitWidth: expanded ? exit.actions.length * 45 : 45
         color: Colors.background
+        opacity: Theme.opacity
         radius: 18
         Process {
             id: quit

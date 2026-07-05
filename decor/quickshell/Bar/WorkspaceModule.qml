@@ -18,6 +18,7 @@ Item {
         color: Colors.background
         border.color: Colors.foreground
         border.width: 0
+        opacity: Theme.opacity
         Behavior on width {
             NumberAnimation {
                 duration: 200
@@ -40,6 +41,7 @@ Item {
                     width: modelData.active ? 50 : 20
                     height: workRow.height
                     color: modelData.active ? Colors.foreground : Colors.color12
+                    opacity: Theme.opacity
                     radius: 10
                     MouseArea {
                         anchors.fill: parent

@@ -26,7 +26,6 @@ Scope {
       ClockModule {}
       WorkspaceModule {}
       StatusModule {} // flex
-      // BackgroundEffect.blurRegion: Region { item: barWindow.contentItem }
     }
   }
 }
