@@ -20,9 +20,7 @@ depends = []
 "decor/quickshell" = "~/.config/quickshell"
 # Functional Utilities
 
-# "utils/alacritty" = "~/.config/alacritty"
 "utils/kanata" = "~/.config/kanata"
-# "utils/kitty" = "~/.config/kitty"
 # "utils/lf" = "~/.config/lf"
 "utils/btop" = "~/.config/btop"
 # "utils/makepkg.conf" = "~/makepkg.conf"
