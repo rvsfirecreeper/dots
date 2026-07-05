@@ -27,7 +27,7 @@ git clone https://github.com/rvsfirecreeper/dots.git
 cd dots || exit
 chsh -s /bin/nu
 sudo mkdir -p /var/lib/rajlab-dotfiles
-sudo chmod 755 /var/lib/rajlab-dotfiles/
+sudo chmod -R 755 /var/lib/rajlab-dotfiles/
 sudo chown $USER:$USER /var/lib/rajlab-dotfiles/
 sudo touch /var/lib/rajlab-dotfiles/bg
 dotter deploy
