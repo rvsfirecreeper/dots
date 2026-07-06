@@ -27,14 +27,8 @@ path add "~/.scripts"
 $env.config.edit_mode = 'vi'
 sleep 0.1sec
 alias hx = helix
-alias sed = perl -pe
 mkdir ($nu.data-dir | path join "vendor/autoload")
 zoxide init nushell | save -f ~/.zoxide.nu
 source ~/.zoxide.nu
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
-$env.PROMPT_INDICATOR_VI_INSERT = ""
-$env.PROMPT_INDICATOR_VI_NORMAL = ""
-$env.GPG_TTY = (tty)
-$env.CC_aarch64_unknown_linux_gnu = "aarch64-linux-gnu-gcc"
-$env.CARGO_TARGET_AARCH64_UNKNOWN_LINUX_GNU_LINKER = "aarch64-linux-gnu-gcc"
 fastfetch
