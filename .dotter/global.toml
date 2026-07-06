@@ -5,11 +5,12 @@ depends = []
 
 [default.files]
 
-# Rcs/profile
+# Sh's/profile
 
 "rc/profile" = "~/.profile"
 "rc/zshrc" = "~/.zshrc"
 "rc/bashrc" = "~/.bashrc"
+"rc/config.fish" = "~/.config/fish/config.fish"
 
 # Decoration
 

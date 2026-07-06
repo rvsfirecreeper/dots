@@ -1,2 +1,4 @@
+alias hx=helix
 fastfetch
+eval "$(zoxide init bash)"
 eval "$(starship init bash)"
