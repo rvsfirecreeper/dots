@@ -8,6 +8,8 @@ depends = []
 # Rcs/profile
 
 "rc/profile" = "~/.profile"
+"rc/zshrc" = "~/.zshrc"
+"rc/bashrc" = "~/.bashrc"
 
 # Decoration
 
