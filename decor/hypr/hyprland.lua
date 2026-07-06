@@ -46,6 +46,6 @@ hl.config({
 
 require("input").activate()
 
-require("binds").init(terminal, menu)
+require("binds").init(terminal, menu, filemanager)
 
 require("windowRules").activate()

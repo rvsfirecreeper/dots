@@ -4,7 +4,7 @@
 
 local binds = {}
 
-function binds.init(terminal, menu)
+function binds.init(terminal, menu, filemanager)
     local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
     -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
@@ -14,7 +14,7 @@ function binds.init(terminal, menu)
     hl.bind(mainMod .. " + T", hl.dsp.window.float({ action = "toggle" }))
     hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
     hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
-    hl.bind(mainMod .. " + SEMICOLON", hl.dsp.layout("togglesplit"))    -- dwindle only
+    hl.bind(mainMod .. " + SHIFT + RETURN", hl.dsp.exec_cmd(filemanager))    -- dwindle only
 
     -- Move focus with mainMod + arrow keys
     hl.bind(mainMod .. " + H",  hl.dsp.focus({ direction = "left" }))
