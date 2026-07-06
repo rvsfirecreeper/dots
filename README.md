@@ -14,8 +14,9 @@ Welcome to my dotfiles! Take whatever you like, but here are a few suggestions:
 
 Use your own wallpaper.
 simply move into ~/dots/wallpaper and run a quick dotter deploy
-Modify config.kdl to suit your own monitor.
+Modify decor/hypr/monitors.lua to suit your own monitor.
 I have a 165hz 1440p, but that's kinda niche.
+There's a placeholder so it will work out of the box but you should probably customize it to fit your monitors
 
 ## Install
 You need to have sudo installed for the script to work
