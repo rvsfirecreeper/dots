@@ -47,6 +47,7 @@ case "${shselect,,}" in
 esac
 sudo mkdir -p "$HOME/.rajlab-dotfiles"
 sudo touch "$HOME/.rajlab-dotfiles"
-dotter deploy
-scripts/fullwal.sh wallpaper/Fantasy-Japanese-Street.png
+dotter deploy -f
+cd "$HOME"
+scripts/fullwal.sh dots/wallpaper/Fantasy-Japanese-Street.png
 echo "Done!"
