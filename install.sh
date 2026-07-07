@@ -23,10 +23,13 @@ fi
 # Updating the system because it needs to be updated(avoid out of date packages being unavailable)
 #install all deps
 yay -Syu --noconfirm
-yay -S --needed --noconfirm wezterm-nightly-bin waypaper fastfetch wallust starship \
-dotter-rs-bin ly yazi ttf-jetbrains-mono-nerd swayidle zoxide helix \
-mako wofi wget hyprland xdg-desktop-portal-hyprland hyprpolkitagent \
-papirus-icon-theme  bibata-cursor-theme quickshell
+# Hyprland core
+yay -S --needed --noconfirm hyprland xdg-desktop-portal-hyprland hyprpolkitagent
+# Functional apps
+yay -S --needed --noconfirm wezterm-nightly-bin ly yazi swayidle \
+zoxide helix dotter-rs-bin mako wofi wget waypaper
+# Cosmetic Decor
+yay -S --needed fastfetch wallust starship ttf-jetbrains-mono-nerd papirus-icon-theme bibata-cursor-theme quickshell 
 gsettings set org.gnome.desktop.interface icon-theme "Papirus"
 if [[ -d dots || -f dots ]]; then
   read -rp "folder or file 'dots' detected. Would you like to move this folder to dots.backup(with timestamp)(y/n)" backup
@@ -46,9 +49,8 @@ case "${shselect,,}" in
   *) echo "Did not select shell. Doing nothing." ;;
 esac
 mkdir -p "$HOME/.rajlab-dotfiles"
-touch "$HOME/.rajlab-dotfiles"
-echo "Adjusting dotter variable."
-sed "s#/home/ragef#$HOME#g" .dotter/local.toml | tee .dotter/local.toml
+touch "$HOME/.rajlab-dotfiles/bg"
+sed -i "s#/home/ragef#$HOME#g" .dotter/local.toml 
 dotter deploy -f
 cd "$HOME"
 dots/scripts/fullwal.sh dots/wallpaper/Fantasy-Japanese-Street.png
