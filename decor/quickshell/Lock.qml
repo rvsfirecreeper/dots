@@ -14,7 +14,7 @@ WlSessionLock {
             color: Colors.background
             Image {
                 anchors.fill: parent
-                source: "/var/lib/rajlab-dotfiles/bg"
+                source: "bg"
                 visible: true
             }
             Rectangle {

@@ -45,10 +45,8 @@ case "${shselect,,}" in
   b*) echo "Selected bash"; chsh -s /bin/bash ;;
   *) echo "Did not select shell. Doing nothing." ;;
 esac
-sudo mkdir -p /var/lib/rajlab-dotfiles
-sudo chmod -R 755 /var/lib/rajlab-dotfiles/
-sudo chown "$USER:$USER" /var/lib/rajlab-dotfiles/
-sudo touch /var/lib/rajlab-dotfiles/bg
+sudo mkdir -p "$HOME/.rajlab-dotfiles"
+sudo touch "$HOME/.rajlab-dotfiles"
 dotter deploy
 scripts/fullwal.sh wallpaper/Fantasy-Japanese-Street.png
 echo "Done!"
