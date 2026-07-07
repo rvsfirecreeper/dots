@@ -1,4 +1,3 @@
-
 # Dots
 
 ## NOTICE
@@ -26,7 +25,7 @@ You can use
 for Arch Linux
 Or manually install all dependencies and use dotter deploy, but just don't.
 The script isn't long, so I force you to read it ;)
-
+Afterwards, make sure to set waypaper to either dots/wallpaper or ~/.wallpaper(either works)
 
 ## Preview
 
