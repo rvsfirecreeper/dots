@@ -45,9 +45,11 @@ case "${shselect,,}" in
   b*) echo "Selected bash"; chsh -s /bin/bash ;;
   *) echo "Did not select shell. Doing nothing." ;;
 esac
-sudo mkdir -p "$HOME/.rajlab-dotfiles"
-sudo touch "$HOME/.rajlab-dotfiles"
+mkdir -p "$HOME/.rajlab-dotfiles"
+touch "$HOME/.rajlab-dotfiles"
+echo "Adjusting dotter variable."
+sed "s#/home/ragef#$HOME#g" .dotter/local.toml | tee .dotter/local.toml
 dotter deploy -f
 cd "$HOME"
-scripts/fullwal.sh dots/wallpaper/Fantasy-Japanese-Street.png
+dots/scripts/fullwal.sh dots/wallpaper/Fantasy-Japanese-Street.png
 echo "Done!"
