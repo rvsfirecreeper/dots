@@ -50,4 +50,5 @@ sudo chmod -R 755 /var/lib/rajlab-dotfiles/
 sudo chown "$USER:$USER" /var/lib/rajlab-dotfiles/
 sudo touch /var/lib/rajlab-dotfiles/bg
 dotter deploy
+scripts/fullwal.sh wallpaper/Fantasy-Japanese-Street.png
 echo "Done!"

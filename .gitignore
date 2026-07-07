@@ -7,5 +7,6 @@ decor/wlogout/colors.css
 decor/hypr/colors-hyprland.conf
 utils/kitty/colors.conf
 utils/alacritty/colors.toml
-wallpaper
+wallpaper/*
+!wallpaper/Fantasy-Japanese-Street.png
 utils/swaylock
