@@ -7,28 +7,7 @@ Item {
     anchors.margins: 10
     anchors.fill: parent
     Rectangle {
-        id: wifiStatus
-        anchors {
-            top: parent.top
-            bottom: parent.bottom
-            right: parent.right
-        }
-        implicitWidth: 45
-        radius: 18
-        color: Colors.background
-        opacity: Theme.opacity
-        border.color: Colors.foreground
-        border.width: 0
-        Text {
-            anchors.centerIn: parent
-            text: Status.wifistatus
-            font.family: Theme.font
-            font.pixelSize: Theme.fontSize
-            color: Colors.foreground
-        }
-    }
-    Rectangle {
-        id: artix
+        id: arch
         anchors {
             top: parent.top
             bottom: parent.bottom
@@ -41,7 +20,7 @@ Item {
         radius: 18
         Text {
             anchors.centerIn: parent
-            text: "\uF002"
+            text: "\uF303"
             font.family: Theme.font
             font.pixelSize: Theme.fontSize
             color: Colors.foreground
@@ -61,8 +40,29 @@ Item {
             anchors.fill: parent
             onClicked: wofi.running = true
             hoverEnabled: true
-            onEntered: artix.implicitWidth = 70
-            onExited: artix.implicitWidth = 45
+            onEntered: arch.implicitWidth = 70
+            onExited: arch.implicitWidth = 45
+        }
+    }
+    Rectangle {
+        id: wifiStatus
+        anchors {
+            top: parent.top
+            bottom: parent.bottom
+            right: parent.right
+        }
+        implicitWidth: 45
+        radius: 18
+        color: Colors.background
+        opacity: Theme.opacity
+        border.color: Colors.foreground
+        border.width: 0
+        Text {
+            anchors.centerIn: parent
+            text: Status.wifistatus
+            font.family: Theme.font
+            font.pixelSize: Theme.fontSize
+            color: Colors.foreground
         }
     }
     Rectangle {
@@ -95,7 +95,7 @@ Item {
         anchors {
             top: parent.top
             bottom: parent.bottom
-            right: artix.left
+            right: arch.left
             rightMargin: 10
         }
         implicitWidth: expanded ? exit.actions.length * 45 : 45
