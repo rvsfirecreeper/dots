@@ -15,8 +15,7 @@ Item {
             rightMargin: 10
         }
         implicitWidth: 45
-        color: Colors.background
-        opacity: Theme.opacity
+        color: Qt.alpha(Colors.background, Theme.opacity)
         radius: 18
         Text {
             anchors.centerIn: parent
@@ -53,8 +52,7 @@ Item {
         }
         implicitWidth: 45
         radius: 18
-        color: Colors.background
-        opacity: Theme.opacity
+        color: Qt.alpha(Colors.background, Theme.opacity)
         border.color: Colors.foreground
         border.width: 0
         Text {
@@ -99,8 +97,7 @@ Item {
             rightMargin: 10
         }
         implicitWidth: expanded ? exit.actions.length * 45 : 45
-        color: Colors.background
-        opacity: Theme.opacity
+        color: Qt.alpha(Colors.background, Theme.opacity)
         radius: 18
         Process {
             id: quit

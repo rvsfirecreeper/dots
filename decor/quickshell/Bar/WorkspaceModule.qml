@@ -15,10 +15,9 @@ Item {
         clip: true
         width: workRow.implicitWidth + 24
         radius: 18
-        color: Colors.background
+        color: Qt.alpha(Colors.background, Theme.opacity)
         border.color: Colors.foreground
         border.width: 0
-        opacity: Theme.opacity
         Behavior on width {
             NumberAnimation {
                 duration: 200
@@ -41,7 +40,7 @@ Item {
                     width: modelData.active ? 50 : 20
                     height: workRow.height
                     color: modelData.active ? Colors.foreground : Colors.color12
-                    opacity: Theme.opacity
+                    opacity: 1
                     radius: 10
                     MouseArea {
                         anchors.fill: parent

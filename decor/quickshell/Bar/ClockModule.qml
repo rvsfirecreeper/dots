@@ -11,8 +11,7 @@ Item {
     }
     implicitWidth: 100
     radius: 18
-    color: Colors.background
-    opacity: Theme.opacity
+    color: Qt.alpha(Colors.background, Theme.opacity)
     border.color: Colors.color3
     border.width: 0
     Text {
