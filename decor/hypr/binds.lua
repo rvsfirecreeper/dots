@@ -25,7 +25,8 @@ function binds.init(terminal, menu, filemanager)
     hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.move({ direction = "left" }))
     hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
     hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
-    hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ "maximize", "toggle" }))
+    hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
+    hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
     -- Switch workspaces with mainMod + [0-9]
     -- Move active window to a workspace with mainMod + SHIFT + [0-9]
     for i = 1, 10 do
