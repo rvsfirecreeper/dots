@@ -44,7 +44,7 @@ function looks.customize(colors)
 
           blur = {
               enabled   = true,
-              size      = 10,
+              size      = 7,
               passes    = 2,
               vibrancy  = 0.2,
           },
