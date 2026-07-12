@@ -29,14 +29,13 @@ depends = []
 "utils/wezterm" = "~/.config/wezterm"
 "utils/helix" = "~/.config/helix"
 "utils/nushell" = "~/.config/nushell"
-"utils/niri" = "~/.config/niri"
 "utils/waypaper/style.css" = "~/.config/waypaper/style.css"
 "scripts" = "~/.scripts"
 [default.variables]
 font = "JetBrainsMono Nerd Font"
 fsize = 13
 lfsize = 20
-opacity = 0.9
+opacity = 0.95
 terminal = 'wezterm'
 [settings]
 default_target_type = "automatic"
