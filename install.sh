@@ -2,7 +2,7 @@
 set -euo pipefail
 # YOU WILL READ THE SCRIPT
 echo "This script will do several changes to your system. Read the script here before proceeding."
-cat "$0"
+cat install.sh
 read -rp "Have you read the install script and do you want to proceed with full installation (Y/n)" proceed
 case "$proceed" in
   [Yy]*) echo "Proceeding with install" ;;
