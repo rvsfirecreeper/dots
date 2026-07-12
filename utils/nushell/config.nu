@@ -17,15 +17,8 @@
 # options using:
 #     config nu --doc | nu-highlight | less -R
 $env.config.show_banner = false
-$env.NO_AT_BRIDGE = 1
 $env.config.buffer_editor = 'helix'
 use std/util "path add"
-path add "~/.local/bin"
-path add "~/.cargo/bin"
-path add "./.venv/bin"
-path add "~/.scripts"
-$env.config.edit_mode = 'vi'
-sleep 0.1sec
 alias hx = helix
 mkdir ($nu.data-dir | path join "vendor/autoload")
 zoxide init nushell | save -f ~/.zoxide.nu
