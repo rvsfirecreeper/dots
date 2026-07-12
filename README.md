@@ -19,11 +19,16 @@ There's a placeholder so it will work out of the box but you should probably cus
 
 ## Install
 You need to have sudo installed for the script to work
-(To be clear, it doesn't run as root, but it needs sudo for package management as well as greetd config)
+
+(To be clear, it doesn't run as root, but it needs sudo for package management)
+
 You can use
 `curl -sS https://raw.githubusercontent.com/rvsfirecreeper/dots/refs/heads/main/install.sh | bash`
-for Arch Linux
-Or manually install all dependencies and use dotter deploy, but just don't.
+for Arch Linux.
+
+Or manually install all dependencies and use dotter deploy, but just don't
+(Unless you're not on Arch, but in that case you're invalid anyways).
+
 The script isn't long, so I force you to read it ;)
 Afterwards, make sure to set waypaper to either dots/wallpaper or ~/.wallpaper(either works)
 
