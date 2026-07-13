@@ -18,7 +18,7 @@
 #     config nu --doc | nu-highlight | less -R
 $env.config.show_banner = false
 $env.config.buffer_editor = 'helix'
-use std/util "path add"
+$env.path ++= ["~/.local/bin"]
 alias hx = helix
 mkdir ($nu.data-dir | path join "vendor/autoload")
 zoxide init nushell | save -f ~/.zoxide.nu
