@@ -24,9 +24,9 @@ depends = []
 
 # Core
 
-"decor/hypr" = "~/.config/hypr"
-"decor/quickshell" = "~/.config/quickshell"
-"utils/wezterm" = "~/.config/wezterm"
+"core/hypr" = "~/.config/hypr"
+"core/quickshell" = "~/.config/quickshell"
+"core/wezterm" = "~/.config/wezterm"
 
 # Other Utilities
 
