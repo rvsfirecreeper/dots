@@ -26,7 +26,7 @@ yay -Syu --noconfirm
 # Hyprland core
 yay -S --needed --noconfirm hyprland xdg-desktop-portal-hyprland hyprpolkitagent
 # Functional apps
-yay -S --needed --noconfirm wezterm-nightly-bin ly yazi swayidle \
+yay -S --needed --noconfirm wezterm-nightly-bin ly superfile swayidle \
 zoxide helix dotter-rs-bin mako wofi wget waypaper
 # Cosmetic Decor
 yay -S --needed fastfetch wallust starship ttf-jetbrains-mono-nerd papirus-icon-theme bibata-cursor-theme quickshell 
