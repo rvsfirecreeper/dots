@@ -25,6 +25,7 @@ Scope {
       // ROOT RECTANGLE
       Rectangle {
         anchors.margins: 10
+        opacity: Theme.opacity
         color: Colors.background
         anchors.fill: parent
         radius: 18
