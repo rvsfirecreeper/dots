@@ -11,7 +11,6 @@ Scope {
     model: Quickshell.screens
 
 
-    // RIGHT RECTANGLE
     PanelWindow {
       id: barWindow
       required property var modelData
@@ -23,6 +22,13 @@ Scope {
         right: true
       }
       implicitHeight: 60
+      // ROOT RECTANGLE
+      Rectangle {
+        anchors.margins: 10
+        color: Colors.background
+        anchors.fill: parent
+        radius: 18
+      }
       ClockModule {}
       WorkspaceModule {}
       StatusModule {} // flex
