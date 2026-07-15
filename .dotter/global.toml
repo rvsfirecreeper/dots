@@ -41,6 +41,7 @@ font = "JetBrainsMono Nerd Font"
 fsize = 13
 lfsize = 20
 opacity = 0.95
+ispill = true
 terminal = 'wezterm'
 [settings]
 default_target_type = "automatic"
