@@ -15,7 +15,7 @@ Item {
         clip: true
         width: workRow.implicitWidth + 24
         radius: 18
-        color: Qt.alpha(Colors.background, Theme.opacity)
+        color: Theme.isPill ? "transparent" : Qt.alpha(Colors.background, Theme.opacity)
         border.color: Colors.foreground
         border.width: 0
         Behavior on width {

@@ -10,7 +10,7 @@ Rectangle {
         bottom: parent.bottom
         margins: 10
     }
-    color: Colors.background
+    color: Theme.isPill ? "transparent" : Qt.alpha(Colors.background, Theme.opacity)
     implicitWidth: statusRow.implicitWidth + 20
     implicitHeight: parent.height
     radius: 18
@@ -30,7 +30,7 @@ Rectangle {
                 bottom: parent.bottom
             }
             implicitWidth: 45
-            color: Qt.alpha(Colors.background, Theme.opacity)
+            color: "transparent"
             radius: 18
             Text {
                 anchors.centerIn: parent
@@ -66,7 +66,7 @@ Rectangle {
             }
             implicitWidth: 45
             radius: 18
-            color: Qt.alpha(Colors.background, Theme.opacity)
+            color: "transparent"
             border.color: Colors.foreground
             border.width: 0
             Text {
@@ -109,7 +109,7 @@ Rectangle {
                 bottom: parent.bottom
             }
             implicitWidth: expanded ? exit.actions.length * 45 : 45
-            color: Qt.alpha(Colors.background, Theme.opacity)
+            color: "transparent"
             radius: 18
             Process {
                 id: quit

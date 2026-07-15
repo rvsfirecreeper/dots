@@ -11,7 +11,7 @@ Item {
             horizontalCenter: parent.horizontalCenter
         }
         radius: 18
-        color: Qt.alpha(Colors.background, Theme.opacity)
+        color: Theme.isPill ? "transparent" : Qt.alpha(Colors.background, Theme.opacity)
         implicitWidth: text.width + 40
         border.color: Colors.color3
         border.width: 0
