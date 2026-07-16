@@ -94,7 +94,7 @@ Rectangle {
                 },
                 {
                     icon: "󰈆",
-                    command: ["niri", "msg", "action", "quit"]
+                    command: ["hyprctl", "dispatch", "hl.dsp.exit()"]
                 },
                 {
                     icon: "󰤄",
