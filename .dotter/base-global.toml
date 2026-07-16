@@ -40,7 +40,7 @@ depends = []
 font = "JetBrainsMono Nerd Font"
 font_size = 13
 large_font_size = 20
-opacity = 0.95
+opacity = 0.85
 is_pill = true
 terminal = 'wezterm'
 [settings]

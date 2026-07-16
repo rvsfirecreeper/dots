@@ -51,6 +51,7 @@ esac
 mkdir -p "$HOME/.rajlab-dotfiles"
 touch "$HOME/.rajlab-dotfiles/bg"
 sed -i "s#/home/ragef#$HOME#g" .dotter/local.toml 
+cp .dotter/base-global.toml .dotter/global.toml
 dotter deploy -f
 cd "$HOME"
 dots/scripts/fullwal.sh dots/wallpaper/Fantasy-Japanese-Street.png

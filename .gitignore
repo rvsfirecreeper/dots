@@ -1,5 +1,6 @@
 .dotter/cache
 .dotter/cache.toml
+.dotter/global.toml
 wallpaper/bg.png
 utils/wofi/colors.css
 decor/waybar/colors.css
