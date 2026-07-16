@@ -3,8 +3,8 @@
 ---------------------
 
 -- Set programs that you use
-local terminal    = "wezterm"
-local filemanager = "wezterm -e yazi"
+local terminal    = "{{terminal}}"
+local filemanager = "{{terminal}} -e yazi"
 local menu        = "wofi"
 
 
