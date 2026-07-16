@@ -29,8 +29,7 @@ yay -S --needed --noconfirm hyprland xdg-desktop-portal-hyprland hyprpolkitagent
 yay -S --needed --noconfirm wezterm-nightly-bin ly yazi swayidle \
 zoxide helix dotter-rs-bin mako wofi wget waypaper
 # Cosmetic Decor
-yay -S --needed fastfetch wallust starship ttf-jetbrains-mono-nerd papirus-icon-theme bibata-cursor-theme quickshell 
-gsettings set org.gnome.desktop.interface icon-theme "Papirus"
+yay -S --needed fastfetch wallust starship ttf-jetbrains-mono-nerd  bibata-cursor-theme quickshell 
 if [[ -d dots || -f dots ]]; then
   read -rp "folder or file 'dots' detected. Would you like to move this folder to dots.backup(with timestamp)(y/n)" backup
   case "${backup,,}" in
