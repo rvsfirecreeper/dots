@@ -11,7 +11,7 @@ config.initial_cols = 120
 config.initial_rows = 28
 
 -- or, changing the font size and color scheme.
-config.font_size = 13
+config.font_size = {{font_size}}
 config.color_scheme = 'wallust'
 config.window_background_opacity = {{opacity}}
 config.enable_tab_bar = false

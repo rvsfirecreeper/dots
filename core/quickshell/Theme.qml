@@ -4,7 +4,7 @@ import Quickshell
 
 Singleton {
     property string font: "{{font}}"
-    property int fontSize: {{lfsize}}
+    property int fontSize: {{large_font_size}}
     property real opacity: {{opacity}}
-    property bool isPill: {{ispill}}
+    property bool isPill: {{is_pill}}
 }

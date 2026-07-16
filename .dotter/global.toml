@@ -38,10 +38,10 @@ depends = []
 
 [default.variables]
 font = "JetBrainsMono Nerd Font"
-fsize = 13
-lfsize = 20
+font_size = 13
+large_font_size = 20
 opacity = 0.95
-ispill = true
+is_pill = true
 terminal = 'wezterm'
 [settings]
 default_target_type = "automatic"

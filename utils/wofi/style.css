@@ -2,7 +2,7 @@
 /* @import "../.config/wofi/colors.css"; */
 * {
 	font-family: "{{font}}";
-  font-size: {{fsize}}px;
+  font-size: {{font_size}}px;
   color: @foreground;
 }
 
