@@ -34,7 +34,7 @@ Rectangle {
             radius: 18
             Text {
                 anchors.centerIn: parent
-                text: "\uF303"
+                text: Status.os
                 font.family: Theme.font
                 font.pixelSize: Theme.fontSize
                 color: Colors.foreground
