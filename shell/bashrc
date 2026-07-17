@@ -1,6 +1,5 @@
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.scripts"
-alias hx=helix
 fastfetch
 eval "$(zoxide init bash)"
 eval "$(starship init bash)"

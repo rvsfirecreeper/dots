@@ -1,4 +1,3 @@
-alias hx=helix
 path+=("$HOME/.local/bin")
 path+=("$HOME/.scripts")
 fastfetch

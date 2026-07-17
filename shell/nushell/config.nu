@@ -20,7 +20,6 @@ $env.config.show_banner = false
 $env.config.buffer_editor = 'helix'
 $env.path ++= ["~/.local/bin"]
 $env.path ++= ["~/.scripts"]
-alias hx = helix
 mkdir ($nu.data-dir | path join "vendor/autoload")
 zoxide init nushell | save -f ~/.zoxide.nu
 source ~/.zoxide.nu
