@@ -77,6 +77,13 @@
     ]; # Enable ‘sudo’ for the user.
     home = "/home/ragef";
     shell = pkgs.fish;
+    packages = with pkgs; [
+      floorp-bin
+      rustup
+      gcc
+      tree
+      zed-editor
+    ];
   };
   users.groups.ragef = {
     gid = 1000;
