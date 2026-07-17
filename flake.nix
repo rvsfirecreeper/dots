@@ -20,6 +20,11 @@
           };
           modules = [
             ./home.nix
+            
+            {
+              home.username = builtins.getEnv "USER";
+              home.homeDirectory = builtins.getEnv "USER";
+            }
           ];
         };
     };
