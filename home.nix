@@ -10,7 +10,6 @@ let
   };
   theme = {
     home = config.home.homeDirectory;
-
     font_size = toString (options.font_size);
     large_font_size = toString (options.large_font_size);
     font = options.font;
@@ -40,6 +39,8 @@ let
 in
 {
   home.stateVersion = "26.05";
+  home.homeDirectory = builtins.getEnv "HOME";
+  home.username = builtins.getEnv "USER";
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
     awww
