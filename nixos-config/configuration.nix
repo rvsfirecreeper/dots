@@ -83,6 +83,7 @@
       gcc
       tree
       zed-editor
+      wl-clipboard
       nil
     ];
   };
