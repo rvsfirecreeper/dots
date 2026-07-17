@@ -85,7 +85,7 @@
     {
       "type": "cpu",
       "key": "│ {#output} Temperature (CPU)",
-      "format": "{#output}{temperature>26} {#keys}│",
+      "format": "{#output}{temperature>16} {#keys}│",
       "temp": true,
       "showPeCoreCount": false
     },
@@ -106,7 +106,7 @@
     {
       "type": "gpu",
       "key": "│ {#output} Temperature (GPU {index})",
-      "format": "{#output}{temperature>24} {#keys}│",
+      "format": "{#output}{temperature>14} {#keys}│",
       "driverSpecific": false,
       "detectionMethod": "pci",
       "temp": true,
@@ -120,7 +120,7 @@
     {
       "type": "memory",
       "key": "│ {#output}  RAM",
-      "format": "{#output}{percentage>25} {#separator}of {#title}{total} {#keys}│",
+      "format": "{#output}{percentage>15} {#separator}of {#title}{total} {#keys}│",
       "percent": {
         "green": 50,
         "yellow": 80,
