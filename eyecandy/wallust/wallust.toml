@@ -2,7 +2,7 @@ backend = "fastresize"
 palette = "dark16"
 color_space = "labmixed"
 checkcontrast = true
-alpha = {{math opacity "*" 100}}
+alpha = {{opacity_percent}}
 [templates]
 hypr = { template = "hyprland.lua", target = "~/.config/hypr/colors.lua"}
 btop = { template = "btop.theme", target = "~/.config/btop/themes/wallust.theme"}
