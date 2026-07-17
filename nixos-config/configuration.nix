@@ -84,6 +84,8 @@
       tree
       zed-editor
       wl-clipboard
+      yubikey-manager
+      yubikey-personalization
       keepassxc
       nil
     ];
