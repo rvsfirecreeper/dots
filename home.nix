@@ -9,6 +9,7 @@ let
     solid_bar = true;
   };
   theme = {
+    boolToString = b: if b then "true" else "false";
     home = config.home.homeDirectory;
     font_size = toString (options.font_size);
     large_font_size = toString (options.large_font_size);
@@ -16,7 +17,7 @@ let
     opacity = toString (options.opacity);
     opacity_percent = toString (builtins.floor (options.opacity * 100));
 
-    is_pill = toString (options.solid_bar);
+    is_pill = theme.boolToString options.solid_bar;
     terminal = "wezterm";
   };
   template =
