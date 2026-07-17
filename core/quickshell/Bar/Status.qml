@@ -25,17 +25,10 @@ Singleton {
     property string os: "aa"
     Process {
         id: osProc
+        running: true
         command: ["bash", "linuxbtw.sh"]
         stdout: StdioCollector {
             onStreamFinished: root.os = this.text
-        }
-    }
-    Timer {
-        interval: 100
-        running: true
-        repeat: true
-        onTriggered: {
-            osProc.running = true
         }
     }
 }
