@@ -12,6 +12,7 @@
 
   outputs = { nixpkgs, home-manager, ... }:
     {
+      homeManagerModules.default = ./home.nix;
       homeConfigurations =
         home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs {
