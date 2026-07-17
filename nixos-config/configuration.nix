@@ -83,6 +83,7 @@
       gcc
       tree
       zed-editor
+      nil
     ];
   };
   users.groups.ragef = {
@@ -100,6 +101,9 @@
     wget
     gnupg
     pinentry-qt
+    libfido2
+    pcsclite
+    opensc
   ];
   services.displayManager.ly.enable = true;
   fonts.packages = with pkgs; [
