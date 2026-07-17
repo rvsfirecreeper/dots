@@ -39,8 +39,8 @@ let
 in
 {
   home.stateVersion = "26.05";
-  home.homeDirectory = builtins.getEnv "HOME";
-  home.username = builtins.getEnv "USER";
+  home.homeDirectory = "/home/ragef";
+  home.username = "ragef";
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
     awww
