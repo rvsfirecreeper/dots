@@ -18,7 +18,7 @@ let
     opacity_percent = toString (builtins.floor (options.opacity * 100));
 
     is_pill = theme.boolToString options.solid_bar;
-    terminal = "wezterm";
+    terminal = "kitty";
   };
   template =
     path:
@@ -48,7 +48,7 @@ in
     git
     quickshell
     yazi
-    wezterm
+    kitty
     zoxide
     wofi
     waypaper

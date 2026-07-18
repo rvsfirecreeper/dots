@@ -4,7 +4,7 @@
 
 -- Set programs that you use
 local terminal    = "{{terminal}}"
-local filemanager = "{{terminal}} -e yazi"
+local filemanager = "{{terminal}} yazi"
 local menu        = "wofi"
 
 
