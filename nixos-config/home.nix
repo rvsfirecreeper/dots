@@ -5,6 +5,7 @@
   home.packages = with pkgs; [
     floorp-bin
     rustup
+    prismlauncher
     gcc
     tree
     zed-editor
