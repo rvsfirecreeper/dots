@@ -120,9 +120,6 @@ in
         templateFile ".config/quickshell/Theme.qml" ./core/quickshell/Theme.qml
       //
 
-        templateFile ".config/wezterm/wezterm.lua" ./core/wezterm/wezterm.lua
-      //
-
         templateFile ".config/wallust/wallust.toml" ./eyecandy/wallust/wallust.toml
     );
 
