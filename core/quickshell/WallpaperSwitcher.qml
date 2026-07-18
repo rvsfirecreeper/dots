@@ -40,7 +40,7 @@ PanelWindow {
             delegate: Rectangle {
                 width: 180
                 height: 120
-
+                color: Colors.background
                 radius: 8
 
                 clip: true

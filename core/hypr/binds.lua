@@ -14,8 +14,8 @@ function binds.init(terminal, menu, filemanager)
     hl.bind(mainMod .. " + T", hl.dsp.window.float({ action = "toggle" }))
     hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
     hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
-    hl.bind(mainMod .. " + SHIFT + RETURN", hl.dsp.exec_cmd(filemanager))    -- dwindle only
-
+    hl.bind(mainMod .. " + SHIFT + RETURN", hl.dsp.exec_cmd(filemanager))
+    hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("qs -p $HOME/.config/quickshell/WallpaperSwitcher.qml"))
     -- Move focus with mainMod + arrow keys
     hl.bind(mainMod .. " + H",  hl.dsp.focus({ direction = "left" }))
     hl.bind(mainMod .. " + J",  hl.dsp.focus({ direction = "down" }))
