@@ -57,12 +57,9 @@ in
     starship
     kanata
     bibata-cursors
-  ];
-  fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
     noto-fonts-color-emoji
   ];
-
   home.file =
 
     # Normal files
