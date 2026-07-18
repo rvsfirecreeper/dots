@@ -5,6 +5,7 @@
   home.packages = with pkgs; [
     floorp-bin
     rustup
+    jdk25
     prismlauncher
     gcc
     tree
