@@ -108,7 +108,7 @@ in
         templateFile ".config/wofi/style.css" ./utils/wofi/style.css
       //
 
-        templateFile ".config/wofi/style.css" ./core/kitty/kitty.conf
+        templateFile ".config/kitty/kitty.conf" ./core/kitty/kitty.conf
       //
 
         templateFile ".config/waypaper/style.css" ./eyecandy/waypaper/style.css
