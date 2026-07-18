@@ -9,6 +9,7 @@
     tree
     zed-editor
     wl-clipboard
+    steam
     yubikey-manager
     yubikey-personalization
     keepassxc
