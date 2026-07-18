@@ -59,7 +59,7 @@ in
     bibata-cursors
   ];
   fonts.packages = with pkgs; [
-    nerdfonts.jetbrains-mono
+    nerd-fonts.jetbrains-mono
     noto-fonts-color-emoji
   ];
 
