@@ -14,12 +14,6 @@
     { nixpkgs, home-manager, ... }:
     {
       homeManagerModules.default = ./dots.nix;
-      homeManagerModules.fullSystem = {
-        imports = [
-          ./dots.nix
-          ./nixos-config/home.nix
-        ];
-      };
       homeConfigurations = home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs {
           system = "x86_64-linux";
