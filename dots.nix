@@ -58,6 +58,10 @@ in
     kanata
     bibata-cursors
   ];
+  fonts.packages = with pkgs; [
+    nerdfonts.jetbrains-mono
+    noto-fonts-color-emoji
+  ];
 
   home.file =
 
