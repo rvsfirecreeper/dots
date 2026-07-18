@@ -5,15 +5,15 @@
 { pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelModules = [ "uinput"];
+  boot.kernelModules = [ "uinput" ];
   services.udev.extraRules = ''
     KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
   '';
@@ -40,10 +40,30 @@
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
 
-
   hardware.graphics = {
     enable = true;
-    enable32Bit= true;
+    enable32Bit = true;
+  };
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings = {
+      General = {
+        # Shows battery charge of connected devices on supported
+        # Bluetooth adapters. Defaults to 'false'.
+        Experimental = true;
+        # When enabled other devices can connect faster to us, however
+        # the tradeoff is increased power consumption. Defaults to
+        # 'false'.
+        FastConnectable = true;
+      };
+      Policy = {
+        # Enable all controllers when they are found. This includes
+        # adapters present on start as well as adapters that are plugged
+        # in later on. Defaults to 'true'.
+        AutoEnable = true;
+      };
+    };
   };
 
   # Configure keymap in X11
@@ -77,26 +97,18 @@
     ]; # Enable ‘sudo’ for the user.
     home = "/home/ragef";
     shell = pkgs.fish;
-    packages = with pkgs; [
-      floorp-bin
-      rustup
-      gcc
-      tree
-      zed-editor
-      wl-clipboard
-      yubikey-manager
-      yubikey-personalization
-      keepassxc
-      nil
-    ];
   };
   users.groups.ragef = {
     gid = 1000;
   };
-  users.groups.uinput = {};
+  users.groups.uinput = { };
   # programs.firefox.enable = true;
   programs.fish.enable = true;
   programs.hyprland.enable = true;
+  programs.gnupg.agent = {
+    enable = true;
+    pinentryPackage = pkgs.pinentry-qt;
+  };
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
@@ -113,7 +125,10 @@
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
   ];
-  nix.settings.experimental-features = [ "nix-command" "flakes" ]; 
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -157,4 +172,3 @@
   system.stateVersion = "26.05"; # Did you read the comment?
 
 }
-

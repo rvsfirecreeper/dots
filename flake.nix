@@ -10,22 +10,28 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
+  outputs =
+    { nixpkgs, home-manager, ... }:
     {
-      homeManagerModules.default = ./home.nix;
-      homeConfigurations =
-        home-manager.lib.homeManagerConfiguration {
-          pkgs = import nixpkgs {
-            system = "x86_64-linux";
-          };
-          modules = [
-            ./home.nix
-            
-            {
-              home.username = builtins.getEnv "USER";
-              home.homeDirectory = builtins.getEnv "USER";
-            }
-          ];
+      homeManagerModules.default = ./dots.nix;
+      homeManagerModules.fullSystem = { nixpkgs, home-manager }: {
+        imports = [
+          ./dots.nix
+          ./nixos-config/home.nix
+        ];
+      };
+      homeConfigurations = home-manager.lib.homeManagerConfiguration {
+        pkgs = import nixpkgs {
+          system = "x86_64-linux";
         };
+        modules = [
+          ./dots.nix
+
+          {
+            home.username = builtins.getEnv "USER";
+            home.homeDirectory = builtins.getEnv "USER";
+          }
+        ];
+      };
     };
 }

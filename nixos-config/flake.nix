@@ -21,7 +21,7 @@
         modules = [
           home-manager.nixosModules.home-manager
           {
-            home-manager.users.ragef = dots.homeManagerModules.default;
+            home-manager.users.ragef = dots.homeManagerModules.fullSystem;
             home-manager.backupFileExtension = "backup";
           }
           ./configuration.nix
