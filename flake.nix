@@ -14,7 +14,7 @@
     { nixpkgs, home-manager, ... }:
     {
       homeManagerModules.default = ./dots.nix;
-      homeManagerModules.fullSystem = { nixpkgs, home-manager }: {
+      homeManagerModules.fullSystem = {
         imports = [
           ./dots.nix
           ./nixos-config/home.nix
