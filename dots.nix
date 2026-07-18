@@ -91,8 +91,8 @@ in
       // normalFile ".config/quickshell/Lock.qml" ./core/quickshell/Lock.qml
       // normalFile ".config/quickshell/Bar.qml" ./core/quickshell/Bar.qml
       // normalFile ".config/quickshell/Bar" ./core/quickshell/Bar
-      // normalFile ".config/quickshell/Bar" ./core/quickshell/WallpaperSwitcher.qml
-      // normalFile ".config/quickshell/Bar" ./core/quickshell/WallpaperSwitcher.qml
+      // normalFile ".config/quickshell/WallpaperSwitcher.qml" ./core/quickshell/WallpaperSwitcher.qml
+      // normalFile ".config/quickshell/WallpaperSwitcher" ./core/quickshell/WallpaperSwitcher
       //
 
         normalFile ".config/kanata" ./utils/kanata
