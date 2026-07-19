@@ -51,7 +51,6 @@ in
     kitty
     zoxide
     wofi
-    waypaper
     fastfetch
     wallust
     starship
