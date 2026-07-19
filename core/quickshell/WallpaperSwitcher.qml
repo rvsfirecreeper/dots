@@ -1,12 +1,11 @@
 import QtQuick
 import Quickshell
 import Quickshell.Io
+import Quickshell.Wayland
 import qs.WallpaperSwitcher
-PanelWindow {
-    id: root
+FloatingWindow {
+    id: wallpaperSwitcherWindow
 
-    implicitWidth: 840
-    implicitHeight: 600
     visible: true
     color: "transparent"
     WallpaperModel {
@@ -40,7 +39,7 @@ PanelWindow {
             delegate: Rectangle {
                 width: 180
                 height: 120
-                color: Qt.alpha(Colors.background, Theme.opacity)
+                color: "transparent"
                 radius: 8
 
                 clip: true
