@@ -27,7 +27,7 @@ PanelWindow {
     Rectangle {
         anchors.fill: parent
         clip: true
-        color: Colors.background
+        color: Qt.alpha(Colors.background, Theme.opacity)
         radius: 18
         GridView {
             anchors.fill: parent
@@ -40,7 +40,7 @@ PanelWindow {
             delegate: Rectangle {
                 width: 180
                 height: 120
-                color: Colors.background
+                color: Qt.alpha(Colors.background, Theme.opacity)
                 radius: 8
 
                 clip: true
