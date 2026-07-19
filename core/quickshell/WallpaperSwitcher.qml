@@ -19,9 +19,6 @@ FloatingWindow {
             "fullwal.sh",
             ""
         ]
-        onExited: {
-            Qt.quit()
-        }
     }
     Rectangle {
         anchors.fill: parent
@@ -64,7 +61,8 @@ FloatingWindow {
                             modelData
                         ]
 
-                        wallpaperProcess.running = true
+                        wallpaperProcess.startDetached()
+                        Qt.quit()
                     }
                 }
             }
