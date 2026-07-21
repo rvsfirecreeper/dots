@@ -30,11 +30,17 @@ let
     builtins.replaceStrings (map (x: "{{${x}}}") keys) values text;
 
   templateFile = target: source: {
-    "${target}".text = template source;
+    name = target;
+    value = {
+      text = template source;
+    };
   };
 
   normalFile = target: source: {
-    "${target}".source = source;
+    name = target;
+    value = {
+      source = source;
+    };
   };
 
 in
@@ -59,70 +65,40 @@ in
     nerd-fonts.jetbrains-mono
     noto-fonts-color-emoji
   ];
-  home.file =
-
-    # Normal files
-    (
-      normalFile ".profile" ./shell/profile
-      // normalFile ".zshrc" ./shell/zshrc
-      // normalFile ".bashrc" ./shell/bashrc
-      //
-
-        normalFile ".config/fish/config.fish" ./shell/config.fish
-      // normalFile ".config/nushell" ./shell/nushell
-      //
-
-        normalFile ".config/fastfetch" ./eyecandy/fastfetch
-      // normalFile ".config/starship.toml" ./eyecandy/starship.toml
-      //
-
-        normalFile ".config/wallust/templates" ./eyecandy/wallust/templates
-      //
-
-        normalFile ".config/hypr/binds.lua" ./core/hypr/binds.lua
-      // normalFile ".config/hypr/daemons.lua" ./core/hypr/daemons.lua
-      // normalFile ".config/hypr/input.lua" ./core/hypr/input.lua
-      // normalFile ".config/hypr/layouts.lua" ./core/hypr/layouts.lua
-      // normalFile ".config/hypr/looks.lua" ./core/hypr/looks.lua
-      // normalFile ".config/hypr/perms.lua" ./core/hypr/perms.lua
-      // normalFile ".config/hypr/monitors.lua" ./core/hypr/monitors.lua
-      // normalFile ".config/hypr/windowRules.lua" ./core/hypr/windowRules.lua
-      
-      // normalFile ".config/quickshell/Lock.qml" ./core/quickshell/Lock.qml
-      // normalFile ".config/quickshell/Bar.qml" ./core/quickshell/Bar.qml
-      // normalFile ".config/quickshell/Bar" ./core/quickshell/Bar
-      //
-
-        normalFile ".config/kanata" ./utils/kanata
-      // normalFile ".config/btop/btop.conf" ./utils/btop/btop.conf
-      // normalFile ".config/wofi/config" ./utils/wofi/config
-      // normalFile ".config/helix" ./utils/helix
-      //
-
-        normalFile ".scripts" ./scripts
-      //
-
-        normalFile ".wallpaper" ./wallpaper
-      //
-
-        # Templated files
-        templateFile ".config/wofi/style.css" ./utils/wofi/style.css
-      //
-
-        templateFile ".config/kitty/kitty.conf" ./core/kitty/kitty.conf
-      //
-
-        templateFile ".config/waypaper/style.css" ./eyecandy/waypaper/style.css
-      //
-
-        templateFile ".config/hypr/hyprland.lua" ./core/hypr/hyprland.lua
-      //
-
-        templateFile ".config/quickshell/Theme.qml" ./core/quickshell/Theme.qml
-      //
-
-        templateFile ".config/wallust/wallust.toml" ./eyecandy/wallust/wallust.toml
-    );
-
+  home.file = builtins.listToAttrs [
+    # good old files
+    (normalFile ".profile" ./shell/profile)
+    (normalFile ".zshrc" ./shell/zshrc)
+    (normalFile ".bashrc" ./shell/bashrc)
+    (normalFile ".config/fish/config.fish" ./shell/config.fish)
+    (normalFile ".config/nushell" ./shell/nushell)
+    (normalFile ".config/fastfetch" ./eyecandy/fastfetch)
+    (normalFile ".config/starship.toml" ./eyecandy/starship.toml)
+    (normalFile ".config/wallust/templates" ./eyecandy/wallust/templates)
+    (normalFile ".config/hypr/binds.lua" ./core/hypr/binds.lua)
+    (normalFile ".config/hypr/daemons.lua" ./core/hypr/daemons.lua)
+    (normalFile ".config/hypr/input.lua" ./core/hypr/input.lua)
+    (normalFile ".config/hypr/layouts.lua" ./core/hypr/layouts.lua)
+    (normalFile ".config/hypr/looks.lua" ./core/hypr/looks.lua)
+    (normalFile ".config/hypr/perms.lua" ./core/hypr/perms.lua)
+    (normalFile ".config/hypr/monitors.lua" ./core/hypr/monitors.lua)
+    (normalFile ".config/hypr/windowRules.lua" ./core/hypr/windowRules.lua)
+    (normalFile ".config/quickshell/Lock.qml" ./core/quickshell/Lock.qml)
+    (normalFile ".config/quickshell/Bar.qml" ./core/quickshell/Bar.qml)
+    (normalFile ".config/quickshell/Bar" ./core/quickshell/Bar)
+    (normalFile ".config/kanata" ./utils/kanata)
+    (normalFile ".config/btop/btop.conf" ./utils/btop/btop.conf)
+    (normalFile ".config/wofi/config" ./utils/wofi/config)
+    (normalFile ".config/helix" ./utils/helix)
+    (normalFile ".scripts" ./scripts)
+    (normalFile ".wallpaper" ./wallpaper)
+    # Templated files
+    (templateFile ".config/wofi/style.css" ./utils/wofi/style.css)
+    (templateFile ".config/kitty/kitty.conf" ./core/kitty/kitty.conf)
+    (templateFile ".config/waypaper/style.css" ./eyecandy/waypaper/style.css)
+    (templateFile ".config/hypr/hyprland.lua" ./core/hypr/hyprland.lua)
+    (templateFile ".config/quickshell/Theme.qml" ./core/quickshell/Theme.qml)
+    (templateFile ".config/wallust/wallust.toml" ./eyecandy/wallust/wallust.toml)
+  ];
   programs.home-manager.enable = true;
 }
