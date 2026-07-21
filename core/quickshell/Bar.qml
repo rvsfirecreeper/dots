@@ -32,7 +32,11 @@ Scope {
       }
       ClockModule {}
       WorkspaceModule {}
-      StatusModule {} // flex
+      WallpaperSwitcher {
+        id: wallSwitch
+        window: barWindow
+      }
+      StatusModule {wallSwitcher: wallSwitch} // flex
     }
   }
 }

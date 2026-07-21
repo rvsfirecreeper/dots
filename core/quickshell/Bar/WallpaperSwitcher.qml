@@ -2,16 +2,20 @@ import QtQuick
 import Quickshell
 import Quickshell.Io
 import Quickshell.Wayland
-import qs.WallpaperSwitcher
-FloatingWindow {
+import qs
+PopupWindow {
     id: wallpaperSwitcherWindow
-
-    visible: true
+    required property QsWindow window 
     color: "transparent"
     WallpaperModel {
         id: wallpaperModel
     }
-
+    implicitWidth: 500
+    implicitHeight: 500
+    anchor.window: window
+    anchor.rect.x: window.width - implicitWidth - 20
+    anchor.rect.y: window.height
+    visible: false
     Process {
         id: wallpaperProcess
 
@@ -62,7 +66,7 @@ FloatingWindow {
                         ]
 
                         wallpaperProcess.startDetached()
-                        Qt.quit()
+                        wallpaperSwitcherWindow.visible = false
                     }
                 }
             }

@@ -2,8 +2,8 @@ import QtQuick
 import Quickshell
 import Quickshell.Io
 import qs
-
 Rectangle {
+    id: root
     anchors {
         right: parent.right
         top: parent.top
@@ -14,6 +14,7 @@ Rectangle {
     implicitWidth: statusRow.implicitWidth + 20
     implicitHeight: parent.height
     radius: 18
+    required property WallpaperSwitcher wallSwitcher
     Row {
         id: statusRow
         anchors.margins: 10
@@ -56,6 +57,36 @@ Rectangle {
                 hoverEnabled: true
                 onEntered: arch.implicitWidth = 70
                 onExited: arch.implicitWidth = 45
+            }
+        }
+        Rectangle {
+            id: wallSwitcher
+            anchors {
+                top: parent.top
+                bottom: parent.bottom
+            }
+            implicitWidth: 45
+            color: "transparent"
+            radius: 18
+            Text {
+                anchors.centerIn: parent
+                text: "󰸉"
+                font.family: Theme.font
+                font.pixelSize: Theme.fontSize
+                color: Colors.foreground
+            }
+            Behavior on implicitWidth {
+                NumberAnimation {
+                    duration: 200   // milliseconds
+                    easing.type: Easing.InOutQuad
+                }
+            }
+            MouseArea {
+                anchors.fill: parent
+                onClicked: root.wallSwitcher.visible = !root.wallSwitcher.visible
+                hoverEnabled: true
+                onEntered: wallSwitcher.implicitWidth = 70
+                onExited: wallSwitcher.implicitWidth = 45
             }
         }
         Rectangle {
