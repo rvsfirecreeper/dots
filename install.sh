@@ -21,8 +21,6 @@ fi
 git clone https://github.com/rvsfirecreeper/dots.git
 cd dots 
 nix run home-manager/master -- switch --flake "$HOME/dots" 
-mkdir -p "$HOME/.rajlab-dotfiles"
-touch "$HOME/.rajlab-dotfiles/bg"
 cd "$HOME"
 dots/scripts/fullwal.sh dots/wallpaper/Fantasy-Japanese-Street.png
 echo "Done!"
