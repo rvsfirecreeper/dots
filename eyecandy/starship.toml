@@ -27,7 +27,6 @@ $nim\
 $nix_shell\
 $nodejs\
 $ocaml\
-$package\
 $perl\
 $php\
 $python\
@@ -44,7 +43,7 @@ $git_status
 $os \
 $character
 """
-
+add_newline = false
 [username]
 show_always = true
 format = '[$user ](fg:blue)'
@@ -102,159 +101,160 @@ ignore_branches = ['master', 'main']
 tag_symbol = '  '
 format = '[$symbol($version)]($style)'
 [git_status]
+deleted = '✗'
 format = '[ $all_status $ahead_behind]($style)'
 [aws]
 symbol = "   "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [buf]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [c]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [cmake]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [conda]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [crystal]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [dart]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [docker_context]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [elixir]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [elm]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [fennel]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [golang]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [guix_shell]
 symbol = "   "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [haskell]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [haxe]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [hg_branch]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [hostname]
 ssh_symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [java]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [julia]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [kotlin]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [lua]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [memory_usage]
 symbol = " 󰍛 "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [meson]
 symbol = " 󰔷 "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [nim]
 symbol = " 󰆥 "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [nix_shell]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [nodejs]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [ocaml]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [package]
 symbol = " 󰏗 "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [perl]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [php]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [pijul_channel]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [python]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [rlang]
 symbol = " 󰟔 "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [ruby]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [rust]
 symbol = " 󱘗 "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [scala]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [swift]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [zig]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
 
 [gradle]
 symbol = "  "
-format = '[$symbol($version)]($style)'
+format = '[$symbol]($style)'
