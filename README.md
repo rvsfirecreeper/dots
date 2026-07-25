@@ -79,6 +79,7 @@ I expect you to be competent if you are doing this.
 You can mostly just replace the commands in install.sh and install that way.
 
 You are not officially supported if you do this, but I wish you the best of luck and will help as best I can.
+(Spoiler alert: it should be pretty easy because Nix is VERY good at cross-distro)
 ## Preview
 
 [![Showcase](https://raw.githubusercontent.com/rvsfirecreeper/dots/main/showcase.png)](https://raw.githubusercontent.com/rvsfirecreeper/dots/main/showcase.mp4)
