@@ -2,7 +2,7 @@
 let
   # user facing options
   options = {
-    opacity = 0.7;
+    opacity = 0.95;
     font_size = 13;
     large_font_size = 20;
     font = "JetBrainsMono Nerd Font";
