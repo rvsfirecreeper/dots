@@ -26,3 +26,4 @@ zed.template = "zed.json"
 zed.target = "~/.config/zed/themes/wallust.json"
 quickshell = { template = "colors.qml", target = "~/.config/quickshell/Colors.qml"}
 gtk = { template = "gtk.css", target = "~/.themes/wallust/gtk-3.0/gtk.css"}
+jetbrains = { template = "jetbrains.icls", target = "~/.jetbrains.icls" } # Just import it
