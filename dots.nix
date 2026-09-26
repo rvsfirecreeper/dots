@@ -90,7 +90,7 @@ in
     (normalFile ".config/btop/btop.conf" ./utils/btop/btop.conf)
     (normalFile ".config/wofi/config" ./utils/wofi/config)
     (normalFile ".config/helix" ./utils/helix)
-    (normalFile ".ideavimrc" "./utils/ideavimrc") 
+    (normalFile ".ideavimrc" ./utils/ideavimrc) 
     (normalFile ".scripts" ./scripts)
     (normalFile ".wallpaper" ./wallpaper)
     # Templated files
