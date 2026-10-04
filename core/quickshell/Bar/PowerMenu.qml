@@ -6,11 +6,11 @@ Rectangle {
     id: root
     readonly property var actions: [
         {
-            icon: "",
+            icon: "",
             command: ["systemctl", "poweroff"]
         },
         {
-            icon: "",
+            icon: "",
             command: ["systemctl", "reboot"]
         },
         {
