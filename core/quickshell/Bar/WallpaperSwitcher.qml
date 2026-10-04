@@ -24,11 +24,52 @@ PopupWindow {
             ""
         ]
     }
+    property bool isLight: false
+    Process {
+        id: modeQuery
+        command: ["bash", "-c", "~/.scripts/walmode.sh get"]
+        running: true
+        stdout: StdioCollector {
+            onStreamFinished: wallpaperSwitcherWindow.isLight = text.trim() === "light"
+        }
+    }
+    Process {
+        id: modeToggle
+        command: ["bash", "-c", "~/.scripts/walmode.sh toggle"]
+        stdout: StdioCollector {
+            onStreamFinished: wallpaperSwitcherWindow.isLight = text.trim() === "light"
+        }
+    }
+    onVisibleChanged: if (visible) modeQuery.running = true
     Rectangle {
         anchors.fill: parent
         clip: true
         color: Qt.alpha(Colors.background, Theme.opacity)
         radius: 18
+        Rectangle {
+            id: modeButton
+            z: 1
+            anchors {
+                top: parent.top
+                right: parent.right
+                margins: 8
+            }
+            width: 32
+            height: 32
+            radius: 16
+            color: Qt.alpha(Colors.foreground, 0.15)
+            Text {
+                anchors.centerIn: parent
+                text: wallpaperSwitcherWindow.isLight ? "󰖨" : "󰖔"
+                font.family: Theme.font
+                font.pixelSize: Theme.fontSize
+                color: Colors.foreground
+            }
+            MouseArea {
+                anchors.fill: parent
+                onClicked: modeToggle.running = true
+            }
+        }
         GridView {
             anchors.fill: parent
             anchors.margins: 20

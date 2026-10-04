@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 let
   # user facing options
   options = {
@@ -99,7 +99,19 @@ in
     (templateFile ".config/waypaper/style.css" ./eyecandy/waypaper/style.css)
     (templateFile ".config/hypr/hyprland.lua" ./core/hypr/hyprland.lua)
     (templateFile ".config/quickshell/Theme.qml" ./core/quickshell/Theme.qml)
-    (templateFile ".config/wallust/wallust.toml" ./eyecandy/wallust/wallust.toml)
   ];
+
+  # wallust.toml is copied instead of symlinked so scripts/walmode.sh can edit it.
+  # The user's chosen palette (dark16/light16) survives rebuilds.
+  home.activation.wallustConfig = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    target="$HOME/.config/wallust/wallust.toml"
+    palette="$(grep -m1 -E '^palette *=' "$target" 2>/dev/null || true)"
+    run mkdir -p "$(dirname "$target")"
+    run rm -f "$target"
+    run install -m 644 ${pkgs.writeText "wallust.toml" (template ./eyecandy/wallust/wallust.toml)} "$target"
+    if [ -n "$palette" ] && [ -z "''${DRY_RUN:-}" ]; then
+      sed -i -E "s|^palette *=.*|$palette|" "$target"
+    fi
+  '';
   programs.home-manager.enable = true;
 }
