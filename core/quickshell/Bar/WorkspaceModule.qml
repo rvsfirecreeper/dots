@@ -15,8 +15,8 @@ Item {
         clip: true
         width: workRow.implicitWidth + 24
         radius: 18
-        color: Theme.isPill ? "transparent" : Qt.alpha(Colors.background, Theme.opacity)
-        border.color: Colors.foreground
+        color: Theme.isPill ? "transparent" : Qt.alpha(Colors.base, Theme.opacity)
+        border.color: Colors.text
         border.width: 0
         Behavior on width {
             NumberAnimation {
@@ -39,7 +39,7 @@ Item {
                 Rectangle {
                     width: modelData.active ? 50 : 20
                     height: workRow.height
-                    color: modelData.active ? Colors.foreground : Colors.color12
+                    color: modelData.active ? Colors.text : Colors.blue
                     opacity: 1
                     radius: 10
                     MouseArea {

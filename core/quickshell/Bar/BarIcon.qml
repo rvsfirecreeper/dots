@@ -21,7 +21,7 @@ Rectangle {
         text: root.icon
         font.family: Theme.font
         font.pixelSize: Theme.fontSize
-        color: Colors.foreground
+        color: Colors.text
     }
     Behavior on implicitWidth {
         NumberAnimation {

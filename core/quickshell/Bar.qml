@@ -26,7 +26,7 @@ Scope {
       Rectangle {
         anchors.margins: 10
         opacity: Theme.isPill ? Theme.opacity : 0
-        color: Colors.background
+        color: Colors.base
         anchors.fill: parent
         radius: 18
       }

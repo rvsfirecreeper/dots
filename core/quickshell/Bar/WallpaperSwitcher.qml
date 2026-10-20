@@ -44,7 +44,7 @@ PopupWindow {
     Rectangle {
         anchors.fill: parent
         clip: true
-        color: Qt.alpha(Colors.background, Theme.opacity)
+        color: Qt.alpha(Colors.base, Theme.opacity)
         radius: 18
         Rectangle {
             id: modeButton
@@ -57,13 +57,13 @@ PopupWindow {
             width: 32
             height: 32
             radius: 16
-            color: Qt.alpha(Colors.foreground, 0.15)
+            color: Qt.alpha(Colors.text, 0.15)
             Text {
                 anchors.centerIn: parent
                 text: wallpaperSwitcherWindow.isLight ? "󰖨" : "󰖔"
                 font.family: Theme.font
                 font.pixelSize: Theme.fontSize
-                color: Colors.foreground
+                color: Colors.text
             }
             MouseArea {
                 anchors.fill: parent

@@ -1,82 +1,60 @@
-/*
-## How to Install the Zed Theme
-
-1. Copy this template to your wallust templates folder:
-
-2. Add this section to your wallust.toml file:
-    ```
-      [templates.zed_theme]
-      template = "zed.json"
-      target = "~/.config/zed/themes/wallust.json"
-    ```
-
-3. Generate the theme: Run wallust to generate the theme from your current wallpaper:
-   ```bash
-     wallust run /path/to/your/wallpaper.jpg
-   ```
-
-4. Select the theme in Zed:
-   - Press `Cmd+Shift+P` (macOS) or `Ctrl+Shift+P` (Linux) to open the command palette
-   - Type "theme selector" and select it
-   - Choose "Wallust" from the theme list
-*/
 {
     "$schema": "https://zed.dev/schema/themes/v0.2.0.json",
     "author": "Jan Reinsch <jan@coded-aesthetics.com>",
-    "name": "Wallust",
+    "name": "Catppuccin",
     "themes": [
         {
-            "name": "Wallust",
-            "appearance": "dark",
+            "name": "Catppuccin",
+            "appearance": "{{appearance}}",
             "style": {
                 // Basic text and background colors
                 "background": "{{background}}",
                 "text": "{{foreground}}",
-                "text.muted": "{{foreground | darken(0.2)}}",
-                "text.placeholder": "{{foreground | darken(0.3)}}",
-                "text.disabled": "{{foreground | darken(0.4)}}",
+                "text.muted": "{{mix text base 20}}",
+                "text.placeholder": "{{mix text base 30}}",
+                "text.disabled": "{{mix text base 40}}",
                 "text.accent": "{{color4}}",
 
                 // Icon colors - match text hierarchy
                 "icon": "{{foreground}}",
-                "icon.muted": "{{foreground | darken(0.2)}}",
-                "icon.disabled": "{{foreground | darken(0.4)}}",
-                "icon.placeholder": "{{foreground | darken(0.3)}}",
+                "icon.muted": "{{mix text base 20}}",
+                "icon.disabled": "{{mix text base 40}}",
+                "icon.placeholder": "{{mix text base 30}}",
                 "icon.accent": "{{color4}}",
 
                 // Border colors - subtle but visible
-                "border": "{{foreground | darken(0.6)}}",
-                "border.variant": "{{foreground | darken(0.7)}}",
+                "border": "{{mix text base 60}}",
+                "border.variant": "{{mix text base 70}}",
                 "border.focused": "{{color4}}",
                 "border.selected": "{{color4}}",
                 "border.transparent": "#00000000",
-                "border.disabled": "{{foreground | darken(0.8)}}",
+                "border.disabled": "{{mix text base 80}}",
 
                 // Surface backgrounds - slightly elevated from main background
                 "surface.background": "{{background}}",
-                "elevated_surface.background": "{{background | lighten(0.1)}}",
+                "elevated_surface.background": "{{mix base text 10}}",
 
                 // Interactive element states
                 "element.background": "transparent",
-                "element.hover": "{{background | blend(foreground) | darken(0.6)}}",
-                "element.active": "{{background | blend(color4) | darken(0.4)}}",
-                "element.selected": "{{background | blend(color4) | darken(0.5)}}",
-                "element.disabled": "{{background | lighten(0.05)}}",
+                "element.hover": "{{mix base text 20}}",
+                "element.active": "{{mix base blue 30}}",
+                "element.selected": "{{mix base blue 25}}",
+                "element.disabled": "{{mix base text 5}}",
 
                 // Ghost elements - more subtle interactions
                 "ghost_element.background": "transparent",
-                "ghost_element.hover": "{{background | blend(foreground) | darken(0.8)}}",
-                "ghost_element.active": "{{background | blend(foreground) | darken(0.6)}}",
-                "ghost_element.selected": "{{background | blend(color4) | darken(0.7)}}",
+                "ghost_element.hover": "{{mix base text 10}}",
+                "ghost_element.active": "{{mix base text 20}}",
+                "ghost_element.selected": "{{mix base blue 15}}",
                 "ghost_element.disabled": "transparent",
 
                 // Drag and drop target
-                "drop_target.background": "{{background | blend(color4) | darken(0.3)}}",
+                "drop_target.background": "{{mix base blue 35}}",
 
                 // Application frame elements
-                "status_bar.background": "{{background | lighten(0.05)}}",
+                "status_bar.background": "{{mix base text 5}}",
                 "title_bar.background": "{{background}}",
-                "title_bar.inactive_background": "{{background | lighten(0.03)}}",
+                "title_bar.inactive_background": "{{mix base text 3}}",
                 "toolbar.background": "{{background}}",
 
                 // Side panels
@@ -85,10 +63,10 @@
 
                 // Editor panes
                 "pane.focused_border": "{{color4}}",
-                "pane_group.border": "{{foreground | darken(0.6)}}",
+                "pane_group.border": "{{mix text base 60}}",
 
                 // Tab bar and tabs
-                "tab_bar.background": "{{background | lighten(0.05)}}",
+                "tab_bar.background": "{{mix base text 5}}",
                 "tab.inactive_background": "transparent",
                 "tab.active_background": "{{background}}",
 
@@ -96,25 +74,25 @@
                 "editor.background": "{{background}}",
                 "editor.foreground": "{{foreground}}",
                 "editor.gutter.background": "{{background}}",
-                "editor.subheader.background": "{{background | lighten(0.05)}}",
-                "editor.active_line.background": "{{background | blend(foreground) | darken(0.8)}}",
-                "editor.highlighted_line.background": "{{background | blend(color3) | darken(0.6)}}",
-                "editor.line_number": "{{foreground | darken(0.4)}}",
+                "editor.subheader.background": "{{mix base text 5}}",
+                "editor.active_line.background": "{{mix base text 10}}",
+                "editor.highlighted_line.background": "{{mix base yellow 20}}",
+                "editor.line_number": "{{mix text base 40}}",
                 "editor.active_line_number": "{{foreground}}",
-                "editor.invisible": "{{foreground | darken(0.5)}}",
-                "editor.wrap_guide": "{{foreground | darken(0.6)}}",
-                "editor.active_wrap_guide": "{{foreground | darken(0.4)}}",
-                "editor.indent_guide": "{{foreground | darken(0.6)}}",
-                "editor.indent_guide_active": "{{foreground | darken(0.4)}}",
-                "editor.document_highlight.read_background": "{{background | blend(color3) | darken(0.5)}}",
-                "editor.document_highlight.write_background": "{{background | blend(color1) | darken(0.5)}}",
-                "editor.document_highlight.bracket_background": "{{background | blend(color4) | darken(0.5)}}",
+                "editor.invisible": "{{mix text base 50}}",
+                "editor.wrap_guide": "{{mix text base 60}}",
+                "editor.active_wrap_guide": "{{mix text base 40}}",
+                "editor.indent_guide": "{{mix text base 60}}",
+                "editor.indent_guide_active": "{{mix text base 40}}",
+                "editor.document_highlight.read_background": "{{mix base yellow 25}}",
+                "editor.document_highlight.write_background": "{{mix base red 25}}",
+                "editor.document_highlight.bracket_background": "{{mix base blue 25}}",
 
                 // Integrated terminal
                 "terminal.background": "{{background}}",
                 "terminal.foreground": "{{foreground}}",
-                "terminal.bright_foreground": "{{foreground | lighten(0.1)}}",
-                "terminal.dim_foreground": "{{foreground | darken(0.2)}}",
+                "terminal.bright_foreground": "{{text}}",
+                "terminal.dim_foreground": "{{mix text base 20}}",
                 "terminal.ansi.background": "{{background}}",
                 "terminal.ansi.black": "{{color0}}",
                 "terminal.ansi.red": "{{color1}}",
@@ -134,85 +112,85 @@
                 "terminal.ansi.bright_white": "{{color15}}",
 
                 // Search functionality
-                "search.match_background": "{{background | blend(color3) | darken(0.2)}}",
+                "search.match_background": "{{mix base yellow 40}}",
 
                 // Scrollbar elements
                 "scrollbar.track.background": "transparent",
                 "scrollbar.track.border": "transparent",
-                "scrollbar.thumb.background": "{{foreground | darken(0.5)}}",
+                "scrollbar.thumb.background": "{{mix text base 50}}",
                 "scrollbar.thumb.border": "transparent",
-                "scrollbar.thumb.hover_background": "{{foreground | darken(0.3)}}",
+                "scrollbar.thumb.hover_background": "{{mix text base 30}}",
 
                 // Status indicators - success, warning, error, info
                 "success": "{{color2}}",
-                "success.background": "{{background | blend(color2) | darken(0.5)}}",
+                "success.background": "{{mix base green 25}}",
                 "success.border": "{{color2}}",
 
                 "warning": "{{color3}}",
-                "warning.background": "{{background | blend(color3) | darken(0.5)}}",
+                "warning.background": "{{mix base yellow 25}}",
                 "warning.border": "{{color3}}",
 
                 "error": "{{color1}}",
-                "error.background": "{{background | blend(color1) | darken(0.5)}}",
+                "error.background": "{{mix base red 25}}",
                 "error.border": "{{color1}}",
 
                 "info": "{{color4}}",
-                "info.background": "{{background | blend(color4) | darken(0.5)}}",
+                "info.background": "{{mix base blue 25}}",
                 "info.border": "{{color4}}",
 
-                "hint": "{{foreground | darken(0.2)}}",
-                "hint.background": "{{background | blend(foreground) | darken(0.7)}}",
-                "hint.border": "{{foreground | darken(0.2)}}",
+                "hint": "{{mix text base 20}}",
+                "hint.background": "{{mix base text 15}}",
+                "hint.border": "{{mix text base 20}}",
 
                 // Git status colors
                 "created": "{{color2}}",
-                "created.background": "{{background | blend(color2) | darken(0.5)}}",
+                "created.background": "{{mix base green 25}}",
                 "created.border": "{{color2}}",
 
                 "modified": "{{color3}}",
-                "modified.background": "{{background | blend(color3) | darken(0.5)}}",
+                "modified.background": "{{mix base yellow 25}}",
                 "modified.border": "{{color3}}",
 
                 "deleted": "{{color1}}",
-                "deleted.background": "{{background | blend(color1) | darken(0.5)}}",
+                "deleted.background": "{{mix base red 25}}",
                 "deleted.border": "{{color1}}",
 
                 "renamed": "{{color4}}",
-                "renamed.background": "{{background | blend(color4) | darken(0.5)}}",
+                "renamed.background": "{{mix base blue 25}}",
                 "renamed.border": "{{color4}}",
 
                 "conflict": "{{color5}}",
-                "conflict.background": "{{background | blend(color5) | darken(0.5)}}",
+                "conflict.background": "{{mix base pink 25}}",
                 "conflict.border": "{{color5}}",
 
-                "ignored": "{{foreground | darken(0.3)}}",
-                "ignored.background": "{{background | blend(foreground) | darken(0.8)}}",
-                "ignored.border": "{{foreground | darken(0.3)}}",
+                "ignored": "{{mix text base 30}}",
+                "ignored.background": "{{mix base text 10}}",
+                "ignored.border": "{{mix text base 30}}",
 
-                "hidden": "{{foreground | darken(0.4)}}",
+                "hidden": "{{mix text base 40}}",
                 "hidden.background": "transparent",
-                "hidden.border": "{{foreground | darken(0.4)}}",
+                "hidden.border": "{{mix text base 40}}",
 
-                "predictive": "{{foreground | darken(0.3)}}",
-                "predictive.background": "{{background | blend(foreground) | darken(0.8)}}",
-                "predictive.border": "{{foreground | darken(0.3)}}",
+                "predictive": "{{mix text base 30}}",
+                "predictive.background": "{{mix base text 10}}",
+                "predictive.border": "{{mix text base 30}}",
 
-                "unreachable": "{{foreground | darken(0.5)}}",
-                "unreachable.background": "{{background | lighten(0.03)}}",
-                "unreachable.border": "{{foreground | darken(0.5)}}",
+                "unreachable": "{{mix text base 50}}",
+                "unreachable.background": "{{mix base text 3}}",
+                "unreachable.border": "{{mix text base 50}}",
 
                 // Link styling
-                "link_text.hover": "{{color4 | lighten(0.1)}}",
+                "link_text.hover": "{{mix blue text 10}}",
 
                 // Syntax highlighting - follows standard color assignments
                 "syntax": {
                     // Comments - muted but readable
                     "comment": {
-                        "color": "{{foreground | darken(0.2)}}",
+                        "color": "{{mix text base 20}}",
                         "font_style": "italic"
                     },
                     "comment.doc": {
-                        "color": "{{foreground | darken(0.1)}}",
+                        "color": "{{mix text base 10}}",
                         "font_style": "italic"
                     },
 
@@ -282,13 +260,13 @@
 
                     // Punctuation - subtle but visible
                     "punctuation": {
-                        "color": "{{foreground | darken(0.1)}}"
+                        "color": "{{mix text base 10}}"
                     },
                     "punctuation.bracket": {
                         "color": "{{foreground}}"
                     },
                     "punctuation.delimiter": {
-                        "color": "{{foreground | darken(0.1)}}"
+                        "color": "{{mix text base 10}}"
                     },
 
                     // Tags (HTML/XML)
@@ -345,11 +323,11 @@
 
                     // Editor hints and diagnostics
                     "hint": {
-                        "color": "{{foreground | darken(0.2)}}",
+                        "color": "{{mix text base 20}}",
                         "font_weight": 700
                     },
                     "predictive": {
-                        "color": "{{foreground | darken(0.3)}}",
+                        "color": "{{mix text base 30}}",
                         "font_style": "italic"
                     }
                 },
@@ -359,22 +337,22 @@
                     {
                         "cursor": "{{color4}}",
                         "background": "{{color4}}",
-                        "selection": "{{background | blend(color4) | darken(0.3)}}"
+                        "selection": "{{mix base blue 35}}"
                     },
                     {
                         "cursor": "{{color2}}",
                         "background": "{{color2}}",
-                        "selection": "{{background | blend(color2) | darken(0.3)}}"
+                        "selection": "{{mix base green 35}}"
                     },
                     {
                         "cursor": "{{color3}}",
                         "background": "{{color3}}",
-                        "selection": "{{background | blend(color3) | darken(0.3)}}"
+                        "selection": "{{mix base yellow 35}}"
                     },
                     {
                         "cursor": "{{color5}}",
                         "background": "{{color5}}",
-                        "selection": "{{background | blend(color5) | darken(0.3)}}"
+                        "selection": "{{mix base pink 35}}"
                     }
                 ]
             }

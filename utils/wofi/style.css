@@ -3,11 +3,11 @@
 * {
 	font-family: "{{font}}";
   font-size: {{font_size}}px;
-  color: @foreground;
+  color: @text;
 }
 
 window {
-    background-color: alpha(@background, {{opacity}});
+    background-color: alpha(@base, {{opacity}});
     outline: none;
     border: none;
 }
@@ -28,7 +28,7 @@ window {
     padding: 15px;
     border: none;
     outline: none;
-    color: @color11;
+    color: @yellow;
     box-shadow: none;
     border-radius:10px;
     background-color: transparent;
@@ -40,11 +40,11 @@ window {
     background-color: transparent;
 }
 #entry:selected #text {
-    color: @color3;
+    color: @mauve;
 }
 #entry {
     border: none;
     margin: 5px;
     padding: 5px;
-    color: @color7;
+    color: @subtext1;
 }

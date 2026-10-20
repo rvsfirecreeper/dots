@@ -11,7 +11,7 @@ WlSessionLock {
     WlSessionLockSurface {
         Rectangle {
             anchors.fill: parent
-            color: Colors.background
+            color: Colors.base
             Image {
                 anchors.fill: parent
                 source: "bg"
@@ -25,12 +25,12 @@ WlSessionLock {
                     horizontalCenter: parent.horizontalCenter
                     topMargin: 10
                 }
-                color: Colors.background
+                color: Colors.base
                 radius: 20
                 Text {
                     id: roasts
                     anchors.centerIn: parent
-                    color: Colors.foreground
+                    color: Colors.text
                     font.pixelSize: Theme.fontSize
                     font.family: Theme.font
                     text: "Press Enter to Authenticate, but first you should learn basic tech"
@@ -40,8 +40,8 @@ WlSessionLock {
                 width: 400
                 height: 60
                 anchors.centerIn: parent
-                color: Colors.background
-                border.color: Colors.color4
+                color: Colors.base
+                border.color: Colors.blue
                 radius: 20
 
                 PamContext {
@@ -79,7 +79,7 @@ WlSessionLock {
                         }
                     }
                     focus: true
-                    color: Colors.foreground
+                    color: Colors.text
                     font.family: Theme.font
                     font.pixelSize: Theme.fontSize
                     echoMode: TextInput.Password

@@ -8,7 +8,7 @@ Rectangle {
         bottom: parent.bottom
         margins: 10
     }
-    color: Theme.isPill ? "transparent" : Qt.alpha(Colors.background, Theme.opacity)
+    color: Theme.isPill ? "transparent" : Qt.alpha(Colors.base, Theme.opacity)
     implicitWidth: statusRow.implicitWidth + 20
     implicitHeight: parent.height
     radius: 18

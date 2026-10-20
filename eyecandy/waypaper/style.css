@@ -1,8 +1,8 @@
 @import "{{home}}/.config/waypaper/colors.css";
 * {
-  background-color: @background;
+  background-color: @base;
   border-color: transparent;
-  color: @foreground;
+  color: @text;
   box-shadow: none;
   -gtk-icon-shadow: none;
   -gtk-icon-effect: none;
