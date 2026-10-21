@@ -14,8 +14,8 @@ function looks.customize(colors)
           border_size = 4,
 
           col = {
-              active_border   = { colors = {colors.blue, colors.lavender}, angle = 45 },
-              inactive_border = colors.surface1,
+              active_border   = { colors = {colors.color12, colors.color12}, angle = 45 },
+              inactive_border = colors.color4,
           },
 
           -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -39,7 +39,7 @@ function looks.customize(colors)
               enabled      = true,
               range        = 4,
               render_power = 3,
-              color        = tonumber("0xee" .. colors.crust:sub(2)),
+              color        = 0xee1a1a1a,
           },
 
           blur = {

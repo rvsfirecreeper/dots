@@ -75,7 +75,7 @@ Rectangle {
                     text: modelData.icon
                     font.family: Theme.font
                     font.pixelSize: Theme.fontSize
-                    color: Colors.text
+                    color: Colors.foreground
                 }
                 MouseArea {
                     anchors.fill: parent

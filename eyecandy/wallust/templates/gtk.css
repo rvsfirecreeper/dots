@@ -1,12 +1,12 @@
 /*default color scheme */
-@define-color bg_color {{base}};
-@define-color fg_color {{text}};
-@define-color base_color {{base}};
-@define-color text_color {{text}};
-@define-color selected_bg_color {{blue}};
-@define-color selected_fg_color {{crust}};
-@define-color tooltip_bg_color {{base}};
-@define-color tooltip_fg_color {{text}};
+@define-color bg_color {{background}};
+@define-color fg_color {{foreground}};
+@define-color base_color {{background}};
+@define-color text_color {{foreground}};
+@define-color selected_bg_color {{color1}};
+@define-color selected_fg_color {{foreground}};
+@define-color tooltip_bg_color {{background}};
+@define-color tooltip_fg_color {{foreground}};
 
 /* misc colors used by gtk+
  *
@@ -15,24 +15,24 @@
  * the name of the variable. Please remember to change values there as well
  * when changing one of the variables below.
  */
-@define-color info_fg_color {{text}};
-@define-color info_bg_color {{base}};
-@define-color warning_fg_color {{peach}};
-@define-color warning_bg_color {{base}};
-@define-color question_fg_color {{blue}};
-@define-color question_bg_color {{sapphire}};
-@define-color error_fg_color {{crust}};
-@define-color error_bg_color {{red}};
+@define-color info_fg_color {{foreground}};
+@define-color info_bg_color {{background}};
+@define-color warning_fg_color {{color5}};
+@define-color warning_bg_color {{background}};
+@define-color question_fg_color rgb (97, 122, 214);
+@define-color question_bg_color rgb (138, 173, 212);
+@define-color error_fg_color rgb (235, 235, 235);
+@define-color error_bg_color rgb (223, 56, 44);
 @define-color link_color @selected_bg_color;
-@define-color success_color {{green}};
-@define-color error_color {{red}};
+@define-color success_color {{color6}};
+@define-color error_color {{color7}};
 
 /* theme common colors */
 @define-color button_bg_color shade (@bg_color, 1.02); /*shade (#cdcdcd, 1.08);*/
 @define-color notebook_button_bg_color shade (@bg_color, 1.02);
 @define-color button_insensitive_bg_color mix (@button_bg_color, @bg_color, 0.6);
-@define-color dark_bg_color {{mantle}};
-@define-color dark_fg_color {{text}};
+@define-color dark_bg_color #3c3b37;
+@define-color dark_fg_color #dfdbd2;
 
 @define-color backdrop_fg_color mix (@bg_color, @fg_color, 0.8);
 @define-color backdrop_text_color mix (@base_color, @text_color, 0.8);
@@ -46,8 +46,8 @@
 
 @define-color shadow_color alpha(black, 0.5);
 
-@define-color osd_fg_color {{text}};
-@define-color osd_bg_color alpha({{crust}}, 0.7);
+@define-color osd_fg_color #eeeeec;
+@define-color osd_bg_color alpha(#202526, 0.7);
 @define-color osd_border_color alpha(black, 0.7);
 
 .background,

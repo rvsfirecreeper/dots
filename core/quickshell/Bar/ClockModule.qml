@@ -11,9 +11,9 @@ Item {
             horizontalCenter: parent.horizontalCenter
         }
         radius: 18
-        color: Theme.isPill ? "transparent" : Qt.alpha(Colors.base, Theme.opacity)
+        color: Theme.isPill ? "transparent" : Qt.alpha(Colors.background, Theme.opacity)
         implicitWidth: text.width + 40
-        border.color: Colors.yellow
+        border.color: Colors.color3
         border.width: 0
         Text {
             anchors.centerIn: parent
@@ -23,7 +23,7 @@ Item {
             text: time
             font.family: Theme.font
             font.pixelSize: Theme.fontSize
-            color: Colors.text
+            color: Colors.foreground
         }
     }
 }
